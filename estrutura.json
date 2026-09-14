@@ -1,0 +1,6296 @@
+{
+  "jar": "mstreetfighter.jar",
+  "nome_projeto": "mstreetfighter",
+  "midlet": "msf",
+  "canvas": "Game",
+  "classes": [
+    {
+      "arquivo": "Game.class",
+      "nome": "Game",
+      "super": "Canvas",
+      "campos": [
+        {
+          "nome": "speed",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "count",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "IM",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "IA",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "IC",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "À",
+          "desc": "J",
+          "tipo_c": "int64_t"
+        },
+        {
+          "nome": "Á",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "Â",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "Ã",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "Ä",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "Å",
+          "desc": "I",
+          "tipo_c": "int"
+        }
+      ],
+      "metodos": [
+        {
+          "nome": "<init>",
+          "desc": "()V",
+          "tipo_ret": "void",
+          "n_instr": 18,
+          "apis": {
+            "java/lang/Thread.<init>": 1
+          },
+          "constantes": [
+            [
+              3,
+              150
+            ],
+            [
+              6,
+              75
+            ],
+            [
+              9,
+              50
+            ],
+            [
+              12,
+              90
+            ],
+            [
+              15,
+              45
+            ]
+          ],
+          "chamadas": [
+            [
+              1,
+              "java/lang/Thread.<init>"
+            ]
+          ],
+          "fields": [
+            [
+              4,
+              "putfield",
+              "Game.Á"
+            ],
+            [
+              7,
+              "putfield",
+              "Game.Â"
+            ],
+            [
+              10,
+              "putfield",
+              "Game.Ã"
+            ],
+            [
+              13,
+              "putfield",
+              "Game.Ä"
+            ],
+            [
+              16,
+              "putfield",
+              "Game.Å"
+            ]
+          ]
+        },
+        {
+          "nome": "sleep",
+          "desc": "(I)V",
+          "tipo_ret": "void",
+          "n_instr": 6,
+          "apis": {
+            "java/lang/Thread.sleep": 1
+          },
+          "constantes": [],
+          "chamadas": [
+            [
+              2,
+              "java/lang/Thread.sleep"
+            ]
+          ],
+          "fields": []
+        },
+        {
+          "nome": "randomInt",
+          "desc": "()I",
+          "tipo_ret": "int",
+          "n_instr": 19,
+          "apis": {},
+          "constantes": [],
+          "chamadas": [],
+          "fields": [
+            [
+              0,
+              "getstatic",
+              "Game.À"
+            ],
+            [
+              1,
+              "getstatic",
+              "Game.IA"
+            ],
+            [
+              4,
+              "getstatic",
+              "Game.IC"
+            ],
+            [
+              7,
+              "getstatic",
+              "Game.IM"
+            ],
+            [
+              10,
+              "putstatic",
+              "Game.À"
+            ],
+            [
+              12,
+              "getstatic",
+              "Game.À"
+            ],
+            [
+              14,
+              "getstatic",
+              "Game.IM"
+            ]
+          ]
+        },
+        {
+          "nome": "run",
+          "desc": "()V",
+          "tipo_ret": "void",
+          "n_instr": 215,
+          "apis": {
+            "javax/microedition/lcdui/Canvas.repaint": 1,
+            "javax/microedition/lcdui/Canvas.serviceRepaints": 1
+          },
+          "constantes": [
+            [
+              0,
+              0
+            ],
+            [
+              4,
+              1
+            ],
+            [
+              15,
+              500
+            ],
+            [
+              19,
+              1
+            ],
+            [
+              28,
+              2
+            ],
+            [
+              36,
+              8
+            ],
+            [
+              40,
+              0
+            ],
+            [
+              46,
+              2
+            ],
+            [
+              55,
+              1
+            ],
+            [
+              63,
+              25
+            ],
+            [
+              72,
+              2
+            ],
+            [
+              80,
+              16
+            ],
+            [
+              84,
+              0
+            ],
+            [
+              90,
+              2
+            ],
+            [
+              99,
+              1
+            ],
+            [
+              107,
+              20
+            ],
+            [
+              134,
+              42
+            ],
+            [
+              155,
+              18
+            ],
+            [
+              172,
+              20
+            ],
+            [
+              193,
+              20
+            ]
+          ],
+          "chamadas": [
+            [
+              211,
+              "javax/microedition/lcdui/Canvas.repaint"
+            ],
+            [
+              213,
+              "javax/microedition/lcdui/Canvas.serviceRepaints"
+            ]
+          ],
+          "fields": [
+            [
+              1,
+              "putstatic",
+              "Game.count"
+            ],
+            [
+              3,
+              "getstatic",
+              "MapCanvas.still"
+            ],
+            [
+              8,
+              "getstatic",
+              "Game.speed"
+            ],
+            [
+              10,
+              "getstatic",
+              "Game.count"
+            ],
+            [
+              11,
+              "getstatic",
+              "Game.speed"
+            ],
+            [
+              13,
+              "putstatic",
+              "Game.count"
+            ],
+            [
+              14,
+              "getstatic",
+              "Game.count"
+            ],
+            [
+              18,
+              "getstatic",
+              "MapCanvas.lightflag"
+            ],
+            [
+              21,
+              "putstatic",
+              "MapCanvas.lightflag"
+            ],
+            [
+              22,
+              "getstatic",
+              "msf.mc"
+            ],
+            [
+              23,
+              "getfield",
+              "MapCanvas.ó"
+            ],
+            [
+              25,
+              "getstatic",
+              "msf.mc"
+            ],
+            [
+              27,
+              "getfield",
+              "MapCanvas.ó"
+            ],
+            [
+              30,
+              "putfield",
+              "MapCanvas.ó"
+            ],
+            [
+              31,
+              "getstatic",
+              "msf.mc"
+            ],
+            [
+              32,
+              "getfield",
+              "MapCanvas.ó"
+            ],
+            [
+              33,
+              "getstatic",
+              "msf.mc"
+            ],
+            [
+              34,
+              "getfield",
+              "MapCanvas.Ā"
+            ],
+            [
+              35,
+              "getfield",
+              "Role_Lee.x"
+            ],
+            [
+              39,
+              "getstatic",
+              "msf.mc"
+            ]
+          ]
+        },
+        {
+          "nome": "<clinit>",
+          "desc": "()V",
+          "tipo_ret": "void",
+          "n_instr": 13,
+          "apis": {},
+          "constantes": [
+            [
+              0,
+              50
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              6,
+              3877
+            ],
+            [
+              8,
+              29573
+            ]
+          ],
+          "chamadas": [],
+          "fields": [
+            [
+              1,
+              "putstatic",
+              "Game.speed"
+            ],
+            [
+              3,
+              "putstatic",
+              "Game.count"
+            ],
+            [
+              5,
+              "putstatic",
+              "Game.IM"
+            ],
+            [
+              7,
+              "putstatic",
+              "Game.IA"
+            ],
+            [
+              9,
+              "putstatic",
+              "Game.IC"
+            ],
+            [
+              11,
+              "putstatic",
+              "Game.À"
+            ]
+          ]
+        }
+      ],
+      "apis": {
+        "java/lang/Thread.<init>": 1,
+        "java/lang/Thread.sleep": 1,
+        "javax/microedition/lcdui/Canvas.repaint": 1,
+        "javax/microedition/lcdui/Canvas.serviceRepaints": 1
+      },
+      "padroes": [
+        "CANVAS",
+        "TEM_RUN"
+      ]
+    },
+    {
+      "arquivo": "GifDecoder.class",
+      "nome": "GifDecoder",
+      "super": "Object",
+      "campos": [
+        {
+          "nome": "Æ",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "Ç",
+          "desc": "[I",
+          "tipo_c": "int*"
+        },
+        {
+          "nome": "È",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "É",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "Ê",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "Ë",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "Ì",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "Í",
+          "desc": "Z",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "Î",
+          "desc": "[I",
+          "tipo_c": "int*"
+        },
+        {
+          "nome": "Ï",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "Ð",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "Ñ",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "Ò",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "Ó",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "Ô",
+          "desc": "Z",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "Õ",
+          "desc": "Z",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "Ö",
+          "desc": "[I",
+          "tipo_c": "int*"
+        },
+        {
+          "nome": "Ø",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "Ù",
+          "desc": "Z",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "Ú",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "Û",
+          "desc": "J",
+          "tipo_c": "int64_t"
+        },
+        {
+          "nome": "Ü",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "Ý",
+          "desc": "[I",
+          "tipo_c": "int*"
+        },
+        {
+          "nome": "Þ",
+          "desc": "[I",
+          "tipo_c": "int*"
+        },
+        {
+          "nome": "ß",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "à",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "á",
+          "desc": "[B",
+          "tipo_c": "signed char*"
+        },
+        {
+          "nome": "â",
+          "desc": "Z",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "matrix",
+          "desc": "LMatrixImage;",
+          "tipo_c": "MatrixImage*"
+        }
+      ],
+      "metodos": [
+        {
+          "nome": "<init>",
+          "desc": "([B)V",
+          "tipo_ret": "void",
+          "n_instr": 75,
+          "apis": {
+            "java/lang/Object.<init>": 1
+          },
+          "constantes": [
+            [
+              3,
+              -1
+            ],
+            [
+              6,
+              280
+            ],
+            [
+              10,
+              -1
+            ],
+            [
+              13,
+              0
+            ],
+            [
+              16,
+              0
+            ],
+            [
+              19,
+              0
+            ],
+            [
+              22,
+              0
+            ],
+            [
+              25,
+              0
+            ],
+            [
+              31,
+              0
+            ],
+            [
+              34,
+              0
+            ],
+            [
+              37,
+              0
+            ],
+            [
+              40,
+              0
+            ],
+            [
+              43,
+              0
+            ],
+            [
+              46,
+              0
+            ],
+            [
+              49,
+              0
+            ],
+            [
+              55,
+              0
+            ],
+            [
+              58,
+              0
+            ],
+            [
+              61,
+              0
+            ],
+            [
+              72,
+              0
+            ]
+          ],
+          "chamadas": [
+            [
+              1,
+              "java/lang/Object.<init>"
+            ]
+          ],
+          "fields": [
+            [
+              4,
+              "putfield",
+              "GifDecoder.Æ"
+            ],
+            [
+              8,
+              "putfield",
+              "GifDecoder.Ç"
+            ],
+            [
+              11,
+              "putfield",
+              "GifDecoder.È"
+            ],
+            [
+              14,
+              "putfield",
+              "GifDecoder.É"
+            ],
+            [
+              17,
+              "putfield",
+              "GifDecoder.Ê"
+            ],
+            [
+              20,
+              "putfield",
+              "GifDecoder.Ë"
+            ],
+            [
+              23,
+              "putfield",
+              "GifDecoder.Ì"
+            ],
+            [
+              26,
+              "putfield",
+              "GifDecoder.Í"
+            ],
+            [
+              29,
+              "putfield",
+              "GifDecoder.Î"
+            ],
+            [
+              32,
+              "putfield",
+              "GifDecoder.Ï"
+            ],
+            [
+              35,
+              "putfield",
+              "GifDecoder.Ð"
+            ],
+            [
+              38,
+              "putfield",
+              "GifDecoder.Ñ"
+            ],
+            [
+              41,
+              "putfield",
+              "GifDecoder.Ò"
+            ],
+            [
+              44,
+              "putfield",
+              "GifDecoder.Ó"
+            ],
+            [
+              47,
+              "putfield",
+              "GifDecoder.Ô"
+            ],
+            [
+              50,
+              "putfield",
+              "GifDecoder.Õ"
+            ],
+            [
+              53,
+              "putfield",
+              "GifDecoder.Ö"
+            ],
+            [
+              56,
+              "putfield",
+              "GifDecoder.Ø"
+            ],
+            [
+              59,
+              "putfield",
+              "GifDecoder.Ü"
+            ],
+            [
+              62,
+              "putfield",
+              "GifDecoder.â"
+            ]
+          ]
+        },
+        {
+          "nome": "<init>",
+          "desc": "(Ljava/io/InputStream;)V",
+          "tipo_ret": "void",
+          "n_instr": 140,
+          "apis": {
+            "java/lang/Object.<init>": 1,
+            "java/io/InputStream.read": 1,
+            "java/lang/System.arraycopy": 1
+          },
+          "constantes": [
+            [
+              3,
+              -1
+            ],
+            [
+              6,
+              280
+            ],
+            [
+              10,
+              -1
+            ],
+            [
+              13,
+              0
+            ],
+            [
+              16,
+              0
+            ],
+            [
+              19,
+              0
+            ],
+            [
+              22,
+              0
+            ],
+            [
+              25,
+              0
+            ],
+            [
+              31,
+              0
+            ],
+            [
+              34,
+              0
+            ],
+            [
+              37,
+              0
+            ],
+            [
+              40,
+              0
+            ],
+            [
+              43,
+              0
+            ],
+            [
+              46,
+              0
+            ],
+            [
+              49,
+              0
+            ],
+            [
+              55,
+              0
+            ],
+            [
+              58,
+              0
+            ],
+            [
+              61,
+              0
+            ],
+            [
+              63,
+              32
+            ],
+            [
+              64,
+              1
+            ]
+          ],
+          "chamadas": [
+            [
+              1,
+              "java/lang/Object.<init>"
+            ],
+            [
+              81,
+              "java/io/InputStream.read"
+            ],
+            [
+              130,
+              "java/lang/System.arraycopy"
+            ]
+          ],
+          "fields": [
+            [
+              4,
+              "putfield",
+              "GifDecoder.Æ"
+            ],
+            [
+              8,
+              "putfield",
+              "GifDecoder.Ç"
+            ],
+            [
+              11,
+              "putfield",
+              "GifDecoder.È"
+            ],
+            [
+              14,
+              "putfield",
+              "GifDecoder.É"
+            ],
+            [
+              17,
+              "putfield",
+              "GifDecoder.Ê"
+            ],
+            [
+              20,
+              "putfield",
+              "GifDecoder.Ë"
+            ],
+            [
+              23,
+              "putfield",
+              "GifDecoder.Ì"
+            ],
+            [
+              26,
+              "putfield",
+              "GifDecoder.Í"
+            ],
+            [
+              29,
+              "putfield",
+              "GifDecoder.Î"
+            ],
+            [
+              32,
+              "putfield",
+              "GifDecoder.Ï"
+            ],
+            [
+              35,
+              "putfield",
+              "GifDecoder.Ð"
+            ],
+            [
+              38,
+              "putfield",
+              "GifDecoder.Ñ"
+            ],
+            [
+              41,
+              "putfield",
+              "GifDecoder.Ò"
+            ],
+            [
+              44,
+              "putfield",
+              "GifDecoder.Ó"
+            ],
+            [
+              47,
+              "putfield",
+              "GifDecoder.Ô"
+            ],
+            [
+              50,
+              "putfield",
+              "GifDecoder.Õ"
+            ],
+            [
+              53,
+              "putfield",
+              "GifDecoder.Ö"
+            ],
+            [
+              56,
+              "putfield",
+              "GifDecoder.Ø"
+            ],
+            [
+              59,
+              "putfield",
+              "GifDecoder.Ü"
+            ],
+            [
+              62,
+              "putfield",
+              "GifDecoder.â"
+            ]
+          ]
+        },
+        {
+          "nome": "decodeMatrix",
+          "desc": "()LMatrixImage;",
+          "tipo_ret": "MatrixImage*",
+          "n_instr": 10,
+          "apis": {},
+          "constantes": [
+            [
+              1,
+              1
+            ],
+            [
+              4,
+              0
+            ]
+          ],
+          "chamadas": [],
+          "fields": [
+            [
+              2,
+              "putfield",
+              "GifDecoder.â"
+            ],
+            [
+              8,
+              "getfield",
+              "GifDecoder.matrix"
+            ]
+          ]
+        },
+        {
+          "nome": "decodeImage",
+          "desc": "()Ljavax/microedition/lcdui/Image;",
+          "tipo_ret": "Image*",
+          "n_instr": 4,
+          "apis": {},
+          "constantes": [
+            [
+              1,
+              0
+            ]
+          ],
+          "chamadas": [],
+          "fields": []
+        },
+        {
+          "nome": "decodeImage",
+          "desc": "(I)Ljavax/microedition/lcdui/Image;",
+          "tipo_ret": "Image*",
+          "n_instr": 72,
+          "apis": {},
+          "constantes": [
+            [
+              22,
+              1
+            ],
+            [
+              29,
+              0
+            ],
+            [
+              33,
+              59
+            ],
+            [
+              38,
+              33
+            ],
+            [
+              46,
+              44
+            ],
+            [
+              60,
+              1
+            ]
+          ],
+          "chamadas": [],
+          "fields": [
+            [
+              4,
+              "getfield",
+              "GifDecoder.Æ"
+            ],
+            [
+              9,
+              "getfield",
+              "GifDecoder.Æ"
+            ],
+            [
+              28,
+              "getfield",
+              "GifDecoder.Ç"
+            ],
+            [
+              59,
+              "getfield",
+              "GifDecoder.Æ"
+            ],
+            [
+              62,
+              "putfield",
+              "GifDecoder.Æ"
+            ],
+            [
+              64,
+              "getfield",
+              "GifDecoder.Æ"
+            ]
+          ]
+        },
+        {
+          "nome": "clear",
+          "desc": "()V",
+          "tipo_ret": "void",
+          "n_instr": 16,
+          "apis": {},
+          "constantes": [],
+          "chamadas": [],
+          "fields": [
+            [
+              2,
+              "putfield",
+              "GifDecoder.á"
+            ],
+            [
+              5,
+              "putfield",
+              "GifDecoder.matrix"
+            ],
+            [
+              8,
+              "putfield",
+              "GifDecoder.Ç"
+            ],
+            [
+              11,
+              "putfield",
+              "GifDecoder.Î"
+            ],
+            [
+              14,
+              "putfield",
+              "GifDecoder.Ö"
+            ]
+          ]
+        },
+        {
+          "nome": "Æ",
+          "desc": "()Ljavax/microedition/lcdui/Image;",
+          "tipo_ret": "Image*",
+          "n_instr": 300,
+          "apis": {
+            "javax/microedition/lcdui/Image.createImage": 1,
+            "javax/microedition/lcdui/Image.getGraphics": 1,
+            "javax/microedition/lcdui/Graphics.setColor": 1,
+            "javax/microedition/lcdui/Graphics.drawLine": 1
+          },
+          "constantes": [
+            [
+              6,
+              0
+            ],
+            [
+              8,
+              0
+            ],
+            [
+              10,
+              0
+            ],
+            [
+              12,
+              4096
+            ],
+            [
+              15,
+              4096
+            ],
+            [
+              18,
+              8192
+            ],
+            [
+              22,
+              1
+            ],
+            [
+              29,
+              0
+            ],
+            [
+              69,
+              0
+            ],
+            [
+              71,
+              1
+            ],
+            [
+              76,
+              1
+            ],
+            [
+              80,
+              1
+            ],
+            [
+              84,
+              2
+            ],
+            [
+              87,
+              -1
+            ],
+            [
+              89,
+              -1
+            ],
+            [
+              91,
+              0
+            ],
+            [
+              102,
+              0
+            ],
+            [
+              106,
+              0
+            ],
+            [
+              108,
+              0
+            ],
+            [
+              111,
+              0
+            ]
+          ],
+          "chamadas": [
+            [
+              41,
+              "javax/microedition/lcdui/Image.createImage"
+            ],
+            [
+              44,
+              "javax/microedition/lcdui/Image.getGraphics"
+            ],
+            [
+              238,
+              "javax/microedition/lcdui/Graphics.setColor"
+            ],
+            [
+              244,
+              "javax/microedition/lcdui/Graphics.drawLine"
+            ]
+          ],
+          "fields": [
+            [
+              1,
+              "getfield",
+              "GifDecoder.Ñ"
+            ],
+            [
+              4,
+              "getfield",
+              "GifDecoder.Ò"
+            ],
+            [
+              28,
+              "getfield",
+              "GifDecoder.Ç"
+            ],
+            [
+              37,
+              "getfield",
+              "GifDecoder.â"
+            ],
+            [
+              53,
+              "putfield",
+              "GifDecoder.matrix"
+            ],
+            [
+              55,
+              "getfield",
+              "GifDecoder.Î"
+            ],
+            [
+              58,
+              "getfield",
+              "GifDecoder.Ô"
+            ],
+            [
+              61,
+              "getfield",
+              "GifDecoder.Ö"
+            ],
+            [
+              64,
+              "getfield",
+              "GifDecoder.È"
+            ],
+            [
+              68,
+              "getfield",
+              "GifDecoder.È"
+            ],
+            [
+              232,
+              "getfield",
+              "GifDecoder.â"
+            ],
+            [
+              248,
+              "getfield",
+              "GifDecoder.È"
+            ],
+            [
+              251,
+              "getfield",
+              "GifDecoder.matrix"
+            ],
+            [
+              258,
+              "getfield",
+              "GifDecoder.matrix"
+            ],
+            [
+              270,
+              "getfield",
+              "GifDecoder.Õ"
+            ],
+            [
+              273,
+              "getstatic",
+              "GifDecoder.Ý"
+            ],
+            [
+              285,
+              "getstatic",
+              "GifDecoder.Þ"
+            ]
+          ]
+        },
+        {
+          "nome": "Ç",
+          "desc": "(I)I",
+          "tipo_ret": "int",
+          "n_instr": 83,
+          "apis": {},
+          "constantes": [
+            [
+              4,
+              -1
+            ],
+            [
+              14,
+              0
+            ],
+            [
+              20,
+              1
+            ],
+            [
+              40,
+              1
+            ],
+            [
+              46,
+              8
+            ],
+            [
+              52,
+              1
+            ],
+            [
+              62,
+              1
+            ],
+            [
+              65,
+              1
+            ]
+          ],
+          "chamadas": [],
+          "fields": [
+            [
+              2,
+              "getfield",
+              "GifDecoder.Ù"
+            ],
+            [
+              7,
+              "getfield",
+              "GifDecoder.Ø"
+            ],
+            [
+              12,
+              "putfield",
+              "GifDecoder.Ø"
+            ],
+            [
+              15,
+              "putfield",
+              "GifDecoder.Ú"
+            ],
+            [
+              17,
+              "getfield",
+              "GifDecoder.Ø"
+            ],
+            [
+              21,
+              "putfield",
+              "GifDecoder.Ù"
+            ],
+            [
+              25,
+              "getfield",
+              "GifDecoder.Û"
+            ],
+            [
+              27,
+              "getfield",
+              "GifDecoder.Ç"
+            ],
+            [
+              29,
+              "getfield",
+              "GifDecoder.Ú"
+            ],
+            [
+              32,
+              "getfield",
+              "GifDecoder.Ü"
+            ],
+            [
+              36,
+              "putfield",
+              "GifDecoder.Û"
+            ],
+            [
+              39,
+              "getfield",
+              "GifDecoder.Ú"
+            ],
+            [
+              42,
+              "putfield",
+              "GifDecoder.Ú"
+            ],
+            [
+              45,
+              "getfield",
+              "GifDecoder.Ü"
+            ],
+            [
+              48,
+              "putfield",
+              "GifDecoder.Ü"
+            ],
+            [
+              51,
+              "getfield",
+              "GifDecoder.Ø"
+            ],
+            [
+              54,
+              "putfield",
+              "GifDecoder.Ø"
+            ],
+            [
+              56,
+              "getfield",
+              "GifDecoder.Ü"
+            ],
+            [
+              60,
+              "getfield",
+              "GifDecoder.Û"
+            ],
+            [
+              71,
+              "getfield",
+              "GifDecoder.Û"
+            ]
+          ]
+        },
+        {
+          "nome": "È",
+          "desc": "()V",
+          "tipo_ret": "void",
+          "n_instr": 16,
+          "apis": {},
+          "constantes": [
+            [
+              1,
+              0
+            ],
+            [
+              4,
+              0
+            ],
+            [
+              10,
+              0
+            ],
+            [
+              13,
+              -1
+            ]
+          ],
+          "chamadas": [],
+          "fields": [
+            [
+              2,
+              "putfield",
+              "GifDecoder.Ü"
+            ],
+            [
+              5,
+              "putfield",
+              "GifDecoder.Ø"
+            ],
+            [
+              8,
+              "putfield",
+              "GifDecoder.Û"
+            ],
+            [
+              11,
+              "putfield",
+              "GifDecoder.Ù"
+            ],
+            [
+              14,
+              "putfield",
+              "GifDecoder.Ú"
+            ]
+          ]
+        },
+        {
+          "nome": "É",
+          "desc": "()Z",
+          "tipo_ret": "int",
+          "n_instr": 52,
+          "apis": {},
+          "constantes": [
+            [
+              1,
+              6
+            ],
+            [
+              4,
+              0
+            ],
+            [
+              8,
+              0
+            ],
+            [
+              10,
+              71
+            ],
+            [
+              14,
+              1
+            ],
+            [
+              16,
+              73
+            ],
+            [
+              20,
+              2
+            ],
+            [
+              22,
+              70
+            ],
+            [
+              26,
+              3
+            ],
+            [
+              28,
+              56
+            ],
+            [
+              32,
+              4
+            ],
+            [
+              34,
+              55
+            ],
+            [
+              38,
+              4
+            ],
+            [
+              40,
+              57
+            ],
+            [
+              44,
+              5
+            ],
+            [
+              46,
+              97
+            ],
+            [
+              48,
+              1
+            ],
+            [
+              50,
+              0
+            ]
+          ],
+          "chamadas": [],
+          "fields": [
+            [
+              7,
+              "getfield",
+              "GifDecoder.Ç"
+            ],
+            [
+              13,
+              "getfield",
+              "GifDecoder.Ç"
+            ],
+            [
+              19,
+              "getfield",
+              "GifDecoder.Ç"
+            ],
+            [
+              25,
+              "getfield",
+              "GifDecoder.Ç"
+            ],
+            [
+              31,
+              "getfield",
+              "GifDecoder.Ç"
+            ],
+            [
+              37,
+              "getfield",
+              "GifDecoder.Ç"
+            ],
+            [
+              43,
+              "getfield",
+              "GifDecoder.Ç"
+            ]
+          ]
+        },
+        {
+          "nome": "Ê",
+          "desc": "()Z",
+          "tipo_ret": "int",
+          "n_instr": 72,
+          "apis": {},
+          "constantes": [
+            [
+              1,
+              7
+            ],
+            [
+              4,
+              0
+            ],
+            [
+              9,
+              0
+            ],
+            [
+              13,
+              1
+            ],
+            [
+              20,
+              2
+            ],
+            [
+              24,
+              3
+            ],
+            [
+              30,
+              4
+            ],
+            [
+              36,
+              5
+            ],
+            [
+              41,
+              6
+            ],
+            [
+              45,
+              2
+            ],
+            [
+              47,
+              7
+            ],
+            [
+              53,
+              128
+            ],
+            [
+              65,
+              1
+            ],
+            [
+              68,
+              0
+            ],
+            [
+              70,
+              1
+            ]
+          ],
+          "chamadas": [],
+          "fields": [
+            [
+              8,
+              "getfield",
+              "GifDecoder.Ç"
+            ],
+            [
+              12,
+              "getfield",
+              "GifDecoder.Ç"
+            ],
+            [
+              16,
+              "putfield",
+              "GifDecoder.É"
+            ],
+            [
+              19,
+              "getfield",
+              "GifDecoder.Ç"
+            ],
+            [
+              23,
+              "getfield",
+              "GifDecoder.Ç"
+            ],
+            [
+              27,
+              "putfield",
+              "GifDecoder.Ê"
+            ],
+            [
+              29,
+              "getfield",
+              "GifDecoder.Ç"
+            ],
+            [
+              35,
+              "getfield",
+              "GifDecoder.Ç"
+            ],
+            [
+              38,
+              "putfield",
+              "GifDecoder.Ë"
+            ],
+            [
+              40,
+              "getfield",
+              "GifDecoder.Ç"
+            ],
+            [
+              50,
+              "putfield",
+              "GifDecoder.Ì"
+            ],
+            [
+              55,
+              "putfield",
+              "GifDecoder.Í"
+            ],
+            [
+              58,
+              "putfield",
+              "GifDecoder.Î"
+            ],
+            [
+              60,
+              "getfield",
+              "GifDecoder.Í"
+            ],
+            [
+              64,
+              "getfield",
+              "GifDecoder.Ì"
+            ]
+          ]
+        },
+        {
+          "nome": "Ë",
+          "desc": "()Z",
+          "tipo_ret": "int",
+          "n_instr": 88,
+          "apis": {},
+          "constantes": [
+            [
+              1,
+              9
+            ],
+            [
+              4,
+              0
+            ],
+            [
+              9,
+              0
+            ],
+            [
+              13,
+              1
+            ],
+            [
+              20,
+              2
+            ],
+            [
+              24,
+              3
+            ],
+            [
+              31,
+              4
+            ],
+            [
+              35,
+              5
+            ],
+            [
+              42,
+              6
+            ],
+            [
+              46,
+              7
+            ],
+            [
+              52,
+              8
+            ],
+            [
+              57,
+              128
+            ],
+            [
+              61,
+              2
+            ],
+            [
+              63,
+              7
+            ],
+            [
+              69,
+              64
+            ],
+            [
+              81,
+              0
+            ],
+            [
+              84,
+              0
+            ],
+            [
+              86,
+              1
+            ]
+          ],
+          "chamadas": [],
+          "fields": [
+            [
+              8,
+              "getfield",
+              "GifDecoder.Ç"
+            ],
+            [
+              12,
+              "getfield",
+              "GifDecoder.Ç"
+            ],
+            [
+              16,
+              "putfield",
+              "GifDecoder.Ï"
+            ],
+            [
+              19,
+              "getfield",
+              "GifDecoder.Ç"
+            ],
+            [
+              23,
+              "getfield",
+              "GifDecoder.Ç"
+            ],
+            [
+              27,
+              "putfield",
+              "GifDecoder.Ð"
+            ],
+            [
+              30,
+              "getfield",
+              "GifDecoder.Ç"
+            ],
+            [
+              34,
+              "getfield",
+              "GifDecoder.Ç"
+            ],
+            [
+              38,
+              "putfield",
+              "GifDecoder.Ñ"
+            ],
+            [
+              41,
+              "getfield",
+              "GifDecoder.Ç"
+            ],
+            [
+              45,
+              "getfield",
+              "GifDecoder.Ç"
+            ],
+            [
+              49,
+              "putfield",
+              "GifDecoder.Ò"
+            ],
+            [
+              51,
+              "getfield",
+              "GifDecoder.Ç"
+            ],
+            [
+              59,
+              "putfield",
+              "GifDecoder.Ô"
+            ],
+            [
+              66,
+              "putfield",
+              "GifDecoder.Ó"
+            ],
+            [
+              71,
+              "putfield",
+              "GifDecoder.Õ"
+            ],
+            [
+              74,
+              "putfield",
+              "GifDecoder.Ö"
+            ],
+            [
+              76,
+              "getfield",
+              "GifDecoder.Ô"
+            ],
+            [
+              80,
+              "getfield",
+              "GifDecoder.Ó"
+            ]
+          ]
+        },
+        {
+          "nome": "Ì",
+          "desc": "(IZ)Z",
+          "tipo_ret": "int",
+          "n_instr": 50,
+          "apis": {},
+          "constantes": [
+            [
+              3,
+              0
+            ],
+            [
+              7,
+              3
+            ],
+            [
+              10,
+              0
+            ],
+            [
+              16,
+              0
+            ],
+            [
+              18,
+              16
+            ],
+            [
+              22,
+              1
+            ],
+            [
+              24,
+              8
+            ],
+            [
+              29,
+              2
+            ],
+            [
+              48,
+              1
+            ]
+          ],
+          "chamadas": [],
+          "fields": [
+            [
+              15,
+              "getfield",
+              "GifDecoder.Ç"
+            ],
+            [
+              21,
+              "getfield",
+              "GifDecoder.Ç"
+            ],
+            [
+              28,
+              "getfield",
+              "GifDecoder.Ç"
+            ],
+            [
+              43,
+              "putfield",
+              "GifDecoder.Î"
+            ],
+            [
+              47,
+              "putfield",
+              "GifDecoder.Ö"
+            ]
+          ]
+        },
+        {
+          "nome": "Í",
+          "desc": "()Z",
+          "tipo_ret": "int",
+          "n_instr": 47,
+          "apis": {},
+          "constantes": [
+            [
+              1,
+              1
+            ],
+            [
+              4,
+              0
+            ],
+            [
+              8,
+              0
+            ],
+            [
+              11,
+              -1
+            ],
+            [
+              21,
+              1
+            ],
+            [
+              25,
+              0
+            ],
+            [
+              27,
+              1
+            ],
+            [
+              33,
+              3
+            ],
+            [
+              38,
+              -1
+            ],
+            [
+              45,
+              1
+            ]
+          ],
+          "chamadas": [],
+          "fields": [
+            [
+              7,
+              "getfield",
+              "GifDecoder.Ç"
+            ],
+            [
+              24,
+              "getfield",
+              "GifDecoder.Ç"
+            ],
+            [
+              32,
+              "getfield",
+              "GifDecoder.Ç"
+            ],
+            [
+              35,
+              "putfield",
+              "GifDecoder.È"
+            ],
+            [
+              39,
+              "putfield",
+              "GifDecoder.È"
+            ]
+          ]
+        },
+        {
+          "nome": "Î",
+          "desc": "()I",
+          "tipo_ret": "int",
+          "n_instr": 21,
+          "apis": {},
+          "constantes": [
+            [
+              1,
+              1
+            ],
+            [
+              4,
+              -1
+            ],
+            [
+              8,
+              0
+            ],
+            [
+              17,
+              -1
+            ]
+          ],
+          "chamadas": [],
+          "fields": [
+            [
+              7,
+              "getfield",
+              "GifDecoder.Ç"
+            ]
+          ]
+        },
+        {
+          "nome": "Ï",
+          "desc": "(I)Z",
+          "tipo_ret": "int",
+          "n_instr": 43,
+          "apis": {},
+          "constantes": [
+            [
+              7,
+              0
+            ],
+            [
+              9,
+              0
+            ],
+            [
+              23,
+              256
+            ],
+            [
+              41,
+              1
+            ]
+          ],
+          "chamadas": [],
+          "fields": [
+            [
+              1,
+              "getfield",
+              "GifDecoder.à"
+            ],
+            [
+              5,
+              "getfield",
+              "GifDecoder.ß"
+            ],
+            [
+              13,
+              "getfield",
+              "GifDecoder.á"
+            ],
+            [
+              15,
+              "getfield",
+              "GifDecoder.à"
+            ],
+            [
+              27,
+              "getfield",
+              "GifDecoder.Ç"
+            ],
+            [
+              37,
+              "getfield",
+              "GifDecoder.à"
+            ],
+            [
+              40,
+              "putfield",
+              "GifDecoder.à"
+            ]
+          ]
+        },
+        {
+          "nome": "Ð",
+          "desc": "(II)I",
+          "tipo_ret": "int",
+          "n_instr": 6,
+          "apis": {},
+          "constantes": [
+            [
+              1,
+              8
+            ]
+          ],
+          "chamadas": [],
+          "fields": []
+        },
+        {
+          "nome": "Ñ",
+          "desc": "(II)Z",
+          "tipo_ret": "int",
+          "n_instr": 9,
+          "apis": {},
+          "constantes": [
+            [
+              5,
+              1
+            ],
+            [
+              7,
+              0
+            ]
+          ],
+          "chamadas": [],
+          "fields": []
+        },
+        {
+          "nome": "<clinit>",
+          "desc": "()V",
+          "tipo_ret": "void",
+          "n_instr": 39,
+          "apis": {},
+          "constantes": [
+            [
+              0,
+              4
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              4,
+              8
+            ],
+            [
+              7,
+              1
+            ],
+            [
+              8,
+              8
+            ],
+            [
+              11,
+              2
+            ],
+            [
+              12,
+              4
+            ],
+            [
+              15,
+              3
+            ],
+            [
+              16,
+              2
+            ],
+            [
+              19,
+              4
+            ],
+            [
+              22,
+              0
+            ],
+            [
+              23,
+              0
+            ],
+            [
+              26,
+              1
+            ],
+            [
+              27,
+              4
+            ],
+            [
+              30,
+              2
+            ],
+            [
+              31,
+              2
+            ],
+            [
+              34,
+              3
+            ],
+            [
+              35,
+              1
+            ]
+          ],
+          "chamadas": [],
+          "fields": [
+            [
+              18,
+              "putstatic",
+              "GifDecoder.Ý"
+            ],
+            [
+              37,
+              "putstatic",
+              "GifDecoder.Þ"
+            ]
+          ]
+        }
+      ],
+      "apis": {
+        "java/lang/Object.<init>": 2,
+        "java/io/InputStream.read": 1,
+        "java/lang/System.arraycopy": 1,
+        "javax/microedition/lcdui/Image.createImage": 1,
+        "javax/microedition/lcdui/Image.getGraphics": 1,
+        "javax/microedition/lcdui/Graphics.setColor": 1,
+        "javax/microedition/lcdui/Graphics.drawLine": 1
+      },
+      "padroes": [
+        "USA_IMAGE"
+      ]
+    },
+    {
+      "arquivo": "Intro.class",
+      "nome": "Intro",
+      "super": "Canvas",
+      "campos": [
+        {
+          "nome": "seq",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "flag",
+          "desc": "Z",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "count",
+          "desc": "I",
+          "tipo_c": "int"
+        }
+      ],
+      "metodos": [
+        {
+          "nome": "<init>",
+          "desc": "()V",
+          "tipo_ret": "void",
+          "n_instr": 9,
+          "apis": {
+            "java/lang/Thread.<init>": 1
+          },
+          "constantes": [
+            [
+              2,
+              1
+            ],
+            [
+              4,
+              1
+            ],
+            [
+              6,
+              0
+            ]
+          ],
+          "chamadas": [
+            [
+              1,
+              "java/lang/Thread.<init>"
+            ]
+          ],
+          "fields": [
+            [
+              3,
+              "putstatic",
+              "Intro.seq"
+            ],
+            [
+              5,
+              "putstatic",
+              "Intro.flag"
+            ],
+            [
+              7,
+              "putstatic",
+              "Intro.count"
+            ]
+          ]
+        },
+        {
+          "nome": "sleep",
+          "desc": "(I)V",
+          "tipo_ret": "void",
+          "n_instr": 6,
+          "apis": {
+            "java/lang/Thread.sleep": 1
+          },
+          "constantes": [],
+          "chamadas": [
+            [
+              2,
+              "java/lang/Thread.sleep"
+            ]
+          ],
+          "fields": []
+        },
+        {
+          "nome": "run",
+          "desc": "()V",
+          "tipo_ret": "void",
+          "n_instr": 43,
+          "apis": {
+            "javax/microedition/lcdui/Canvas.repaint": 3,
+            "javax/microedition/lcdui/Canvas.serviceRepaints": 3,
+            "javax/microedition/lcdui/Displayable.addCommand": 2
+          },
+          "constantes": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              4,
+              0
+            ],
+            [
+              8,
+              1
+            ],
+            [
+              12,
+              6
+            ],
+            [
+              20,
+              500
+            ],
+            [
+              28,
+              500
+            ],
+            [
+              30,
+              0
+            ]
+          ],
+          "chamadas": [
+            [
+              16,
+              "javax/microedition/lcdui/Canvas.repaint"
+            ],
+            [
+              18,
+              "javax/microedition/lcdui/Canvas.serviceRepaints"
+            ],
+            [
+              24,
+              "javax/microedition/lcdui/Canvas.repaint"
+            ],
+            [
+              26,
+              "javax/microedition/lcdui/Canvas.serviceRepaints"
+            ],
+            [
+              34,
+              "javax/microedition/lcdui/Displayable.addCommand"
+            ],
+            [
+              37,
+              "javax/microedition/lcdui/Displayable.addCommand"
+            ],
+            [
+              39,
+              "javax/microedition/lcdui/Canvas.repaint"
+            ],
+            [
+              41,
+              "javax/microedition/lcdui/Canvas.serviceRepaints"
+            ]
+          ],
+          "fields": [
+            [
+              1,
+              "putstatic",
+              "Intro.flag"
+            ],
+            [
+              3,
+              "putstatic",
+              "Intro.seq"
+            ],
+            [
+              5,
+              "putstatic",
+              "Intro.count"
+            ],
+            [
+              7,
+              "getstatic",
+              "Intro.count"
+            ],
+            [
+              10,
+              "putstatic",
+              "Intro.count"
+            ],
+            [
+              11,
+              "getstatic",
+              "Intro.count"
+            ],
+            [
+              15,
+              "getstatic",
+              "msf.mc"
+            ],
+            [
+              17,
+              "getstatic",
+              "msf.mc"
+            ],
+            [
+              23,
+              "getstatic",
+              "msf.mc"
+            ],
+            [
+              25,
+              "getstatic",
+              "msf.mc"
+            ],
+            [
+              31,
+              "putstatic",
+              "Intro.flag"
+            ],
+            [
+              32,
+              "getstatic",
+              "msf.mc"
+            ],
+            [
+              33,
+              "getstatic",
+              "msf.CommandPlay"
+            ],
+            [
+              35,
+              "getstatic",
+              "msf.mc"
+            ],
+            [
+              36,
+              "getstatic",
+              "msf.CommandExit"
+            ],
+            [
+              38,
+              "getstatic",
+              "msf.mc"
+            ],
+            [
+              40,
+              "getstatic",
+              "msf.mc"
+            ]
+          ]
+        }
+      ],
+      "apis": {
+        "java/lang/Thread.<init>": 1,
+        "java/lang/Thread.sleep": 1,
+        "javax/microedition/lcdui/Canvas.repaint": 3,
+        "javax/microedition/lcdui/Canvas.serviceRepaints": 3,
+        "javax/microedition/lcdui/Displayable.addCommand": 2
+      },
+      "padroes": [
+        "CANVAS",
+        "TEM_RUN"
+      ]
+    },
+    {
+      "arquivo": "MapCanvas.class",
+      "nome": "MapCanvas",
+      "super": "Canvas",
+      "campos": [
+        {
+          "nome": "mode",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "CanvasWidth",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "CanvasHeight",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "GameWidth",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "GameHeight",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "G",
+          "desc": "Ljavax/microedition/lcdui/Graphics;",
+          "tipo_c": "Graphics*"
+        },
+        {
+          "nome": "offimage",
+          "desc": "Ljavax/microedition/lcdui/Image;",
+          "tipo_c": "Image*"
+        },
+        {
+          "nome": "offscreen",
+          "desc": "Ljavax/microedition/lcdui/Graphics;",
+          "tipo_c": "Graphics*"
+        },
+        {
+          "nome": "still",
+          "desc": "Z",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "OFFX",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "OFFY",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "lightflag",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "ã",
+          "desc": "Ljavax/microedition/lcdui/Font;",
+          "tipo_c": "Font*"
+        },
+        {
+          "nome": "ä",
+          "desc": "Ljava/lang/String;",
+          "tipo_c": "String*"
+        },
+        {
+          "nome": "å",
+          "desc": "Ljava/lang/String;",
+          "tipo_c": "String*"
+        },
+        {
+          "nome": "æ",
+          "desc": "Ljava/lang/String;",
+          "tipo_c": "String*"
+        },
+        {
+          "nome": "ç",
+          "desc": "Ljavax/microedition/lcdui/Image;",
+          "tipo_c": "Image*"
+        },
+        {
+          "nome": "è",
+          "desc": "Ljavax/microedition/lcdui/Image;",
+          "tipo_c": "Image*"
+        },
+        {
+          "nome": "é",
+          "desc": "Ljavax/microedition/lcdui/Image;",
+          "tipo_c": "Image*"
+        },
+        {
+          "nome": "ê",
+          "desc": "Ljavax/microedition/lcdui/Image;",
+          "tipo_c": "Image*"
+        },
+        {
+          "nome": "ë",
+          "desc": "Ljavax/microedition/lcdui/Image;",
+          "tipo_c": "Image*"
+        },
+        {
+          "nome": "ì",
+          "desc": "Ljavax/microedition/lcdui/Image;",
+          "tipo_c": "Image*"
+        },
+        {
+          "nome": "í",
+          "desc": "Ljavax/microedition/lcdui/Image;",
+          "tipo_c": "Image*"
+        },
+        {
+          "nome": "î",
+          "desc": "LMatrixImage;",
+          "tipo_c": "MatrixImage*"
+        },
+        {
+          "nome": "ï",
+          "desc": "LMatrixImage;",
+          "tipo_c": "MatrixImage*"
+        },
+        {
+          "nome": "ð",
+          "desc": "LMatrixImage;",
+          "tipo_c": "MatrixImage*"
+        },
+        {
+          "nome": "ñ",
+          "desc": "LMatrixImage;",
+          "tipo_c": "MatrixImage*"
+        },
+        {
+          "nome": "ò",
+          "desc": "LMatrixImage;",
+          "tipo_c": "MatrixImage*"
+        },
+        {
+          "nome": "ó",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "ô",
+          "desc": "LMatrixImage;",
+          "tipo_c": "MatrixImage*"
+        },
+        {
+          "nome": "õ",
+          "desc": "LMatrixImage;",
+          "tipo_c": "MatrixImage*"
+        },
+        {
+          "nome": "ö",
+          "desc": "LMatrixImage;",
+          "tipo_c": "MatrixImage*"
+        },
+        {
+          "nome": "ø",
+          "desc": "LMatrixImage;",
+          "tipo_c": "MatrixImage*"
+        },
+        {
+          "nome": "ù",
+          "desc": "LMatrixImage;",
+          "tipo_c": "MatrixImage*"
+        },
+        {
+          "nome": "ú",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "û",
+          "desc": "LMatrixImage;",
+          "tipo_c": "MatrixImage*"
+        },
+        {
+          "nome": "ü",
+          "desc": "Z",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "ý",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "þ",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "ÿ",
+          "desc": "LRole_Ryu;",
+          "tipo_c": "Role_Ryu*"
+        },
+        {
+          "nome": "Ā",
+          "desc": "LRole_Lee;",
+          "tipo_c": "Role_Lee*"
+        },
+        {
+          "nome": "ā",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "Ă",
+          "desc": "I",
+          "tipo_c": "int"
+        }
+      ],
+      "metodos": [
+        {
+          "nome": "<init>",
+          "desc": "()V",
+          "tipo_ret": "void",
+          "n_instr": 21,
+          "apis": {
+            "javax/microedition/lcdui/Canvas.<init>": 1
+          },
+          "constantes": [
+            [
+              15,
+              0
+            ],
+            [
+              18,
+              0
+            ]
+          ],
+          "chamadas": [
+            [
+              1,
+              "javax/microedition/lcdui/Canvas.<init>"
+            ]
+          ],
+          "fields": [
+            [
+              4,
+              "putfield",
+              "MapCanvas.ã"
+            ],
+            [
+              7,
+              "putfield",
+              "MapCanvas.ä"
+            ],
+            [
+              10,
+              "putfield",
+              "MapCanvas.å"
+            ],
+            [
+              13,
+              "putfield",
+              "MapCanvas.æ"
+            ],
+            [
+              16,
+              "putfield",
+              "MapCanvas.ý"
+            ],
+            [
+              19,
+              "putfield",
+              "MapCanvas.þ"
+            ]
+          ]
+        },
+        {
+          "nome": "init",
+          "desc": "()V",
+          "tipo_ret": "void",
+          "n_instr": 251,
+          "apis": {
+            "javax/microedition/lcdui/Canvas.getWidth": 1,
+            "javax/microedition/lcdui/Canvas.getHeight": 1,
+            "javax/microedition/lcdui/Image.createImage": 8,
+            "javax/microedition/lcdui/Image.getGraphics": 7,
+            "javax/microedition/lcdui/Graphics.drawImage": 6,
+            "java/io/PrintStream.println": 1
+          },
+          "constantes": [
+            [
+              0,
+              0
+            ],
+            [
+              16,
+              120
+            ],
+            [
+              18,
+              2
+            ],
+            [
+              22,
+              80
+            ],
+            [
+              24,
+              2
+            ],
+            [
+              31,
+              60
+            ],
+            [
+              32,
+              55
+            ],
+            [
+              41,
+              0
+            ],
+            [
+              42,
+              0
+            ],
+            [
+              43,
+              20
+            ],
+            [
+              46,
+              60
+            ],
+            [
+              47,
+              55
+            ],
+            [
+              56,
+              0
+            ],
+            [
+              57,
+              -55
+            ],
+            [
+              58,
+              20
+            ],
+            [
+              61,
+              60
+            ],
+            [
+              62,
+              55
+            ],
+            [
+              71,
+              0
+            ],
+            [
+              72,
+              -110
+            ],
+            [
+              73,
+              20
+            ]
+          ],
+          "chamadas": [
+            [
+              3,
+              "javax/microedition/lcdui/Canvas.getWidth"
+            ],
+            [
+              6,
+              "javax/microedition/lcdui/Canvas.getHeight"
+            ],
+            [
+              10,
+              "javax/microedition/lcdui/Image.createImage"
+            ],
+            [
+              13,
+              "javax/microedition/lcdui/Image.getGraphics"
+            ],
+            [
+              28,
+              "javax/microedition/lcdui/Image.createImage"
+            ],
+            [
+              33,
+              "javax/microedition/lcdui/Image.createImage"
+            ],
+            [
+              37,
+              "javax/microedition/lcdui/Image.getGraphics"
+            ],
+            [
+              44,
+              "javax/microedition/lcdui/Graphics.drawImage"
+            ],
+            [
+              48,
+              "javax/microedition/lcdui/Image.createImage"
+            ],
+            [
+              52,
+              "javax/microedition/lcdui/Image.getGraphics"
+            ],
+            [
+              59,
+              "javax/microedition/lcdui/Graphics.drawImage"
+            ],
+            [
+              63,
+              "javax/microedition/lcdui/Image.createImage"
+            ],
+            [
+              67,
+              "javax/microedition/lcdui/Image.getGraphics"
+            ],
+            [
+              74,
+              "javax/microedition/lcdui/Graphics.drawImage"
+            ],
+            [
+              78,
+              "javax/microedition/lcdui/Image.createImage"
+            ],
+            [
+              82,
+              "javax/microedition/lcdui/Image.getGraphics"
+            ],
+            [
+              89,
+              "javax/microedition/lcdui/Graphics.drawImage"
+            ],
+            [
+              93,
+              "javax/microedition/lcdui/Image.createImage"
+            ],
+            [
+              97,
+              "javax/microedition/lcdui/Image.getGraphics"
+            ],
+            [
+              104,
+              "javax/microedition/lcdui/Graphics.drawImage"
+            ]
+          ],
+          "fields": [
+            [
+              1,
+              "putstatic",
+              "MapCanvas.mode"
+            ],
+            [
+              4,
+              "putstatic",
+              "MapCanvas.CanvasWidth"
+            ],
+            [
+              7,
+              "putstatic",
+              "MapCanvas.CanvasHeight"
+            ],
+            [
+              8,
+              "getstatic",
+              "MapCanvas.CanvasWidth"
+            ],
+            [
+              9,
+              "getstatic",
+              "MapCanvas.CanvasHeight"
+            ],
+            [
+              11,
+              "putstatic",
+              "MapCanvas.offimage"
+            ],
+            [
+              12,
+              "getstatic",
+              "MapCanvas.offimage"
+            ],
+            [
+              14,
+              "putstatic",
+              "MapCanvas.offscreen"
+            ],
+            [
+              15,
+              "getstatic",
+              "MapCanvas.CanvasWidth"
+            ],
+            [
+              20,
+              "putstatic",
+              "MapCanvas.OFFX"
+            ],
+            [
+              21,
+              "getstatic",
+              "MapCanvas.CanvasHeight"
+            ],
+            [
+              26,
+              "putstatic",
+              "MapCanvas.OFFY"
+            ],
+            [
+              34,
+              "putfield",
+              "MapCanvas.ç"
+            ],
+            [
+              36,
+              "getfield",
+              "MapCanvas.ç"
+            ],
+            [
+              38,
+              "putstatic",
+              "MapCanvas.G"
+            ],
+            [
+              39,
+              "getstatic",
+              "MapCanvas.G"
+            ],
+            [
+              49,
+              "putfield",
+              "MapCanvas.è"
+            ],
+            [
+              51,
+              "getfield",
+              "MapCanvas.è"
+            ],
+            [
+              53,
+              "putstatic",
+              "MapCanvas.G"
+            ],
+            [
+              54,
+              "getstatic",
+              "MapCanvas.G"
+            ]
+          ]
+        },
+        {
+          "nome": "CreateGifMatrixImage",
+          "desc": "(Ljava/lang/String;)LMatrixImage;",
+          "tipo_ret": "MatrixImage*",
+          "n_instr": 24,
+          "apis": {
+            "java/lang/Object.getClass": 1,
+            "java/lang/Class.getResourceAsStream": 1,
+            "java/io/InputStream.close": 1
+          },
+          "constantes": [],
+          "chamadas": [
+            [
+              1,
+              "java/lang/Object.getClass"
+            ],
+            [
+              3,
+              "java/lang/Class.getResourceAsStream"
+            ],
+            [
+              14,
+              "java/io/InputStream.close"
+            ]
+          ],
+          "fields": []
+        },
+        {
+          "nome": "paint",
+          "desc": "(Ljavax/microedition/lcdui/Graphics;)V",
+          "tipo_ret": "void",
+          "n_instr": 400,
+          "apis": {
+            "javax/microedition/lcdui/Graphics.getFont": 1,
+            "javax/microedition/lcdui/Graphics.setColor": 11,
+            "javax/microedition/lcdui/Graphics.fillRect": 6,
+            "javax/microedition/lcdui/Graphics.drawImage": 4,
+            "javax/microedition/lcdui/Font.getHeight": 8,
+            "javax/microedition/lcdui/Graphics.drawString": 5,
+            "javax/microedition/lcdui/Image.createImage": 1,
+            "java/lang/Thread.start": 1,
+            "javax/microedition/lcdui/Graphics.setClip": 1,
+            "javax/microedition/lcdui/Graphics.fillRoundRect": 1,
+            "javax/microedition/lcdui/Font.stringWidth": 1,
+            "javax/microedition/lcdui/Graphics.drawRect": 1
+          },
+          "constantes": [
+            [
+              9,
+              1
+            ],
+            [
+              14,
+              60
+            ],
+            [
+              16,
+              2
+            ],
+            [
+              20,
+              55
+            ],
+            [
+              22,
+              2
+            ],
+            [
+              53,
+              6
+            ],
+            [
+              60,
+              4
+            ],
+            [
+              67,
+              0
+            ],
+            [
+              70,
+              0
+            ],
+            [
+              71,
+              0
+            ],
+            [
+              81,
+              20
+            ],
+            [
+              85,
+              0
+            ],
+            [
+              86,
+              0
+            ],
+            [
+              87,
+              20
+            ],
+            [
+              96,
+              0
+            ],
+            [
+              97,
+              0
+            ],
+            [
+              102,
+              0
+            ],
+            [
+              105,
+              2
+            ],
+            [
+              109,
+              2
+            ],
+            [
+              121,
+              33
+            ]
+          ],
+          "chamadas": [
+            [
+              6,
+              "javax/microedition/lcdui/Graphics.getFont"
+            ],
+            [
+              57,
+              "javax/microedition/lcdui/Graphics.setColor"
+            ],
+            [
+              64,
+              "javax/microedition/lcdui/Graphics.setColor"
+            ],
+            [
+              68,
+              "javax/microedition/lcdui/Graphics.setColor"
+            ],
+            [
+              74,
+              "javax/microedition/lcdui/Graphics.fillRect"
+            ],
+            [
+              82,
+              "javax/microedition/lcdui/Graphics.drawImage"
+            ],
+            [
+              88,
+              "javax/microedition/lcdui/Graphics.drawImage"
+            ],
+            [
+              94,
+              "javax/microedition/lcdui/Graphics.setColor"
+            ],
+            [
+              100,
+              "javax/microedition/lcdui/Graphics.fillRect"
+            ],
+            [
+              103,
+              "javax/microedition/lcdui/Graphics.setColor"
+            ],
+            [
+              113,
+              "javax/microedition/lcdui/Font.getHeight"
+            ],
+            [
+              122,
+              "javax/microedition/lcdui/Graphics.drawString"
+            ],
+            [
+              126,
+              "javax/microedition/lcdui/Font.getHeight"
+            ],
+            [
+              137,
+              "javax/microedition/lcdui/Graphics.drawString"
+            ],
+            [
+              141,
+              "javax/microedition/lcdui/Font.getHeight"
+            ],
+            [
+              152,
+              "javax/microedition/lcdui/Graphics.drawString"
+            ],
+            [
+              177,
+              "javax/microedition/lcdui/Image.createImage"
+            ],
+            [
+              184,
+              "java/lang/Thread.start"
+            ],
+            [
+              190,
+              "javax/microedition/lcdui/Graphics.setClip"
+            ],
+            [
+              193,
+              "javax/microedition/lcdui/Graphics.setColor"
+            ]
+          ],
+          "fields": [
+            [
+              0,
+              "getstatic",
+              "MapCanvas.G"
+            ],
+            [
+              3,
+              "putstatic",
+              "MapCanvas.G"
+            ],
+            [
+              7,
+              "putfield",
+              "MapCanvas.ã"
+            ],
+            [
+              8,
+              "getstatic",
+              "Intro.flag"
+            ],
+            [
+              11,
+              "getstatic",
+              "Intro.seq"
+            ],
+            [
+              13,
+              "getstatic",
+              "MapCanvas.CanvasWidth"
+            ],
+            [
+              19,
+              "getstatic",
+              "MapCanvas.CanvasHeight"
+            ],
+            [
+              27,
+              "getstatic",
+              "Intro.count"
+            ],
+            [
+              30,
+              "getfield",
+              "MapCanvas.ç"
+            ],
+            [
+              34,
+              "getfield",
+              "MapCanvas.è"
+            ],
+            [
+              38,
+              "getfield",
+              "MapCanvas.é"
+            ],
+            [
+              42,
+              "getfield",
+              "MapCanvas.ê"
+            ],
+            [
+              46,
+              "getfield",
+              "MapCanvas.ë"
+            ],
+            [
+              50,
+              "getfield",
+              "MapCanvas.ì"
+            ],
+            [
+              52,
+              "getstatic",
+              "Intro.count"
+            ],
+            [
+              55,
+              "getstatic",
+              "MapCanvas.offscreen"
+            ],
+            [
+              59,
+              "getstatic",
+              "Intro.count"
+            ],
+            [
+              62,
+              "getstatic",
+              "MapCanvas.offscreen"
+            ],
+            [
+              66,
+              "getstatic",
+              "MapCanvas.offscreen"
+            ],
+            [
+              69,
+              "getstatic",
+              "MapCanvas.offscreen"
+            ]
+          ]
+        },
+        {
+          "nome": "keyProc",
+          "desc": "(I)V",
+          "tipo_ret": "void",
+          "n_instr": 43,
+          "apis": {
+            "javax/microedition/lcdui/Canvas.getGameAction": 1,
+            "javax/microedition/lcdui/Canvas.repaint": 1
+          },
+          "constantes": [
+            [
+              3,
+              1
+            ],
+            [
+              11,
+              5
+            ],
+            [
+              17,
+              2
+            ],
+            [
+              23,
+              1
+            ],
+            [
+              29,
+              6
+            ],
+            [
+              35,
+              8
+            ]
+          ],
+          "chamadas": [
+            [
+              8,
+              "javax/microedition/lcdui/Canvas.getGameAction"
+            ],
+            [
+              41,
+              "javax/microedition/lcdui/Canvas.repaint"
+            ]
+          ],
+          "fields": [
+            [
+              2,
+              "getstatic",
+              "MapCanvas.still"
+            ],
+            [
+              14,
+              "getfield",
+              "MapCanvas.ÿ"
+            ],
+            [
+              20,
+              "getfield",
+              "MapCanvas.ÿ"
+            ],
+            [
+              26,
+              "getfield",
+              "MapCanvas.ÿ"
+            ],
+            [
+              32,
+              "getfield",
+              "MapCanvas.ÿ"
+            ],
+            [
+              38,
+              "getfield",
+              "MapCanvas.ÿ"
+            ]
+          ]
+        },
+        {
+          "nome": "keyPressed",
+          "desc": "(I)V",
+          "tipo_ret": "void",
+          "n_instr": 4,
+          "apis": {},
+          "constantes": [],
+          "chamadas": [],
+          "fields": []
+        },
+        {
+          "nome": "keyRepeated",
+          "desc": "(I)V",
+          "tipo_ret": "void",
+          "n_instr": 4,
+          "apis": {},
+          "constantes": [],
+          "chamadas": [],
+          "fields": []
+        },
+        {
+          "nome": "<clinit>",
+          "desc": "()V",
+          "tipo_ret": "void",
+          "n_instr": 11,
+          "apis": {},
+          "constantes": [
+            [
+              0,
+              0
+            ],
+            [
+              8,
+              0
+            ]
+          ],
+          "chamadas": [],
+          "fields": [
+            [
+              1,
+              "putstatic",
+              "MapCanvas.mode"
+            ],
+            [
+              3,
+              "putstatic",
+              "MapCanvas.G"
+            ],
+            [
+              5,
+              "putstatic",
+              "MapCanvas.offimage"
+            ],
+            [
+              7,
+              "putstatic",
+              "MapCanvas.offscreen"
+            ],
+            [
+              9,
+              "putstatic",
+              "MapCanvas.lightflag"
+            ]
+          ]
+        }
+      ],
+      "apis": {
+        "javax/microedition/lcdui/Canvas.<init>": 1,
+        "javax/microedition/lcdui/Canvas.getWidth": 1,
+        "javax/microedition/lcdui/Canvas.getHeight": 1,
+        "javax/microedition/lcdui/Image.createImage": 9,
+        "javax/microedition/lcdui/Image.getGraphics": 7,
+        "javax/microedition/lcdui/Graphics.drawImage": 10,
+        "java/io/PrintStream.println": 1,
+        "java/lang/Object.getClass": 1,
+        "java/lang/Class.getResourceAsStream": 1,
+        "java/io/InputStream.close": 1,
+        "javax/microedition/lcdui/Graphics.getFont": 1,
+        "javax/microedition/lcdui/Graphics.setColor": 11,
+        "javax/microedition/lcdui/Graphics.fillRect": 6,
+        "javax/microedition/lcdui/Font.getHeight": 8,
+        "javax/microedition/lcdui/Graphics.drawString": 5,
+        "java/lang/Thread.start": 1,
+        "javax/microedition/lcdui/Graphics.setClip": 1,
+        "javax/microedition/lcdui/Graphics.fillRoundRect": 1,
+        "javax/microedition/lcdui/Font.stringWidth": 1,
+        "javax/microedition/lcdui/Graphics.drawRect": 1,
+        "javax/microedition/lcdui/Canvas.getGameAction": 1,
+        "javax/microedition/lcdui/Canvas.repaint": 1
+      },
+      "padroes": [
+        "CANVAS",
+        "TEM_PAINT",
+        "TEM_INPUT",
+        "USA_IMAGE"
+      ]
+    },
+    {
+      "arquivo": "MatrixImage.class",
+      "nome": "MatrixImage",
+      "super": "Object",
+      "campos": [
+        {
+          "nome": "width",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "height",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "matrix",
+          "desc": "[[I",
+          "tipo_c": "int**"
+        }
+      ],
+      "metodos": [
+        {
+          "nome": "<init>",
+          "desc": "(II)V",
+          "tipo_ret": "void",
+          "n_instr": 14,
+          "apis": {
+            "java/lang/Object.<init>": 1
+          },
+          "constantes": [],
+          "chamadas": [
+            [
+              1,
+              "java/lang/Object.<init>"
+            ]
+          ],
+          "fields": [
+            [
+              4,
+              "putfield",
+              "MatrixImage.width"
+            ],
+            [
+              7,
+              "putfield",
+              "MatrixImage.height"
+            ],
+            [
+              12,
+              "putfield",
+              "MatrixImage.matrix"
+            ]
+          ]
+        },
+        {
+          "nome": "crop",
+          "desc": "(IIII)LMatrixImage;",
+          "tipo_ret": "MatrixImage*",
+          "n_instr": 38,
+          "apis": {},
+          "constantes": [
+            [
+              6,
+              0
+            ],
+            [
+              9,
+              0
+            ]
+          ],
+          "chamadas": [],
+          "fields": [
+            [
+              13,
+              "getfield",
+              "MatrixImage.matrix"
+            ],
+            [
+              18,
+              "getfield",
+              "MatrixImage.matrix"
+            ]
+          ]
+        },
+        {
+          "nome": "setColor",
+          "desc": "(III)V",
+          "tipo_ret": "void",
+          "n_instr": 8,
+          "apis": {},
+          "constantes": [],
+          "chamadas": [],
+          "fields": [
+            [
+              1,
+              "getfield",
+              "MatrixImage.matrix"
+            ]
+          ]
+        },
+        {
+          "nome": "paint",
+          "desc": "(Ljavax/microedition/lcdui/Graphics;II)V",
+          "tipo_ret": "void",
+          "n_instr": 43,
+          "apis": {
+            "javax/microedition/lcdui/Graphics.setColor": 1,
+            "javax/microedition/lcdui/Graphics.drawRect": 1
+          },
+          "constantes": [
+            [
+              0,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              12,
+              -1
+            ],
+            [
+              29,
+              1
+            ],
+            [
+              30,
+              1
+            ]
+          ],
+          "chamadas": [
+            [
+              21,
+              "javax/microedition/lcdui/Graphics.setColor"
+            ],
+            [
+              31,
+              "javax/microedition/lcdui/Graphics.drawRect"
+            ]
+          ],
+          "fields": [
+            [
+              7,
+              "getfield",
+              "MatrixImage.matrix"
+            ],
+            [
+              16,
+              "getfield",
+              "MatrixImage.matrix"
+            ],
+            [
+              35,
+              "getfield",
+              "MatrixImage.height"
+            ],
+            [
+              40,
+              "getfield",
+              "MatrixImage.width"
+            ]
+          ]
+        }
+      ],
+      "apis": {
+        "java/lang/Object.<init>": 1,
+        "javax/microedition/lcdui/Graphics.setColor": 1,
+        "javax/microedition/lcdui/Graphics.drawRect": 1
+      },
+      "padroes": [
+        "TEM_PAINT"
+      ]
+    },
+    {
+      "arquivo": "Role_Lee.class",
+      "nome": "Role_Lee",
+      "super": "Object",
+      "campos": [
+        {
+          "nome": "x",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "y",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "status",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "ă",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "Ą",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "ą",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "count",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "Ć",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "ć",
+          "desc": "Z",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "Ĉ",
+          "desc": "Ljavax/microedition/lcdui/Image;",
+          "tipo_c": "Image*"
+        },
+        {
+          "nome": "ĉ",
+          "desc": "Ljavax/microedition/lcdui/Graphics;",
+          "tipo_c": "Graphics*"
+        }
+      ],
+      "metodos": [
+        {
+          "nome": "<init>",
+          "desc": "()V",
+          "tipo_ret": "void",
+          "n_instr": 27,
+          "apis": {
+            "java/lang/Object.<init>": 1,
+            "javax/microedition/lcdui/Image.createImage": 1,
+            "javax/microedition/lcdui/Image.getGraphics": 1
+          },
+          "constantes": [
+            [
+              3,
+              0
+            ],
+            [
+              6,
+              0
+            ],
+            [
+              9,
+              0
+            ],
+            [
+              12,
+              0
+            ],
+            [
+              17,
+              16
+            ],
+            [
+              18,
+              35
+            ]
+          ],
+          "chamadas": [
+            [
+              1,
+              "java/lang/Object.<init>"
+            ],
+            [
+              19,
+              "javax/microedition/lcdui/Image.createImage"
+            ],
+            [
+              24,
+              "javax/microedition/lcdui/Image.getGraphics"
+            ]
+          ],
+          "fields": [
+            [
+              4,
+              "putfield",
+              "Role_Lee.status"
+            ],
+            [
+              7,
+              "putfield",
+              "Role_Lee.ą"
+            ],
+            [
+              10,
+              "putfield",
+              "Role_Lee.count"
+            ],
+            [
+              13,
+              "putfield",
+              "Role_Lee.Ć"
+            ],
+            [
+              20,
+              "putfield",
+              "Role_Lee.Ĉ"
+            ],
+            [
+              23,
+              "getfield",
+              "Role_Lee.Ĉ"
+            ],
+            [
+              25,
+              "putfield",
+              "Role_Lee.ĉ"
+            ]
+          ]
+        },
+        {
+          "nome": "reset",
+          "desc": "()V",
+          "tipo_ret": "void",
+          "n_instr": 25,
+          "apis": {},
+          "constantes": [
+            [
+              2,
+              20
+            ],
+            [
+              7,
+              44
+            ],
+            [
+              11,
+              0
+            ],
+            [
+              14,
+              0
+            ],
+            [
+              18,
+              16
+            ],
+            [
+              22,
+              1
+            ]
+          ],
+          "chamadas": [],
+          "fields": [
+            [
+              1,
+              "getstatic",
+              "MapCanvas.CanvasWidth"
+            ],
+            [
+              4,
+              "putfield",
+              "Role_Lee.x"
+            ],
+            [
+              6,
+              "getstatic",
+              "MapCanvas.OFFY"
+            ],
+            [
+              9,
+              "putfield",
+              "Role_Lee.y"
+            ],
+            [
+              12,
+              "putfield",
+              "Role_Lee.status"
+            ],
+            [
+              15,
+              "putfield",
+              "Role_Lee.ă"
+            ],
+            [
+              17,
+              "getstatic",
+              "MapCanvas.CanvasWidth"
+            ],
+            [
+              20,
+              "putfield",
+              "Role_Lee.Ą"
+            ],
+            [
+              23,
+              "putfield",
+              "Role_Lee.ć"
+            ]
+          ]
+        },
+        {
+          "nome": "forward",
+          "desc": "()V",
+          "tipo_ret": "void",
+          "n_instr": 29,
+          "apis": {},
+          "constantes": [
+            [
+              4,
+              16
+            ],
+            [
+              9,
+              2
+            ],
+            [
+              17,
+              2
+            ],
+            [
+              26,
+              1
+            ]
+          ],
+          "chamadas": [],
+          "fields": [
+            [
+              1,
+              "getstatic",
+              "msf.mc"
+            ],
+            [
+              2,
+              "getfield",
+              "MapCanvas.ÿ"
+            ],
+            [
+              3,
+              "getfield",
+              "Role_Ryu.x"
+            ],
+            [
+              6,
+              "putfield",
+              "Role_Lee.ă"
+            ],
+            [
+              8,
+              "getfield",
+              "Role_Lee.x"
+            ],
+            [
+              12,
+              "getfield",
+              "Role_Lee.ă"
+            ],
+            [
+              16,
+              "getfield",
+              "Role_Lee.x"
+            ],
+            [
+              19,
+              "putfield",
+              "Role_Lee.x"
+            ],
+            [
+              23,
+              "getfield",
+              "Role_Lee.ă"
+            ],
+            [
+              24,
+              "putfield",
+              "Role_Lee.x"
+            ],
+            [
+              27,
+              "putfield",
+              "Role_Lee.ć"
+            ]
+          ]
+        },
+        {
+          "nome": "backward",
+          "desc": "()V",
+          "tipo_ret": "void",
+          "n_instr": 22,
+          "apis": {},
+          "constantes": [
+            [
+              2,
+              2
+            ],
+            [
+              10,
+              2
+            ],
+            [
+              19,
+              1
+            ]
+          ],
+          "chamadas": [],
+          "fields": [
+            [
+              1,
+              "getfield",
+              "Role_Lee.x"
+            ],
+            [
+              5,
+              "getfield",
+              "Role_Lee.Ą"
+            ],
+            [
+              9,
+              "getfield",
+              "Role_Lee.x"
+            ],
+            [
+              12,
+              "putfield",
+              "Role_Lee.x"
+            ],
+            [
+              16,
+              "getfield",
+              "Role_Lee.Ą"
+            ],
+            [
+              17,
+              "putfield",
+              "Role_Lee.x"
+            ],
+            [
+              20,
+              "putfield",
+              "Role_Lee.ć"
+            ]
+          ]
+        },
+        {
+          "nome": "punch",
+          "desc": "()V",
+          "tipo_ret": "void",
+          "n_instr": 47,
+          "apis": {},
+          "constantes": [
+            [
+              5,
+              3
+            ],
+            [
+              8,
+              1
+            ],
+            [
+              11,
+              1
+            ],
+            [
+              20,
+              18
+            ],
+            [
+              26,
+              2
+            ],
+            [
+              35,
+              1
+            ],
+            [
+              43,
+              5
+            ]
+          ],
+          "chamadas": [],
+          "fields": [
+            [
+              1,
+              "getfield",
+              "Role_Lee.status"
+            ],
+            [
+              6,
+              "putfield",
+              "Role_Lee.count"
+            ],
+            [
+              9,
+              "putfield",
+              "Role_Lee.status"
+            ],
+            [
+              12,
+              "putfield",
+              "Role_Lee.ć"
+            ],
+            [
+              13,
+              "getstatic",
+              "msf.mc"
+            ],
+            [
+              14,
+              "getfield",
+              "MapCanvas.Ā"
+            ],
+            [
+              15,
+              "getfield",
+              "Role_Lee.x"
+            ],
+            [
+              16,
+              "getstatic",
+              "msf.mc"
+            ],
+            [
+              17,
+              "getfield",
+              "MapCanvas.ÿ"
+            ],
+            [
+              18,
+              "getfield",
+              "Role_Ryu.x"
+            ],
+            [
+              22,
+              "getstatic",
+              "msf.mc"
+            ],
+            [
+              23,
+              "getstatic",
+              "msf.mc"
+            ],
+            [
+              24,
+              "getfield",
+              "MapCanvas.ÿ"
+            ],
+            [
+              25,
+              "getfield",
+              "Role_Ryu.x"
+            ],
+            [
+              28,
+              "putfield",
+              "MapCanvas.ý"
+            ],
+            [
+              29,
+              "getstatic",
+              "msf.mc"
+            ],
+            [
+              30,
+              "getstatic",
+              "msf.mc"
+            ],
+            [
+              31,
+              "getfield",
+              "MapCanvas.ÿ"
+            ],
+            [
+              32,
+              "getfield",
+              "Role_Ryu.y"
+            ],
+            [
+              33,
+              "putfield",
+              "MapCanvas.þ"
+            ]
+          ]
+        },
+        {
+          "nome": "kick",
+          "desc": "()V",
+          "tipo_ret": "void",
+          "n_instr": 47,
+          "apis": {},
+          "constantes": [
+            [
+              5,
+              3
+            ],
+            [
+              8,
+              2
+            ],
+            [
+              11,
+              1
+            ],
+            [
+              20,
+              20
+            ],
+            [
+              26,
+              2
+            ],
+            [
+              35,
+              1
+            ],
+            [
+              43,
+              10
+            ]
+          ],
+          "chamadas": [],
+          "fields": [
+            [
+              1,
+              "getfield",
+              "Role_Lee.status"
+            ],
+            [
+              6,
+              "putfield",
+              "Role_Lee.count"
+            ],
+            [
+              9,
+              "putfield",
+              "Role_Lee.status"
+            ],
+            [
+              12,
+              "putfield",
+              "Role_Lee.ć"
+            ],
+            [
+              13,
+              "getstatic",
+              "msf.mc"
+            ],
+            [
+              14,
+              "getfield",
+              "MapCanvas.Ā"
+            ],
+            [
+              15,
+              "getfield",
+              "Role_Lee.x"
+            ],
+            [
+              16,
+              "getstatic",
+              "msf.mc"
+            ],
+            [
+              17,
+              "getfield",
+              "MapCanvas.ÿ"
+            ],
+            [
+              18,
+              "getfield",
+              "Role_Ryu.x"
+            ],
+            [
+              22,
+              "getstatic",
+              "msf.mc"
+            ],
+            [
+              23,
+              "getstatic",
+              "msf.mc"
+            ],
+            [
+              24,
+              "getfield",
+              "MapCanvas.ÿ"
+            ],
+            [
+              25,
+              "getfield",
+              "Role_Ryu.x"
+            ],
+            [
+              28,
+              "putfield",
+              "MapCanvas.ý"
+            ],
+            [
+              29,
+              "getstatic",
+              "msf.mc"
+            ],
+            [
+              30,
+              "getstatic",
+              "msf.mc"
+            ],
+            [
+              31,
+              "getfield",
+              "MapCanvas.ÿ"
+            ],
+            [
+              32,
+              "getfield",
+              "Role_Ryu.y"
+            ],
+            [
+              33,
+              "putfield",
+              "MapCanvas.þ"
+            ]
+          ]
+        },
+        {
+          "nome": "fire",
+          "desc": "()V",
+          "tipo_ret": "void",
+          "n_instr": 29,
+          "apis": {},
+          "constantes": [
+            [
+              15,
+              42
+            ],
+            [
+              23,
+              3
+            ],
+            [
+              26,
+              1
+            ]
+          ],
+          "chamadas": [],
+          "fields": [
+            [
+              1,
+              "getfield",
+              "Role_Lee.status"
+            ],
+            [
+              4,
+              "getstatic",
+              "msf.mc"
+            ],
+            [
+              5,
+              "getfield",
+              "MapCanvas.ú"
+            ],
+            [
+              8,
+              "getstatic",
+              "msf.mc"
+            ],
+            [
+              9,
+              "getfield",
+              "MapCanvas.Ā"
+            ],
+            [
+              10,
+              "getfield",
+              "Role_Lee.x"
+            ],
+            [
+              11,
+              "getstatic",
+              "msf.mc"
+            ],
+            [
+              12,
+              "getfield",
+              "MapCanvas.ÿ"
+            ],
+            [
+              13,
+              "getfield",
+              "Role_Ryu.x"
+            ],
+            [
+              18,
+              "getstatic",
+              "msf.mc"
+            ],
+            [
+              20,
+              "getfield",
+              "Role_Lee.x"
+            ],
+            [
+              21,
+              "putfield",
+              "MapCanvas.ú"
+            ],
+            [
+              24,
+              "putfield",
+              "Role_Lee.status"
+            ],
+            [
+              27,
+              "putfield",
+              "Role_Lee.ć"
+            ]
+          ]
+        },
+        {
+          "nome": "paint",
+          "desc": "(Ljavax/microedition/lcdui/Graphics;)V",
+          "tipo_ret": "void",
+          "n_instr": 162,
+          "apis": {
+            "javax/microedition/lcdui/Graphics.drawImage": 2
+          },
+          "constantes": [
+            [
+              4,
+              300
+            ],
+            [
+              6,
+              150
+            ],
+            [
+              11,
+              1
+            ],
+            [
+              15,
+              1
+            ],
+            [
+              19,
+              1
+            ],
+            [
+              22,
+              0
+            ],
+            [
+              53,
+              20
+            ],
+            [
+              69,
+              20
+            ],
+            [
+              73,
+              1
+            ],
+            [
+              86,
+              1
+            ],
+            [
+              93,
+              0
+            ],
+            [
+              97,
+              2
+            ],
+            [
+              110,
+              1
+            ],
+            [
+              117,
+              0
+            ],
+            [
+              121,
+              3
+            ],
+            [
+              133,
+              1
+            ],
+            [
+              138,
+              1
+            ],
+            [
+              159,
+              0
+            ]
+          ],
+          "chamadas": [
+            [
+              54,
+              "javax/microedition/lcdui/Graphics.drawImage"
+            ],
+            [
+              70,
+              "javax/microedition/lcdui/Graphics.drawImage"
+            ]
+          ],
+          "fields": [
+            [
+              1,
+              "getfield",
+              "Role_Lee.status"
+            ],
+            [
+              3,
+              "getstatic",
+              "Game.count"
+            ],
+            [
+              10,
+              "getfield",
+              "Role_Lee.ą"
+            ],
+            [
+              13,
+              "putfield",
+              "Role_Lee.ą"
+            ],
+            [
+              16,
+              "putfield",
+              "Role_Lee.ć"
+            ],
+            [
+              18,
+              "getfield",
+              "Role_Lee.ć"
+            ],
+            [
+              23,
+              "putfield",
+              "Role_Lee.ć"
+            ],
+            [
+              24,
+              "getstatic",
+              "msf.mc"
+            ],
+            [
+              25,
+              "getfield",
+              "MapCanvas.ô"
+            ],
+            [
+              28,
+              "getfield",
+              "Role_Lee.x"
+            ],
+            [
+              30,
+              "getfield",
+              "Role_Lee.ą"
+            ],
+            [
+              33,
+              "getfield",
+              "Role_Lee.y"
+            ],
+            [
+              35,
+              "getfield",
+              "Role_Lee.ą"
+            ],
+            [
+              39,
+              "getfield",
+              "Role_Lee.ĉ"
+            ],
+            [
+              40,
+              "getstatic",
+              "MapCanvas.offimage"
+            ],
+            [
+              42,
+              "getfield",
+              "Role_Lee.x"
+            ],
+            [
+              45,
+              "getfield",
+              "Role_Lee.ą"
+            ],
+            [
+              48,
+              "getfield",
+              "Role_Lee.y"
+            ],
+            [
+              51,
+              "getfield",
+              "Role_Lee.ą"
+            ],
+            [
+              58,
+              "getfield",
+              "Role_Lee.Ĉ"
+            ]
+          ]
+        }
+      ],
+      "apis": {
+        "java/lang/Object.<init>": 1,
+        "javax/microedition/lcdui/Image.createImage": 1,
+        "javax/microedition/lcdui/Image.getGraphics": 1,
+        "javax/microedition/lcdui/Graphics.drawImage": 2
+      },
+      "padroes": [
+        "TEM_PAINT",
+        "USA_IMAGE"
+      ]
+    },
+    {
+      "arquivo": "Role_Ryu.class",
+      "nome": "Role_Ryu",
+      "super": "Object",
+      "campos": [
+        {
+          "nome": "x",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "y",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "status",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "ă",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "Ą",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "ą",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "count",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "Ċ",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "ċ",
+          "desc": "I",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "ć",
+          "desc": "Z",
+          "tipo_c": "int"
+        },
+        {
+          "nome": "Ĉ",
+          "desc": "Ljavax/microedition/lcdui/Image;",
+          "tipo_c": "Image*"
+        },
+        {
+          "nome": "ĉ",
+          "desc": "Ljavax/microedition/lcdui/Graphics;",
+          "tipo_c": "Graphics*"
+        }
+      ],
+      "metodos": [
+        {
+          "nome": "<init>",
+          "desc": "()V",
+          "tipo_ret": "void",
+          "n_instr": 30,
+          "apis": {
+            "java/lang/Object.<init>": 1,
+            "javax/microedition/lcdui/Image.createImage": 1,
+            "javax/microedition/lcdui/Image.getGraphics": 1
+          },
+          "constantes": [
+            [
+              3,
+              0
+            ],
+            [
+              6,
+              0
+            ],
+            [
+              9,
+              0
+            ],
+            [
+              12,
+              0
+            ],
+            [
+              15,
+              0
+            ],
+            [
+              20,
+              19
+            ],
+            [
+              21,
+              41
+            ]
+          ],
+          "chamadas": [
+            [
+              1,
+              "java/lang/Object.<init>"
+            ],
+            [
+              22,
+              "javax/microedition/lcdui/Image.createImage"
+            ],
+            [
+              27,
+              "javax/microedition/lcdui/Image.getGraphics"
+            ]
+          ],
+          "fields": [
+            [
+              4,
+              "putfield",
+              "Role_Ryu.status"
+            ],
+            [
+              7,
+              "putfield",
+              "Role_Ryu.ą"
+            ],
+            [
+              10,
+              "putfield",
+              "Role_Ryu.count"
+            ],
+            [
+              13,
+              "putfield",
+              "Role_Ryu.Ċ"
+            ],
+            [
+              16,
+              "putfield",
+              "Role_Ryu.ċ"
+            ],
+            [
+              23,
+              "putfield",
+              "Role_Ryu.Ĉ"
+            ],
+            [
+              26,
+              "getfield",
+              "Role_Ryu.Ĉ"
+            ],
+            [
+              28,
+              "putfield",
+              "Role_Ryu.ĉ"
+            ]
+          ]
+        },
+        {
+          "nome": "reset",
+          "desc": "()V",
+          "tipo_ret": "void",
+          "n_instr": 23,
+          "apis": {},
+          "constantes": [
+            [
+              1,
+              4
+            ],
+            [
+              5,
+              39
+            ],
+            [
+              9,
+              0
+            ],
+            [
+              12,
+              0
+            ],
+            [
+              16,
+              16
+            ],
+            [
+              20,
+              1
+            ]
+          ],
+          "chamadas": [],
+          "fields": [
+            [
+              2,
+              "putfield",
+              "Role_Ryu.x"
+            ],
+            [
+              4,
+              "getstatic",
+              "MapCanvas.OFFY"
+            ],
+            [
+              7,
+              "putfield",
+              "Role_Ryu.y"
+            ],
+            [
+              10,
+              "putfield",
+              "Role_Ryu.status"
+            ],
+            [
+              13,
+              "putfield",
+              "Role_Ryu.ă"
+            ],
+            [
+              15,
+              "getstatic",
+              "MapCanvas.CanvasWidth"
+            ],
+            [
+              18,
+              "putfield",
+              "Role_Ryu.Ą"
+            ],
+            [
+              21,
+              "putfield",
+              "Role_Ryu.ć"
+            ]
+          ]
+        },
+        {
+          "nome": "forward",
+          "desc": "()V",
+          "tipo_ret": "void",
+          "n_instr": 51,
+          "apis": {},
+          "constantes": [
+            [
+              3,
+              1
+            ],
+            [
+              9,
+              5
+            ],
+            [
+              17,
+              61
+            ],
+            [
+              26,
+              16
+            ],
+            [
+              31,
+              2
+            ],
+            [
+              39,
+              2
+            ],
+            [
+              48,
+              1
+            ]
+          ],
+          "chamadas": [],
+          "fields": [
+            [
+              2,
+              "getfield",
+              "Role_Ryu.ċ"
+            ],
+            [
+              5,
+              "putfield",
+              "Role_Ryu.ċ"
+            ],
+            [
+              8,
+              "getfield",
+              "Role_Ryu.Ċ"
+            ],
+            [
+              11,
+              "getfield",
+              "Role_Ryu.ċ"
+            ],
+            [
+              14,
+              "putfield",
+              "Role_Ryu.Ċ"
+            ],
+            [
+              16,
+              "getfield",
+              "Role_Ryu.Ċ"
+            ],
+            [
+              23,
+              "getstatic",
+              "msf.mc"
+            ],
+            [
+              24,
+              "getfield",
+              "MapCanvas.Ā"
+            ],
+            [
+              25,
+              "getfield",
+              "Role_Lee.x"
+            ],
+            [
+              28,
+              "putfield",
+              "Role_Ryu.Ą"
+            ],
+            [
+              30,
+              "getfield",
+              "Role_Ryu.x"
+            ],
+            [
+              34,
+              "getfield",
+              "Role_Ryu.Ą"
+            ],
+            [
+              38,
+              "getfield",
+              "Role_Ryu.x"
+            ],
+            [
+              41,
+              "putfield",
+              "Role_Ryu.x"
+            ],
+            [
+              45,
+              "getfield",
+              "Role_Ryu.Ą"
+            ],
+            [
+              46,
+              "putfield",
+              "Role_Ryu.x"
+            ],
+            [
+              49,
+              "putfield",
+              "Role_Ryu.ć"
+            ]
+          ]
+        },
+        {
+          "nome": "backward",
+          "desc": "()V",
+          "tipo_ret": "void",
+          "n_instr": 37,
+          "apis": {},
+          "constantes": [
+            [
+              3,
+              1
+            ],
+            [
+              9,
+              6
+            ],
+            [
+              17,
+              2
+            ],
+            [
+              25,
+              2
+            ],
+            [
+              34,
+              1
+            ]
+          ],
+          "chamadas": [],
+          "fields": [
+            [
+              2,
+              "getfield",
+              "Role_Ryu.ċ"
+            ],
+            [
+              5,
+              "putfield",
+              "Role_Ryu.ċ"
+            ],
+            [
+              8,
+              "getfield",
+              "Role_Ryu.Ċ"
+            ],
+            [
+              11,
+              "getfield",
+              "Role_Ryu.ċ"
+            ],
+            [
+              14,
+              "putfield",
+              "Role_Ryu.Ċ"
+            ],
+            [
+              16,
+              "getfield",
+              "Role_Ryu.x"
+            ],
+            [
+              20,
+              "getfield",
+              "Role_Ryu.ă"
+            ],
+            [
+              24,
+              "getfield",
+              "Role_Ryu.x"
+            ],
+            [
+              27,
+              "putfield",
+              "Role_Ryu.x"
+            ],
+            [
+              31,
+              "getfield",
+              "Role_Ryu.ă"
+            ],
+            [
+              32,
+              "putfield",
+              "Role_Ryu.x"
+            ],
+            [
+              35,
+              "putfield",
+              "Role_Ryu.ć"
+            ]
+          ]
+        },
+        {
+          "nome": "punch",
+          "desc": "()V",
+          "tipo_ret": "void",
+          "n_instr": 62,
+          "apis": {},
+          "constantes": [
+            [
+              3,
+              1
+            ],
+            [
+              9,
+              7
+            ],
+            [
+              20,
+              3
+            ],
+            [
+              23,
+              1
+            ],
+            [
+              26,
+              1
+            ],
+            [
+              35,
+              18
+            ],
+            [
+              41,
+              2
+            ],
+            [
+              50,
+              1
+            ],
+            [
+              58,
+              5
+            ]
+          ],
+          "chamadas": [],
+          "fields": [
+            [
+              2,
+              "getfield",
+              "Role_Ryu.ċ"
+            ],
+            [
+              5,
+              "putfield",
+              "Role_Ryu.ċ"
+            ],
+            [
+              8,
+              "getfield",
+              "Role_Ryu.Ċ"
+            ],
+            [
+              11,
+              "getfield",
+              "Role_Ryu.ċ"
+            ],
+            [
+              14,
+              "putfield",
+              "Role_Ryu.Ċ"
+            ],
+            [
+              16,
+              "getfield",
+              "Role_Ryu.status"
+            ],
+            [
+              21,
+              "putfield",
+              "Role_Ryu.count"
+            ],
+            [
+              24,
+              "putfield",
+              "Role_Ryu.status"
+            ],
+            [
+              27,
+              "putfield",
+              "Role_Ryu.ć"
+            ],
+            [
+              28,
+              "getstatic",
+              "msf.mc"
+            ],
+            [
+              29,
+              "getfield",
+              "MapCanvas.Ā"
+            ],
+            [
+              30,
+              "getfield",
+              "Role_Lee.x"
+            ],
+            [
+              31,
+              "getstatic",
+              "msf.mc"
+            ],
+            [
+              32,
+              "getfield",
+              "MapCanvas.ÿ"
+            ],
+            [
+              33,
+              "getfield",
+              "Role_Ryu.x"
+            ],
+            [
+              37,
+              "getstatic",
+              "msf.mc"
+            ],
+            [
+              38,
+              "getstatic",
+              "msf.mc"
+            ],
+            [
+              39,
+              "getfield",
+              "MapCanvas.Ā"
+            ],
+            [
+              40,
+              "getfield",
+              "Role_Lee.x"
+            ],
+            [
+              43,
+              "putfield",
+              "MapCanvas.ý"
+            ]
+          ]
+        },
+        {
+          "nome": "kick",
+          "desc": "()V",
+          "tipo_ret": "void",
+          "n_instr": 62,
+          "apis": {},
+          "constantes": [
+            [
+              3,
+              1
+            ],
+            [
+              9,
+              8
+            ],
+            [
+              20,
+              3
+            ],
+            [
+              23,
+              2
+            ],
+            [
+              26,
+              1
+            ],
+            [
+              35,
+              20
+            ],
+            [
+              41,
+              2
+            ],
+            [
+              50,
+              1
+            ],
+            [
+              58,
+              5
+            ]
+          ],
+          "chamadas": [],
+          "fields": [
+            [
+              2,
+              "getfield",
+              "Role_Ryu.ċ"
+            ],
+            [
+              5,
+              "putfield",
+              "Role_Ryu.ċ"
+            ],
+            [
+              8,
+              "getfield",
+              "Role_Ryu.Ċ"
+            ],
+            [
+              11,
+              "getfield",
+              "Role_Ryu.ċ"
+            ],
+            [
+              14,
+              "putfield",
+              "Role_Ryu.Ċ"
+            ],
+            [
+              16,
+              "getfield",
+              "Role_Ryu.status"
+            ],
+            [
+              21,
+              "putfield",
+              "Role_Ryu.count"
+            ],
+            [
+              24,
+              "putfield",
+              "Role_Ryu.status"
+            ],
+            [
+              27,
+              "putfield",
+              "Role_Ryu.ć"
+            ],
+            [
+              28,
+              "getstatic",
+              "msf.mc"
+            ],
+            [
+              29,
+              "getfield",
+              "MapCanvas.Ā"
+            ],
+            [
+              30,
+              "getfield",
+              "Role_Lee.x"
+            ],
+            [
+              31,
+              "getstatic",
+              "msf.mc"
+            ],
+            [
+              32,
+              "getfield",
+              "MapCanvas.ÿ"
+            ],
+            [
+              33,
+              "getfield",
+              "Role_Ryu.x"
+            ],
+            [
+              37,
+              "getstatic",
+              "msf.mc"
+            ],
+            [
+              38,
+              "getstatic",
+              "msf.mc"
+            ],
+            [
+              39,
+              "getfield",
+              "MapCanvas.Ā"
+            ],
+            [
+              40,
+              "getfield",
+              "Role_Lee.x"
+            ],
+            [
+              43,
+              "putfield",
+              "MapCanvas.ý"
+            ]
+          ]
+        },
+        {
+          "nome": "fire",
+          "desc": "()V",
+          "tipo_ret": "void",
+          "n_instr": 34,
+          "apis": {},
+          "constantes": [
+            [
+              15,
+              42
+            ],
+            [
+              21,
+              33
+            ],
+            [
+              25,
+              3
+            ],
+            [
+              28,
+              3
+            ],
+            [
+              31,
+              1
+            ]
+          ],
+          "chamadas": [],
+          "fields": [
+            [
+              1,
+              "getfield",
+              "Role_Ryu.status"
+            ],
+            [
+              4,
+              "getstatic",
+              "msf.mc"
+            ],
+            [
+              5,
+              "getfield",
+              "MapCanvas.ó"
+            ],
+            [
+              8,
+              "getstatic",
+              "msf.mc"
+            ],
+            [
+              9,
+              "getfield",
+              "MapCanvas.Ā"
+            ],
+            [
+              10,
+              "getfield",
+              "Role_Lee.x"
+            ],
+            [
+              11,
+              "getstatic",
+              "msf.mc"
+            ],
+            [
+              12,
+              "getfield",
+              "MapCanvas.ÿ"
+            ],
+            [
+              13,
+              "getfield",
+              "Role_Ryu.x"
+            ],
+            [
+              18,
+              "getstatic",
+              "msf.mc"
+            ],
+            [
+              20,
+              "getfield",
+              "Role_Ryu.x"
+            ],
+            [
+              23,
+              "putfield",
+              "MapCanvas.ó"
+            ],
+            [
+              26,
+              "putfield",
+              "Role_Ryu.count"
+            ],
+            [
+              29,
+              "putfield",
+              "Role_Ryu.status"
+            ],
+            [
+              32,
+              "putfield",
+              "Role_Ryu.ć"
+            ]
+          ]
+        },
+        {
+          "nome": "paint",
+          "desc": "(Ljavax/microedition/lcdui/Graphics;)V",
+          "tipo_ret": "void",
+          "n_instr": 145,
+          "apis": {
+            "javax/microedition/lcdui/Graphics.drawImage": 2
+          },
+          "constantes": [
+            [
+              4,
+              300
+            ],
+            [
+              10,
+              1
+            ],
+            [
+              14,
+              1
+            ],
+            [
+              18,
+              1
+            ],
+            [
+              21,
+              0
+            ],
+            [
+              52,
+              20
+            ],
+            [
+              68,
+              20
+            ],
+            [
+              72,
+              1
+            ],
+            [
+              85,
+              1
+            ],
+            [
+              92,
+              0
+            ],
+            [
+              96,
+              2
+            ],
+            [
+              109,
+              1
+            ],
+            [
+              116,
+              0
+            ],
+            [
+              120,
+              3
+            ],
+            [
+              129,
+              6
+            ],
+            [
+              135,
+              1
+            ],
+            [
+              142,
+              0
+            ]
+          ],
+          "chamadas": [
+            [
+              53,
+              "javax/microedition/lcdui/Graphics.drawImage"
+            ],
+            [
+              69,
+              "javax/microedition/lcdui/Graphics.drawImage"
+            ]
+          ],
+          "fields": [
+            [
+              1,
+              "getfield",
+              "Role_Ryu.status"
+            ],
+            [
+              3,
+              "getstatic",
+              "Game.count"
+            ],
+            [
+              9,
+              "getfield",
+              "Role_Ryu.ą"
+            ],
+            [
+              12,
+              "putfield",
+              "Role_Ryu.ą"
+            ],
+            [
+              15,
+              "putfield",
+              "Role_Ryu.ć"
+            ],
+            [
+              17,
+              "getfield",
+              "Role_Ryu.ć"
+            ],
+            [
+              22,
+              "putfield",
+              "Role_Ryu.ć"
+            ],
+            [
+              23,
+              "getstatic",
+              "msf.mc"
+            ],
+            [
+              24,
+              "getfield",
+              "MapCanvas.î"
+            ],
+            [
+              27,
+              "getfield",
+              "Role_Ryu.x"
+            ],
+            [
+              29,
+              "getfield",
+              "Role_Ryu.ą"
+            ],
+            [
+              32,
+              "getfield",
+              "Role_Ryu.y"
+            ],
+            [
+              34,
+              "getfield",
+              "Role_Ryu.ą"
+            ],
+            [
+              38,
+              "getfield",
+              "Role_Ryu.ĉ"
+            ],
+            [
+              39,
+              "getstatic",
+              "MapCanvas.offimage"
+            ],
+            [
+              41,
+              "getfield",
+              "Role_Ryu.x"
+            ],
+            [
+              44,
+              "getfield",
+              "Role_Ryu.ą"
+            ],
+            [
+              47,
+              "getfield",
+              "Role_Ryu.y"
+            ],
+            [
+              50,
+              "getfield",
+              "Role_Ryu.ą"
+            ],
+            [
+              57,
+              "getfield",
+              "Role_Ryu.Ĉ"
+            ]
+          ]
+        }
+      ],
+      "apis": {
+        "java/lang/Object.<init>": 1,
+        "javax/microedition/lcdui/Image.createImage": 1,
+        "javax/microedition/lcdui/Image.getGraphics": 1,
+        "javax/microedition/lcdui/Graphics.drawImage": 2
+      },
+      "padroes": [
+        "TEM_PAINT",
+        "USA_IMAGE"
+      ]
+    },
+    {
+      "arquivo": "msf.class",
+      "nome": "msf",
+      "super": "MIDlet",
+      "campos": [
+        {
+          "nome": "display",
+          "desc": "Ljavax/microedition/lcdui/Display;",
+          "tipo_c": "Display*"
+        },
+        {
+          "nome": "mc",
+          "desc": "LMapCanvas;",
+          "tipo_c": "MapCanvas*"
+        },
+        {
+          "nome": "CommandPlay",
+          "desc": "Ljavax/microedition/lcdui/Command;",
+          "tipo_c": "Command*"
+        },
+        {
+          "nome": "CommandExit",
+          "desc": "Ljavax/microedition/lcdui/Command;",
+          "tipo_c": "Command*"
+        }
+      ],
+      "metodos": [
+        {
+          "nome": "<init>",
+          "desc": "()V",
+          "tipo_ret": "void",
+          "n_instr": 3,
+          "apis": {
+            "javax/microedition/midlet/MIDlet.<init>": 1
+          },
+          "constantes": [],
+          "chamadas": [
+            [
+              1,
+              "javax/microedition/midlet/MIDlet.<init>"
+            ]
+          ],
+          "fields": []
+        },
+        {
+          "nome": "startApp",
+          "desc": "()V",
+          "tipo_ret": "void",
+          "n_instr": 36,
+          "apis": {
+            "javax/microedition/lcdui/Command.<init>": 2,
+            "javax/microedition/lcdui/Displayable.addCommand": 2,
+            "javax/microedition/lcdui/Displayable.setCommandListener": 1,
+            "javax/microedition/lcdui/Display.getDisplay": 1,
+            "javax/microedition/lcdui/Display.setCurrent": 1
+          },
+          "constantes": [
+            [
+              3,
+              1
+            ],
+            [
+              4,
+              1
+            ],
+            [
+              10,
+              1
+            ],
+            [
+              11,
+              2
+            ]
+          ],
+          "chamadas": [
+            [
+              5,
+              "javax/microedition/lcdui/Command.<init>"
+            ],
+            [
+              12,
+              "javax/microedition/lcdui/Command.<init>"
+            ],
+            [
+              20,
+              "javax/microedition/lcdui/Displayable.addCommand"
+            ],
+            [
+              23,
+              "javax/microedition/lcdui/Displayable.addCommand"
+            ],
+            [
+              26,
+              "javax/microedition/lcdui/Displayable.setCommandListener"
+            ],
+            [
+              30,
+              "javax/microedition/lcdui/Display.getDisplay"
+            ],
+            [
+              34,
+              "javax/microedition/lcdui/Display.setCurrent"
+            ]
+          ],
+          "fields": [
+            [
+              6,
+              "putstatic",
+              "msf.CommandPlay"
+            ],
+            [
+              13,
+              "putstatic",
+              "msf.CommandExit"
+            ],
+            [
+              17,
+              "putstatic",
+              "msf.mc"
+            ],
+            [
+              18,
+              "getstatic",
+              "msf.mc"
+            ],
+            [
+              19,
+              "getstatic",
+              "msf.CommandPlay"
+            ],
+            [
+              21,
+              "getstatic",
+              "msf.mc"
+            ],
+            [
+              22,
+              "getstatic",
+              "msf.CommandExit"
+            ],
+            [
+              24,
+              "getstatic",
+              "msf.mc"
+            ],
+            [
+              27,
+              "getstatic",
+              "msf.mc"
+            ],
+            [
+              31,
+              "putstatic",
+              "msf.display"
+            ],
+            [
+              32,
+              "getstatic",
+              "msf.display"
+            ],
+            [
+              33,
+              "getstatic",
+              "msf.mc"
+            ]
+          ]
+        },
+        {
+          "nome": "sleep",
+          "desc": "(I)V",
+          "tipo_ret": "void",
+          "n_instr": 6,
+          "apis": {
+            "java/lang/Thread.sleep": 1
+          },
+          "constantes": [],
+          "chamadas": [
+            [
+              2,
+              "java/lang/Thread.sleep"
+            ]
+          ],
+          "fields": []
+        },
+        {
+          "nome": "commandAction",
+          "desc": "(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
+          "tipo_ret": "void",
+          "n_instr": 53,
+          "apis": {
+            "javax/microedition/midlet/MIDlet.notifyDestroyed": 1,
+            "javax/microedition/lcdui/Displayable.removeCommand": 2,
+            "java/lang/Thread.start": 1,
+            "javax/microedition/lcdui/Canvas.repaint": 1
+          },
+          "constantes": [
+            [
+              23,
+              1
+            ],
+            [
+              27,
+              0
+            ],
+            [
+              30,
+              0
+            ],
+            [
+              33,
+              0
+            ],
+            [
+              42,
+              100
+            ],
+            [
+              45,
+              100
+            ],
+            [
+              47,
+              0
+            ]
+          ],
+          "chamadas": [
+            [
+              4,
+              "javax/microedition/midlet/MIDlet.notifyDestroyed"
+            ],
+            [
+              13,
+              "javax/microedition/lcdui/Displayable.removeCommand"
+            ],
+            [
+              16,
+              "javax/microedition/lcdui/Displayable.removeCommand"
+            ],
+            [
+              22,
+              "java/lang/Thread.start"
+            ],
+            [
+              50,
+              "javax/microedition/lcdui/Canvas.repaint"
+            ]
+          ],
+          "fields": [
+            [
+              1,
+              "getstatic",
+              "msf.CommandExit"
+            ],
+            [
+              7,
+              "getstatic",
+              "msf.CommandPlay"
+            ],
+            [
+              9,
+              "getstatic",
+              "MapCanvas.mode"
+            ],
+            [
+              11,
+              "getstatic",
+              "msf.mc"
+            ],
+            [
+              12,
+              "getstatic",
+              "msf.CommandPlay"
+            ],
+            [
+              14,
+              "getstatic",
+              "msf.mc"
+            ],
+            [
+              15,
+              "getstatic",
+              "msf.CommandExit"
+            ],
+            [
+              24,
+              "putstatic",
+              "MapCanvas.mode"
+            ],
+            [
+              26,
+              "getstatic",
+              "msf.mc"
+            ],
+            [
+              28,
+              "putfield",
+              "MapCanvas.ó"
+            ],
+            [
+              29,
+              "getstatic",
+              "msf.mc"
+            ],
+            [
+              31,
+              "putfield",
+              "MapCanvas.ú"
+            ],
+            [
+              32,
+              "getstatic",
+              "msf.mc"
+            ],
+            [
+              34,
+              "putfield",
+              "MapCanvas.ü"
+            ],
+            [
+              35,
+              "getstatic",
+              "msf.mc"
+            ],
+            [
+              36,
+              "getfield",
+              "MapCanvas.ÿ"
+            ],
+            [
+              38,
+              "getstatic",
+              "msf.mc"
+            ],
+            [
+              39,
+              "getfield",
+              "MapCanvas.Ā"
+            ],
+            [
+              41,
+              "getstatic",
+              "msf.mc"
+            ],
+            [
+              43,
+              "putfield",
+              "MapCanvas.ā"
+            ]
+          ]
+        },
+        {
+          "nome": "pauseApp",
+          "desc": "()V",
+          "tipo_ret": "void",
+          "n_instr": 1,
+          "apis": {},
+          "constantes": [],
+          "chamadas": [],
+          "fields": []
+        },
+        {
+          "nome": "destroyApp",
+          "desc": "(Z)V",
+          "tipo_ret": "void",
+          "n_instr": 1,
+          "apis": {},
+          "constantes": [],
+          "chamadas": [],
+          "fields": []
+        }
+      ],
+      "apis": {
+        "javax/microedition/midlet/MIDlet.<init>": 1,
+        "javax/microedition/lcdui/Command.<init>": 2,
+        "javax/microedition/lcdui/Displayable.addCommand": 2,
+        "javax/microedition/lcdui/Displayable.setCommandListener": 1,
+        "javax/microedition/lcdui/Display.getDisplay": 1,
+        "javax/microedition/lcdui/Display.setCurrent": 1,
+        "java/lang/Thread.sleep": 1,
+        "javax/microedition/midlet/MIDlet.notifyDestroyed": 1,
+        "javax/microedition/lcdui/Displayable.removeCommand": 2,
+        "java/lang/Thread.start": 1,
+        "javax/microedition/lcdui/Canvas.repaint": 1
+      },
+      "padroes": [
+        "MIDLET",
+        "TEM_STARTAPP"
+      ]
+    }
+  ],
+  "n_classes": 8
+}
