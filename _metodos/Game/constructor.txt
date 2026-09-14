@@ -1,0 +1,23 @@
+// Classe: Game
+// Metodo: <init>
+// Descritor: ()V
+// Instrucoes: 18
+
+[   0] aload_0
+[   1] invokespecial java/lang/Thread.<init>
+[   2] aload_0
+[   3] sipush 150
+[   4] putfield Game.Á
+[   5] aload_0
+[   6] bipush 75
+[   7] putfield Game.Â
+[   8] aload_0
+[   9] bipush 50
+[  10] putfield Game.Ã
+[  11] aload_0
+[  12] bipush 90
+[  13] putfield Game.Ä
+[  14] aload_0
+[  15] bipush 45
+[  16] putfield Game.Å
+[  17] return

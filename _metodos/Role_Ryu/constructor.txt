@@ -1,0 +1,35 @@
+// Classe: Role_Ryu
+// Metodo: <init>
+// Descritor: ()V
+// Instrucoes: 30
+
+[   0] aload_0
+[   1] invokespecial java/lang/Object.<init>
+[   2] aload_0
+[   3] iconst_0
+[   4] putfield Role_Ryu.status
+[   5] aload_0
+[   6] iconst_0
+[   7] putfield Role_Ryu.ą
+[   8] aload_0
+[   9] iconst_0
+[  10] putfield Role_Ryu.count
+[  11] aload_0
+[  12] iconst_0
+[  13] putfield Role_Ryu.Ċ
+[  14] aload_0
+[  15] iconst_0
+[  16] putfield Role_Ryu.ċ
+[  17] aload_0
+[  18] invokevirtual Role_Ryu.reset
+[  19] aload_0
+[  20] bipush 19
+[  21] bipush 41
+[  22] invokestatic javax/microedition/lcdui/Image.createImage
+[  23] putfield Role_Ryu.Ĉ
+[  24] aload_0
+[  25] aload_0
+[  26] getfield Role_Ryu.Ĉ
+[  27] invokevirtual javax/microedition/lcdui/Image.getGraphics
+[  28] putfield Role_Ryu.ĉ
+[  29] return

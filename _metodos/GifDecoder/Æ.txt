@@ -1,0 +1,305 @@
+// Classe: GifDecoder
+// Metodo: Æ
+// Descritor: ()Ljavax/microedition/lcdui/Image;
+// Instrucoes: 300
+
+[   0] aload_0
+[   1] getfield GifDecoder.Ñ
+[   2] istore_1
+[   3] aload_0
+[   4] getfield GifDecoder.Ò
+[   5] istore_2
+[   6] iconst_0
+[   7] istore 5
+[   8] iconst_0
+[   9] istore 6
+[  10] iconst_0
+[  11] istore 7
+[  12] sipush 4096
+[  13] newarray 10
+[  14] astore 9
+[  15] sipush 4096
+[  16] newarray 10
+[  17] astore 10
+[  18] sipush 8192
+[  19] newarray 10
+[  20] astore 11
+[  21] aload_0
+[  22] iconst_1
+[  23] invokespecial GifDecoder.Ï
+[  24] ifne 5
+[  25] aconst_null
+[  26] areturn
+[  27] aload_0
+[  28] getfield GifDecoder.Ç
+[  29] iconst_0
+[  30] iaload
+[  31] istore_3
+[  32] aconst_null
+[  33] astore 21
+[  34] aconst_null
+[  35] astore 22
+[  36] aload_0
+[  37] getfield GifDecoder.â
+[  38] ifne 20
+[  39] iload_1
+[  40] iload_2
+[  41] invokestatic javax/microedition/lcdui/Image.createImage
+[  42] astore 21
+[  43] aload 21
+[  44] invokevirtual javax/microedition/lcdui/Image.getGraphics
+[  45] astore 22
+[  46] goto 16
+[  47] aload_0
+[  48] new 39
+[  49] dup
+[  50] iload_1
+[  51] iload_2
+[  52] invokespecial MatrixImage.<init>
+[  53] putfield GifDecoder.matrix
+[  54] aload_0
+[  55] getfield GifDecoder.Î
+[  56] astore 23
+[  57] aload_0
+[  58] getfield GifDecoder.Ô
+[  59] ifeq 9
+[  60] aload_0
+[  61] getfield GifDecoder.Ö
+[  62] astore 23
+[  63] aload_0
+[  64] getfield GifDecoder.È
+[  65] iflt 11
+[  66] aload 23
+[  67] aload_0
+[  68] getfield GifDecoder.È
+[  69] iconst_0
+[  70] iastore
+[  71] iconst_1
+[  72] iload_3
+[  73] ishl
+[  74] istore 14
+[  75] iload 14
+[  76] iconst_1
+[  77] iadd
+[  78] istore 16
+[  79] iload_3
+[  80] iconst_1
+[  81] iadd
+[  82] istore 13
+[  83] iload 14
+[  84] iconst_2
+[  85] iadd
+[  86] istore 18
+[  87] iconst_m1
+[  88] istore 17
+[  89] iconst_m1
+[  90] istore 20
+[  91] iconst_0
+[  92] istore 8
+[  93] goto 13
+[  94] aload 10
+[  95] iload 8
+[  96] iload 8
+[  97] iastore
+[  98] iinc 8
+[  99] iload 8
+[ 100] iload 14
+[ 101] if_icmplt -14
+[ 102] iconst_0
+[ 103] istore 12
+[ 104] aload_0
+[ 105] invokespecial GifDecoder.È
+[ 106] iconst_0
+[ 107] istore 6
+[ 108] iconst_0
+[ 109] istore 8
+[ 110] goto 381
+[ 111] iconst_0
+[ 112] istore 5
+[ 113] goto 313
+[ 114] iload 12
+[ 115] ifne 214
+[ 116] aload_0
+[ 117] iload 13
+[ 118] invokespecial GifDecoder.Ç
+[ 119] istore 19
+[ 120] iload 19
+[ 121] ifge 6
+[ 122] aload 21
+[ 123] areturn
+[ 124] iload 19
+[ 125] iload 18
+[ 126] if_icmpgt 10
+[ 127] iload 19
+[ 128] iload 16
+[ 129] if_icmpne 6
+[ 130] aload 21
+[ 131] areturn
+[ 132] iload 19
+[ 133] iload 14
+[ 134] if_icmpne 20
+[ 135] iload_3
+[ 136] iconst_1
+[ 137] iadd
+[ 138] istore 13
+[ 139] iload 14
+[ 140] iconst_2
+[ 141] iadd
+[ 142] istore 18
+[ 143] iconst_m1
+[ 144] istore 17
+[ 145] goto 251
+[ 146] iload 17
+[ 147] iconst_m1
+[ 148] if_icmpne 27
+[ 149] aload 11
+[ 150] iload 12
+[ 151] iinc 12
+[ 152] aload 10
+[ 153] iload 19
+[ 154] iaload
+[ 155] iastore
+[ 156] iload 19
+[ 157] istore 17
+[ 158] iload 19
+[ 159] istore 20
+[ 160] goto 221
+[ 161] iload 19
+[ 162] istore 15
+[ 163] iload 19
+[ 164] iload 18
+[ 165] if_icmpne 40
+[ 166] aload 11
+[ 167] iload 12
+[ 168] iinc 12
+[ 169] iload 20
+[ 170] iastore
+[ 171] iload 17
+[ 172] istore 19
+[ 173] goto 23
+[ 174] aload 11
+[ 175] iload 12
+[ 176] iinc 12
+[ 177] aload 10
+[ 178] iload 19
+[ 179] iaload
+[ 180] iastore
+[ 181] aload 9
+[ 182] iload 19
+[ 183] iaload
+[ 184] istore 19
+[ 185] iload 19
+[ 186] iload 14
+[ 187] if_icmpgt -24
+[ 188] aload 10
+[ 189] iload 19
+[ 190] iaload
+[ 191] istore 20
+[ 192] iload 18
+[ 193] sipush 4096
+[ 194] if_icmplt 6
+[ 195] aload 21
+[ 196] areturn
+[ 197] aload 11
+[ 198] iload 12
+[ 199] iinc 12
+[ 200] iload 20
+[ 201] iastore
+[ 202] aload 9
+[ 203] iload 18
+[ 204] iload 17
+[ 205] iastore
+[ 206] aload 10
+[ 207] iload 18
+[ 208] iload 20
+[ 209] iastore
+[ 210] iinc 18
+[ 211] iload 18
+[ 212] iconst_1
+[ 213] iload 13
+[ 214] ishl
+[ 215] if_icmplt 14
+[ 216] iload 18
+[ 217] sipush 4096
+[ 218] if_icmpge 6
+[ 219] iinc 13
+[ 220] iload 15
+[ 221] istore 17
+[ 222] aload 11
+[ 223] iinc 12
+[ 224] iload 12
+[ 225] iaload
+[ 226] istore 4
+[ 227] iload 4
+[ 228] ifge 6
+[ 229] aload 21
+[ 230] areturn
+[ 231] aload_0
+[ 232] getfield GifDecoder.â
+[ 233] ifne 29
+[ 234] aload 22
+[ 235] aload 23
+[ 236] iload 4
+[ 237] iaload
+[ 238] invokevirtual javax/microedition/lcdui/Graphics.setColor
+[ 239] aload 22
+[ 240] iload 5
+[ 241] iload 6
+[ 242] iload 5
+[ 243] iload 6
+[ 244] invokevirtual javax/microedition/lcdui/Graphics.drawLine
+[ 245] goto 43
+[ 246] iload 4
+[ 247] aload_0
+[ 248] getfield GifDecoder.È
+[ 249] if_icmpne 18
+[ 250] aload_0
+[ 251] getfield GifDecoder.matrix
+[ 252] iload 5
+[ 253] iload 6
+[ 254] iconst_m1
+[ 255] invokevirtual MatrixImage.setColor
+[ 256] goto 19
+[ 257] aload_0
+[ 258] getfield GifDecoder.matrix
+[ 259] iload 5
+[ 260] iload 6
+[ 261] aload 23
+[ 262] iload 4
+[ 263] iaload
+[ 264] invokevirtual MatrixImage.setColor
+[ 265] iinc 5
+[ 266] iload 5
+[ 267] iload_1
+[ 268] if_icmplt -313
+[ 269] aload_0
+[ 270] getfield GifDecoder.Õ
+[ 271] ifeq 46
+[ 272] iload 6
+[ 273] getstatic GifDecoder.Ý
+[ 274] iload 7
+[ 275] iaload
+[ 276] iadd
+[ 277] istore 6
+[ 278] goto 23
+[ 279] iinc 7
+[ 280] iload 7
+[ 281] iconst_3
+[ 282] if_icmple 6
+[ 283] aload 21
+[ 284] areturn
+[ 285] getstatic GifDecoder.Þ
+[ 286] iload 7
+[ 287] iaload
+[ 288] istore 6
+[ 289] iload 6
+[ 290] iload_2
+[ 291] if_icmpge -23
+[ 292] goto 6
+[ 293] iinc 6
+[ 294] iinc 8
+[ 295] iload 8
+[ 296] iload_2
+[ 297] if_icmplt -381
+[ 298] aload 21
+[ 299] areturn

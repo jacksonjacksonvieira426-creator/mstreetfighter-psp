@@ -1,0 +1,27 @@
+// Classe: Role_Lee
+// Metodo: backward
+// Descritor: ()V
+// Instrucoes: 22
+
+[   0] aload_0
+[   1] getfield Role_Lee.x
+[   2] iconst_2
+[   3] iadd
+[   4] aload_0
+[   5] getfield Role_Lee.Ą
+[   6] if_icmpge 16
+[   7] aload_0
+[   8] aload_0
+[   9] getfield Role_Lee.x
+[  10] iconst_2
+[  11] iadd
+[  12] putfield Role_Lee.x
+[  13] goto 11
+[  14] aload_0
+[  15] aload_0
+[  16] getfield Role_Lee.Ą
+[  17] putfield Role_Lee.x
+[  18] aload_0
+[  19] iconst_1
+[  20] putfield Role_Lee.ć
+[  21] return

@@ -1,0 +1,55 @@
+// Classe: GifDecoder
+// Metodo: Ì
+// Descritor: (IZ)Z
+// Instrucoes: 50
+
+[   0] iload_1
+[   1] newarray 10
+[   2] astore_3
+[   3] iconst_0
+[   4] istore 4
+[   5] goto 49
+[   6] aload_0
+[   7] iconst_3
+[   8] invokespecial GifDecoder.Ï
+[   9] ifne 5
+[  10] iconst_0
+[  11] ireturn
+[  12] aload_3
+[  13] iload 4
+[  14] aload_0
+[  15] getfield GifDecoder.Ç
+[  16] iconst_0
+[  17] iaload
+[  18] bipush 16
+[  19] ishl
+[  20] aload_0
+[  21] getfield GifDecoder.Ç
+[  22] iconst_1
+[  23] iaload
+[  24] bipush 8
+[  25] ishl
+[  26] ior
+[  27] aload_0
+[  28] getfield GifDecoder.Ç
+[  29] iconst_2
+[  30] iaload
+[  31] ior
+[  32] ldc 55
+[  33] ior
+[  34] iastore
+[  35] iinc 4
+[  36] iload 4
+[  37] iload_1
+[  38] if_icmplt -49
+[  39] iload_2
+[  40] ifeq 11
+[  41] aload_0
+[  42] aload_3
+[  43] putfield GifDecoder.Î
+[  44] goto 8
+[  45] aload_0
+[  46] aload_3
+[  47] putfield GifDecoder.Ö
+[  48] iconst_1
+[  49] ireturn

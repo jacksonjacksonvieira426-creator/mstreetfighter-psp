@@ -1,0 +1,26 @@
+// Classe: GifDecoder
+// Metodo: Î
+// Descritor: ()I
+// Instrucoes: 21
+
+[   0] aload_0
+[   1] iconst_1
+[   2] invokespecial GifDecoder.Ï
+[   3] ifne 5
+[   4] iconst_m1
+[   5] ireturn
+[   6] aload_0
+[   7] getfield GifDecoder.Ç
+[   8] iconst_0
+[   9] iaload
+[  10] istore_1
+[  11] iload_1
+[  12] ifeq 13
+[  13] aload_0
+[  14] iload_1
+[  15] invokespecial GifDecoder.Ï
+[  16] ifne 5
+[  17] iconst_m1
+[  18] ireturn
+[  19] iload_1
+[  20] ireturn

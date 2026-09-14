@@ -1,0 +1,58 @@
+// Classe: msf
+// Metodo: commandAction
+// Descritor: (Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V
+// Instrucoes: 53
+
+[   0] aload_1
+[   1] getstatic msf.CommandExit
+[   2] if_acmpne 8
+[   3] aload_0
+[   4] invokevirtual javax/microedition/midlet/MIDlet.notifyDestroyed
+[   5] return
+[   6] aload_1
+[   7] getstatic msf.CommandPlay
+[   8] if_acmpne 112
+[   9] getstatic MapCanvas.mode
+[  10] ifne 40
+[  11] getstatic msf.mc
+[  12] getstatic msf.CommandPlay
+[  13] invokevirtual javax/microedition/lcdui/Displayable.removeCommand
+[  14] getstatic msf.mc
+[  15] getstatic msf.CommandExit
+[  16] invokevirtual javax/microedition/lcdui/Displayable.removeCommand
+[  17] new 22
+[  18] dup
+[  19] invokespecial Intro.<init>
+[  20] astore_3
+[  21] aload_3
+[  22] invokevirtual java/lang/Thread.start
+[  23] iconst_1
+[  24] putstatic MapCanvas.mode
+[  25] goto 68
+[  26] getstatic msf.mc
+[  27] iconst_0
+[  28] putfield MapCanvas.ó
+[  29] getstatic msf.mc
+[  30] iconst_0
+[  31] putfield MapCanvas.ú
+[  32] getstatic msf.mc
+[  33] iconst_0
+[  34] putfield MapCanvas.ü
+[  35] getstatic msf.mc
+[  36] getfield MapCanvas.ÿ
+[  37] invokevirtual Role_Ryu.reset
+[  38] getstatic msf.mc
+[  39] getfield MapCanvas.Ā
+[  40] invokevirtual Role_Lee.reset
+[  41] getstatic msf.mc
+[  42] bipush 100
+[  43] putfield MapCanvas.ā
+[  44] getstatic msf.mc
+[  45] bipush 100
+[  46] putfield MapCanvas.Ă
+[  47] iconst_0
+[  48] putstatic MapCanvas.still
+[  49] getstatic msf.mc
+[  50] invokevirtual javax/microedition/lcdui/Canvas.repaint
+[  51] return
+[  52] return

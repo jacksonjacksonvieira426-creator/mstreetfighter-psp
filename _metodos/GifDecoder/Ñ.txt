@@ -1,0 +1,14 @@
+// Classe: GifDecoder
+// Metodo: Ñ
+// Descritor: (II)Z
+// Instrucoes: 9
+
+[   0] iload_0
+[   1] iload_1
+[   2] iand
+[   3] iload_1
+[   4] if_icmpne 7
+[   5] iconst_1
+[   6] goto 4
+[   7] iconst_0
+[   8] ireturn

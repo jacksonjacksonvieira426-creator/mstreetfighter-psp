@@ -1,0 +1,34 @@
+// Classe: Role_Lee
+// Metodo: forward
+// Descritor: ()V
+// Instrucoes: 29
+
+[   0] aload_0
+[   1] getstatic msf.mc
+[   2] getfield MapCanvas.ÿ
+[   3] getfield Role_Ryu.x
+[   4] bipush 16
+[   5] iadd
+[   6] putfield Role_Lee.ă
+[   7] aload_0
+[   8] getfield Role_Lee.x
+[   9] iconst_2
+[  10] isub
+[  11] aload_0
+[  12] getfield Role_Lee.ă
+[  13] if_icmple 16
+[  14] aload_0
+[  15] aload_0
+[  16] getfield Role_Lee.x
+[  17] iconst_2
+[  18] isub
+[  19] putfield Role_Lee.x
+[  20] goto 11
+[  21] aload_0
+[  22] aload_0
+[  23] getfield Role_Lee.ă
+[  24] putfield Role_Lee.x
+[  25] aload_0
+[  26] iconst_1
+[  27] putfield Role_Lee.ć
+[  28] return

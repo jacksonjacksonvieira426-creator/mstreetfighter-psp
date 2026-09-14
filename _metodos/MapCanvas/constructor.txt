@@ -1,0 +1,26 @@
+// Classe: MapCanvas
+// Metodo: <init>
+// Descritor: ()V
+// Instrucoes: 21
+
+[   0] aload_0
+[   1] invokespecial javax/microedition/lcdui/Canvas.<init>
+[   2] aload_0
+[   3] aconst_null
+[   4] putfield MapCanvas.ã
+[   5] aload_0
+[   6] ldc 3
+[   7] putfield MapCanvas.ä
+[   8] aload_0
+[   9] ldc 5
+[  10] putfield MapCanvas.å
+[  11] aload_0
+[  12] ldc 7
+[  13] putfield MapCanvas.æ
+[  14] aload_0
+[  15] iconst_0
+[  16] putfield MapCanvas.ý
+[  17] aload_0
+[  18] iconst_0
+[  19] putfield MapCanvas.þ
+[  20] return

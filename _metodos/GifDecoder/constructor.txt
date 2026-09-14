@@ -1,0 +1,145 @@
+// Classe: GifDecoder
+// Metodo: <init>
+// Descritor: (Ljava/io/InputStream;)V
+// Instrucoes: 140
+
+[   0] aload_0
+[   1] invokespecial java/lang/Object.<init>
+[   2] aload_0
+[   3] iconst_m1
+[   4] putfield GifDecoder.Æ
+[   5] aload_0
+[   6] sipush 280
+[   7] newarray 10
+[   8] putfield GifDecoder.Ç
+[   9] aload_0
+[  10] iconst_m1
+[  11] putfield GifDecoder.È
+[  12] aload_0
+[  13] iconst_0
+[  14] putfield GifDecoder.É
+[  15] aload_0
+[  16] iconst_0
+[  17] putfield GifDecoder.Ê
+[  18] aload_0
+[  19] iconst_0
+[  20] putfield GifDecoder.Ë
+[  21] aload_0
+[  22] iconst_0
+[  23] putfield GifDecoder.Ì
+[  24] aload_0
+[  25] iconst_0
+[  26] putfield GifDecoder.Í
+[  27] aload_0
+[  28] aconst_null
+[  29] putfield GifDecoder.Î
+[  30] aload_0
+[  31] iconst_0
+[  32] putfield GifDecoder.Ï
+[  33] aload_0
+[  34] iconst_0
+[  35] putfield GifDecoder.Ð
+[  36] aload_0
+[  37] iconst_0
+[  38] putfield GifDecoder.Ñ
+[  39] aload_0
+[  40] iconst_0
+[  41] putfield GifDecoder.Ò
+[  42] aload_0
+[  43] iconst_0
+[  44] putfield GifDecoder.Ó
+[  45] aload_0
+[  46] iconst_0
+[  47] putfield GifDecoder.Ô
+[  48] aload_0
+[  49] iconst_0
+[  50] putfield GifDecoder.Õ
+[  51] aload_0
+[  52] aconst_null
+[  53] putfield GifDecoder.Ö
+[  54] aload_0
+[  55] iconst_0
+[  56] putfield GifDecoder.Ø
+[  57] aload_0
+[  58] iconst_0
+[  59] putfield GifDecoder.Ü
+[  60] aload_0
+[  61] iconst_0
+[  62] putfield GifDecoder.â
+[  63] bipush 32
+[  64] iconst_1
+[  65] multianewarray 25
+[  66] astore_2
+[  67] iconst_0
+[  68] istore_3
+[  69] iconst_0
+[  70] istore 4
+[  71] goto 3
+[  72] aload_2
+[  73] iload_3
+[  74] sipush 1024
+[  75] newarray 8
+[  76] aastore
+[  77] aload_1
+[  78] aload_2
+[  79] iload_3
+[  80] aaload
+[  81] invokevirtual java/io/InputStream.read
+[  82] istore 4
+[  83] goto 8
+[  84] astore 5
+[  85] iconst_0
+[  86] istore 4
+[  87] aload_0
+[  88] dup
+[  89] getfield GifDecoder.ß
+[  90] iload 4
+[  91] iadd
+[  92] putfield GifDecoder.ß
+[  93] iload 4
+[  94] sipush 1024
+[  95] if_icmpeq 6
+[  96] goto 9
+[  97] iinc 3
+[  98] goto -50
+[  99] aload_0
+[ 100] aload_0
+[ 101] getfield GifDecoder.ß
+[ 102] newarray 8
+[ 103] putfield GifDecoder.á
+[ 104] aload_0
+[ 105] iconst_0
+[ 106] putfield GifDecoder.à
+[ 107] iconst_0
+[ 108] istore 5
+[ 109] iconst_0
+[ 110] istore 6
+[ 111] iconst_0
+[ 112] istore 7
+[ 113] goto 47
+[ 114] iload 7
+[ 115] iload_3
+[ 116] if_icmpne 10
+[ 117] iload 4
+[ 118] istore 6
+[ 119] goto 8
+[ 120] sipush 1024
+[ 121] istore 6
+[ 122] aload_2
+[ 123] iload 7
+[ 124] aaload
+[ 125] iconst_0
+[ 126] aload_0
+[ 127] getfield GifDecoder.á
+[ 128] iload 5
+[ 129] iload 6
+[ 130] invokestatic java/lang/System.arraycopy
+[ 131] iload 5
+[ 132] iload 6
+[ 133] iadd
+[ 134] istore 5
+[ 135] iinc 7
+[ 136] iload 7
+[ 137] iload_3
+[ 138] if_icmple -47
+[ 139] return

@@ -1,0 +1,77 @@
+// Classe: GifDecoder
+// Metodo: Ê
+// Descritor: ()Z
+// Instrucoes: 72
+
+[   0] aload_0
+[   1] bipush 7
+[   2] invokespecial GifDecoder.Ï
+[   3] ifne 5
+[   4] iconst_0
+[   5] ireturn
+[   6] aload_0
+[   7] aload_0
+[   8] getfield GifDecoder.Ç
+[   9] iconst_0
+[  10] iaload
+[  11] aload_0
+[  12] getfield GifDecoder.Ç
+[  13] iconst_1
+[  14] iaload
+[  15] invokestatic GifDecoder.Ð
+[  16] putfield GifDecoder.É
+[  17] aload_0
+[  18] aload_0
+[  19] getfield GifDecoder.Ç
+[  20] iconst_2
+[  21] iaload
+[  22] aload_0
+[  23] getfield GifDecoder.Ç
+[  24] iconst_3
+[  25] iaload
+[  26] invokestatic GifDecoder.Ð
+[  27] putfield GifDecoder.Ê
+[  28] aload_0
+[  29] getfield GifDecoder.Ç
+[  30] iconst_4
+[  31] iaload
+[  32] istore_1
+[  33] aload_0
+[  34] aload_0
+[  35] getfield GifDecoder.Ç
+[  36] iconst_5
+[  37] iaload
+[  38] putfield GifDecoder.Ë
+[  39] aload_0
+[  40] getfield GifDecoder.Ç
+[  41] bipush 6
+[  42] iaload
+[  43] istore_2
+[  44] aload_0
+[  45] iconst_2
+[  46] iload_1
+[  47] bipush 7
+[  48] iand
+[  49] ishl
+[  50] putfield GifDecoder.Ì
+[  51] aload_0
+[  52] iload_1
+[  53] sipush 128
+[  54] invokestatic GifDecoder.Ñ
+[  55] putfield GifDecoder.Í
+[  56] aload_0
+[  57] aconst_null
+[  58] putfield GifDecoder.Î
+[  59] aload_0
+[  60] getfield GifDecoder.Í
+[  61] ifeq 17
+[  62] aload_0
+[  63] aload_0
+[  64] getfield GifDecoder.Ì
+[  65] iconst_1
+[  66] invokespecial GifDecoder.Ì
+[  67] ifne 5
+[  68] iconst_0
+[  69] ireturn
+[  70] iconst_1
+[  71] ireturn

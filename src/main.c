@@ -26,6 +26,11 @@ typedef void* Displayable;
 typedef void* MIDlet;
 typedef void* Canvas;
 
+// Globais do jogo (do <clinit> e <init>)
+int MapCanvas_OFFY = 50;
+int MapCanvas_CanvasWidth = 480;
+int MapCanvas_CanvasHeight = 272;
+
 PSP_MODULE_INFO("mstreetfighter", 0, 1, 0);
 PSP_MAIN_THREAD_ATTR(THREAD_ATTR_USER);
 
@@ -452,13 +457,26 @@ void MapCanvas_paint() {
 //   1x javax/microedition/lcdui/Canvas.getGameAction -> j2me_input_get_actions
 //   1x javax/microedition/lcdui/Canvas.repaint -> j2me_canvas_repaint
 void MapCanvas_keyProc() {
-    // TODO: traduzir logica do bytecode
+    // Traduzido do bytecode (43 instrucoes)
+    // Detecta direcao e chama metodo correspondente
+    int acoes = j2me_input_get_actions();
+    extern void* _p1_self;  // Ponteiro pro Ryu (jogador 1)
+    Role_Ryu_s* p1 = (Role_Ryu_s*)_p1_self;
+    if (!p1) return;
+    if (acoes & J2ME_LEFT)       Role_Ryu_backward();
+    else if (acoes & J2ME_RIGHT) Role_Ryu_forward();
+    if (j2me_input_is_pressed(J2ME_UP))    Role_Ryu_punch();
+    if (j2me_input_is_pressed(J2ME_FIRE))  Role_Ryu_kick();
 }
 
 // === MapCanvas.MapCanvas_keyPressed ((I)V) ===
 // Instrucoes: 4
 void MapCanvas_keyPressed() {
-    // TODO: traduzir logica do bytecode
+    // Traduzido do bytecode (4 instrucoes)
+    // Chama keyProc(self, arg0) — mas sem self explicito, so le input
+    int acoes = j2me_input_get_actions();
+    (void)acoes;
+    // TODO: chamar keyProc com self e arg0 quando tivermos o loop
 }
 
 // === MapCanvas.MapCanvas_keyRepeated ((I)V) ===
@@ -510,7 +528,16 @@ void Role_Lee_constructor() {
 // === Role_Lee.Role_Lee_reset (()V) ===
 // Instrucoes: 25
 void Role_Lee_reset() {
-    // TODO: traduzir logica do bytecode
+    // Traduzido do bytecode (25 instrucoes)
+    extern void* _role_self;
+    Role_Lee_s* s = (Role_Lee_s*)_role_self;
+    if (!s) return;
+    s->x = MapCanvas_CanvasWidth - 20;
+    s->y = MapCanvas_OFFY + 44;
+    s->status = 0;
+    s->ofusc_0103 = 0;
+    s->ofusc_0104 = MapCanvas_CanvasWidth - 16;
+    s->ofusc_0107 = 1;
 }
 
 // === Role_Lee.Role_Lee_forward (()V) ===
@@ -564,7 +591,17 @@ void Role_Ryu_constructor() {
 // === Role_Ryu.Role_Ryu_reset (()V) ===
 // Instrucoes: 23
 void Role_Ryu_reset() {
-    // TODO: traduzir logica do bytecode
+    // Traduzido do bytecode (23 instrucoes)
+    // NOTA: precisa receber self como void* — vamos usar global temporaria
+    extern void* _role_self;
+    Role_Ryu_s* s = (Role_Ryu_s*)_role_self;
+    if (!s) return;
+    s->x = 4;
+    s->y = MapCanvas_OFFY + 39;
+    s->status = 0;
+    s->ofusc_0103 = 0;
+    s->ofusc_0104 = MapCanvas_CanvasWidth - 16;
+    s->ofusc_0107 = 1;
 }
 
 // === Role_Ryu.Role_Ryu_forward (()V) ===

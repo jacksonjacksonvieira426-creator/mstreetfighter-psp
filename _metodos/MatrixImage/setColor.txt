@@ -1,0 +1,13 @@
+// Classe: MatrixImage
+// Metodo: setColor
+// Descritor: (III)V
+// Instrucoes: 8
+
+[   0] aload_0
+[   1] getfield MatrixImage.matrix
+[   2] iload_1
+[   3] aaload
+[   4] iload_2
+[   5] iload_3
+[   6] iastore
+[   7] return

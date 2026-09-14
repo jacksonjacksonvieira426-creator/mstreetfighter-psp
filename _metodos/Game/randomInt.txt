@@ -1,0 +1,24 @@
+// Classe: Game
+// Metodo: randomInt
+// Descritor: ()I
+// Instrucoes: 19
+
+[   0] getstatic Game.À
+[   1] getstatic Game.IA
+[   2] i2l
+[   3] lmul
+[   4] getstatic Game.IC
+[   5] i2l
+[   6] ladd
+[   7] getstatic Game.IM
+[   8] i2l
+[   9] lrem
+[  10] putstatic Game.À
+[  11] ldc2_w 13
+[  12] getstatic Game.À
+[  13] lmul
+[  14] getstatic Game.IM
+[  15] i2l
+[  16] ldiv
+[  17] l2i
+[  18] ireturn

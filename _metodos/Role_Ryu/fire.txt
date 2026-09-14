@@ -1,0 +1,39 @@
+// Classe: Role_Ryu
+// Metodo: fire
+// Descritor: ()V
+// Instrucoes: 34
+
+[   0] aload_0
+[   1] getfield Role_Ryu.status
+[   2] ifeq 4
+[   3] return
+[   4] getstatic msf.mc
+[   5] getfield MapCanvas.ó
+[   6] ifle 4
+[   7] return
+[   8] getstatic msf.mc
+[   9] getfield MapCanvas.Ā
+[  10] getfield Role_Lee.x
+[  11] getstatic msf.mc
+[  12] getfield MapCanvas.ÿ
+[  13] getfield Role_Ryu.x
+[  14] isub
+[  15] bipush 42
+[  16] if_icmpge 4
+[  17] return
+[  18] getstatic msf.mc
+[  19] aload_0
+[  20] getfield Role_Ryu.x
+[  21] bipush 33
+[  22] iadd
+[  23] putfield MapCanvas.ó
+[  24] aload_0
+[  25] iconst_3
+[  26] putfield Role_Ryu.count
+[  27] aload_0
+[  28] iconst_3
+[  29] putfield Role_Ryu.status
+[  30] aload_0
+[  31] iconst_1
+[  32] putfield Role_Ryu.ć
+[  33] return

@@ -1,0 +1,43 @@
+// Classe: MatrixImage
+// Metodo: crop
+// Descritor: (IIII)LMatrixImage;
+// Instrucoes: 38
+
+[   0] new 6
+[   1] dup
+[   2] iload_3
+[   3] iload 4
+[   4] invokespecial MatrixImage.<init>
+[   5] astore 5
+[   6] iconst_0
+[   7] istore 6
+[   8] goto 47
+[   9] iconst_0
+[  10] istore 7
+[  11] goto 31
+[  12] aload 5
+[  13] getfield MatrixImage.matrix
+[  14] iload 6
+[  15] aaload
+[  16] iload 7
+[  17] aload_0
+[  18] getfield MatrixImage.matrix
+[  19] iload_1
+[  20] iload 6
+[  21] iadd
+[  22] aaload
+[  23] iload_2
+[  24] iload 7
+[  25] iadd
+[  26] iaload
+[  27] iastore
+[  28] iinc 7
+[  29] iload 7
+[  30] iload 4
+[  31] if_icmplt -32
+[  32] iinc 6
+[  33] iload 6
+[  34] iload_3
+[  35] if_icmplt -47
+[  36] aload 5
+[  37] areturn

@@ -1,0 +1,48 @@
+// Classe: GifDecoder
+// Metodo: Ï
+// Descritor: (I)Z
+// Instrucoes: 43
+
+[   0] aload_0
+[   1] getfield GifDecoder.à
+[   2] iload_1
+[   3] iadd
+[   4] aload_0
+[   5] getfield GifDecoder.ß
+[   6] if_icmplt 5
+[   7] iconst_0
+[   8] ireturn
+[   9] iconst_0
+[  10] istore_2
+[  11] goto 35
+[  12] aload_0
+[  13] getfield GifDecoder.á
+[  14] aload_0
+[  15] getfield GifDecoder.à
+[  16] iload_2
+[  17] iadd
+[  18] baload
+[  19] istore_3
+[  20] iload_3
+[  21] ifge 9
+[  22] iload_3
+[  23] sipush 256
+[  24] iadd
+[  25] istore_3
+[  26] aload_0
+[  27] getfield GifDecoder.Ç
+[  28] iload_2
+[  29] iload_3
+[  30] iastore
+[  31] iinc 2
+[  32] iload_2
+[  33] iload_1
+[  34] if_icmplt -34
+[  35] aload_0
+[  36] dup
+[  37] getfield GifDecoder.à
+[  38] iload_1
+[  39] iadd
+[  40] putfield GifDecoder.à
+[  41] iconst_1
+[  42] ireturn

@@ -1,0 +1,220 @@
+// Classe: Game
+// Metodo: run
+// Descritor: ()V
+// Instrucoes: 215
+
+[   0] iconst_0
+[   1] putstatic Game.count
+[   2] goto 3
+[   3] getstatic MapCanvas.still
+[   4] iconst_1
+[   5] if_icmpne 6
+[   6] goto -7
+[   7] aload_0
+[   8] getstatic Game.speed
+[   9] invokevirtual Game.sleep
+[  10] getstatic Game.count
+[  11] getstatic Game.speed
+[  12] iadd
+[  13] putstatic Game.count
+[  14] getstatic Game.count
+[  15] sipush 500
+[  16] irem
+[  17] ifne 11
+[  18] getstatic MapCanvas.lightflag
+[  19] iconst_1
+[  20] ixor
+[  21] putstatic MapCanvas.lightflag
+[  22] getstatic msf.mc
+[  23] getfield MapCanvas.ó
+[  24] ifle 104
+[  25] getstatic msf.mc
+[  26] dup
+[  27] getfield MapCanvas.ó
+[  28] iconst_2
+[  29] iadd
+[  30] putfield MapCanvas.ó
+[  31] getstatic msf.mc
+[  32] getfield MapCanvas.ó
+[  33] getstatic msf.mc
+[  34] getfield MapCanvas.Ā
+[  35] getfield Role_Lee.x
+[  36] bipush 8
+[  37] isub
+[  38] if_icmplt 71
+[  39] getstatic msf.mc
+[  40] iconst_0
+[  41] putfield MapCanvas.ó
+[  42] getstatic msf.mc
+[  43] getstatic msf.mc
+[  44] getfield MapCanvas.Ā
+[  45] getfield Role_Lee.x
+[  46] iconst_2
+[  47] iadd
+[  48] putfield MapCanvas.ý
+[  49] getstatic msf.mc
+[  50] getstatic msf.mc
+[  51] getfield MapCanvas.Ā
+[  52] getfield Role_Lee.y
+[  53] putfield MapCanvas.þ
+[  54] getstatic msf.mc
+[  55] iconst_1
+[  56] putfield MapCanvas.ü
+[  57] getstatic msf.mc
+[  58] getfield MapCanvas.Ā
+[  59] invokevirtual Role_Lee.backward
+[  60] getstatic msf.mc
+[  61] dup
+[  62] getfield MapCanvas.Ă
+[  63] bipush 25
+[  64] isub
+[  65] putfield MapCanvas.Ă
+[  66] getstatic msf.mc
+[  67] getfield MapCanvas.ú
+[  68] ifle 104
+[  69] getstatic msf.mc
+[  70] dup
+[  71] getfield MapCanvas.ú
+[  72] iconst_2
+[  73] isub
+[  74] putfield MapCanvas.ú
+[  75] getstatic msf.mc
+[  76] getfield MapCanvas.ú
+[  77] getstatic msf.mc
+[  78] getfield MapCanvas.ÿ
+[  79] getfield Role_Ryu.x
+[  80] bipush 16
+[  81] iadd
+[  82] if_icmpge 71
+[  83] getstatic msf.mc
+[  84] iconst_0
+[  85] putfield MapCanvas.ú
+[  86] getstatic msf.mc
+[  87] getstatic msf.mc
+[  88] getfield MapCanvas.ÿ
+[  89] getfield Role_Ryu.x
+[  90] iconst_2
+[  91] iadd
+[  92] putfield MapCanvas.ý
+[  93] getstatic msf.mc
+[  94] getstatic msf.mc
+[  95] getfield MapCanvas.ÿ
+[  96] getfield Role_Ryu.y
+[  97] putfield MapCanvas.þ
+[  98] getstatic msf.mc
+[  99] iconst_1
+[ 100] putfield MapCanvas.ü
+[ 101] getstatic msf.mc
+[ 102] getfield MapCanvas.ÿ
+[ 103] invokevirtual Role_Ryu.backward
+[ 104] getstatic msf.mc
+[ 105] dup
+[ 106] getfield MapCanvas.ā
+[ 107] bipush 20
+[ 108] isub
+[ 109] putfield MapCanvas.ā
+[ 110] getstatic Game.count
+[ 111] aload_0
+[ 112] getfield Game.Á
+[ 113] irem
+[ 114] ifne 220
+[ 115] invokestatic Game.randomInt
+[ 116] istore_1
+[ 117] iload_1
+[ 118] aload_0
+[ 119] getfield Game.Â
+[ 120] if_icmple 167
+[ 121] invokestatic Game.randomInt
+[ 122] istore_2
+[ 123] iload_2
+[ 124] aload_0
+[ 125] getfield Game.Ä
+[ 126] if_icmple 51
+[ 127] getstatic msf.mc
+[ 128] getfield MapCanvas.Ā
+[ 129] getfield Role_Lee.x
+[ 130] getstatic msf.mc
+[ 131] getfield MapCanvas.ÿ
+[ 132] getfield Role_Ryu.x
+[ 133] isub
+[ 134] bipush 42
+[ 135] if_icmpge 15
+[ 136] getstatic msf.mc
+[ 137] getfield MapCanvas.Ā
+[ 138] invokevirtual Role_Lee.backward
+[ 139] goto 160
+[ 140] getstatic msf.mc
+[ 141] getfield MapCanvas.Ā
+[ 142] invokevirtual Role_Lee.fire
+[ 143] goto 148
+[ 144] iload_2
+[ 145] aload_0
+[ 146] getfield Game.Å
+[ 147] if_icmple 51
+[ 148] getstatic msf.mc
+[ 149] getfield MapCanvas.Ā
+[ 150] getfield Role_Lee.x
+[ 151] getstatic msf.mc
+[ 152] getfield MapCanvas.ÿ
+[ 153] getfield Role_Ryu.x
+[ 154] isub
+[ 155] bipush 18
+[ 156] if_icmple 15
+[ 157] getstatic msf.mc
+[ 158] getfield MapCanvas.Ā
+[ 159] invokevirtual Role_Lee.forward
+[ 160] goto 104
+[ 161] getstatic msf.mc
+[ 162] getfield MapCanvas.Ā
+[ 163] invokevirtual Role_Lee.punch
+[ 164] goto 92
+[ 165] getstatic msf.mc
+[ 166] getfield MapCanvas.Ā
+[ 167] getfield Role_Lee.x
+[ 168] getstatic msf.mc
+[ 169] getfield MapCanvas.ÿ
+[ 170] getfield Role_Ryu.x
+[ 171] isub
+[ 172] bipush 20
+[ 173] if_icmple 15
+[ 174] getstatic msf.mc
+[ 175] getfield MapCanvas.Ā
+[ 176] invokevirtual Role_Lee.forward
+[ 177] goto 56
+[ 178] getstatic msf.mc
+[ 179] getfield MapCanvas.Ā
+[ 180] invokevirtual Role_Lee.kick
+[ 181] goto 44
+[ 182] iload_1
+[ 183] aload_0
+[ 184] getfield Game.Ã
+[ 185] if_icmple 36
+[ 186] getstatic msf.mc
+[ 187] getfield MapCanvas.Ā
+[ 188] getfield Role_Lee.x
+[ 189] getstatic msf.mc
+[ 190] getfield MapCanvas.ÿ
+[ 191] getfield Role_Ryu.x
+[ 192] isub
+[ 193] bipush 20
+[ 194] if_icmpgt 12
+[ 195] getstatic msf.mc
+[ 196] getfield MapCanvas.Ā
+[ 197] invokevirtual Role_Lee.backward
+[ 198] getstatic Game.count
+[ 199] sipush 3000
+[ 200] irem
+[ 201] ifne 23
+[ 202] getstatic msf.mc
+[ 203] getfield MapCanvas.ÿ
+[ 204] iconst_0
+[ 205] putfield Role_Ryu.Ċ
+[ 206] getstatic msf.mc
+[ 207] getfield MapCanvas.ÿ
+[ 208] iconst_0
+[ 209] putfield Role_Ryu.ċ
+[ 210] getstatic msf.mc
+[ 211] invokevirtual javax/microedition/lcdui/Canvas.repaint
+[ 212] getstatic msf.mc
+[ 213] invokevirtual javax/microedition/lcdui/Canvas.serviceRepaints
+[ 214] goto -535

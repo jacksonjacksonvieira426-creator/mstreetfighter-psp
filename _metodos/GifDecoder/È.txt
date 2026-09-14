@@ -1,0 +1,21 @@
+// Classe: GifDecoder
+// Metodo: È
+// Descritor: ()V
+// Instrucoes: 16
+
+[   0] aload_0
+[   1] iconst_0
+[   2] putfield GifDecoder.Ü
+[   3] aload_0
+[   4] iconst_0
+[   5] putfield GifDecoder.Ø
+[   6] aload_0
+[   7] lconst_0
+[   8] putfield GifDecoder.Û
+[   9] aload_0
+[  10] iconst_0
+[  11] putfield GifDecoder.Ù
+[  12] aload_0
+[  13] iconst_m1
+[  14] putfield GifDecoder.Ú
+[  15] return

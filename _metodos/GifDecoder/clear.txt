@@ -1,0 +1,21 @@
+// Classe: GifDecoder
+// Metodo: clear
+// Descritor: ()V
+// Instrucoes: 16
+
+[   0] aload_0
+[   1] aconst_null
+[   2] putfield GifDecoder.á
+[   3] aload_0
+[   4] aconst_null
+[   5] putfield GifDecoder.matrix
+[   6] aload_0
+[   7] aconst_null
+[   8] putfield GifDecoder.Ç
+[   9] aload_0
+[  10] aconst_null
+[  11] putfield GifDecoder.Î
+[  12] aload_0
+[  13] aconst_null
+[  14] putfield GifDecoder.Ö
+[  15] return

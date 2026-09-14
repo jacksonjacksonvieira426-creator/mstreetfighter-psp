@@ -1,0 +1,11 @@
+// Classe: Game
+// Metodo: sleep
+// Descritor: (I)V
+// Instrucoes: 6
+
+[   0] iload_1
+[   1] i2l
+[   2] invokestatic java/lang/Thread.sleep
+[   3] goto 4
+[   4] astore_2
+[   5] return

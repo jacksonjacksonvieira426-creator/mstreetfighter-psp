@@ -1,0 +1,11 @@
+// Classe: GifDecoder
+// Metodo: Ð
+// Descritor: (II)I
+// Instrucoes: 6
+
+[   0] iload_1
+[   1] bipush 8
+[   2] ishl
+[   3] iload_0
+[   4] ior
+[   5] ireturn

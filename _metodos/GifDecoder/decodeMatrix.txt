@@ -1,0 +1,15 @@
+// Classe: GifDecoder
+// Metodo: decodeMatrix
+// Descritor: ()LMatrixImage;
+// Instrucoes: 10
+
+[   0] aload_0
+[   1] iconst_1
+[   2] putfield GifDecoder.â
+[   3] aload_0
+[   4] iconst_0
+[   5] invokevirtual GifDecoder.decodeImage
+[   6] pop
+[   7] aload_0
+[   8] getfield GifDecoder.matrix
+[   9] areturn

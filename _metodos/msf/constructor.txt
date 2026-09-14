@@ -1,0 +1,8 @@
+// Classe: msf
+// Metodo: <init>
+// Descritor: ()V
+// Instrucoes: 3
+
+[   0] aload_0
+[   1] invokespecial javax/microedition/midlet/MIDlet.<init>
+[   2] return

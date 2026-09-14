@@ -1,0 +1,30 @@
+// Classe: Role_Lee
+// Metodo: reset
+// Descritor: ()V
+// Instrucoes: 25
+
+[   0] aload_0
+[   1] getstatic MapCanvas.CanvasWidth
+[   2] bipush 20
+[   3] isub
+[   4] putfield Role_Lee.x
+[   5] aload_0
+[   6] getstatic MapCanvas.OFFY
+[   7] bipush 44
+[   8] iadd
+[   9] putfield Role_Lee.y
+[  10] aload_0
+[  11] iconst_0
+[  12] putfield Role_Lee.status
+[  13] aload_0
+[  14] iconst_0
+[  15] putfield Role_Lee.ă
+[  16] aload_0
+[  17] getstatic MapCanvas.CanvasWidth
+[  18] bipush 16
+[  19] isub
+[  20] putfield Role_Lee.Ą
+[  21] aload_0
+[  22] iconst_1
+[  23] putfield Role_Lee.ć
+[  24] return

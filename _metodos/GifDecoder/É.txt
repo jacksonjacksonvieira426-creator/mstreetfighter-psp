@@ -1,0 +1,57 @@
+// Classe: GifDecoder
+// Metodo: É
+// Descritor: ()Z
+// Instrucoes: 52
+
+[   0] aload_0
+[   1] bipush 6
+[   2] invokespecial GifDecoder.Ï
+[   3] ifne 5
+[   4] iconst_0
+[   5] ireturn
+[   6] aload_0
+[   7] getfield GifDecoder.Ç
+[   8] iconst_0
+[   9] iaload
+[  10] bipush 71
+[  11] if_icmpne 71
+[  12] aload_0
+[  13] getfield GifDecoder.Ç
+[  14] iconst_1
+[  15] iaload
+[  16] bipush 73
+[  17] if_icmpne 60
+[  18] aload_0
+[  19] getfield GifDecoder.Ç
+[  20] iconst_2
+[  21] iaload
+[  22] bipush 70
+[  23] if_icmpne 49
+[  24] aload_0
+[  25] getfield GifDecoder.Ç
+[  26] iconst_3
+[  27] iaload
+[  28] bipush 56
+[  29] if_icmpne 38
+[  30] aload_0
+[  31] getfield GifDecoder.Ç
+[  32] iconst_4
+[  33] iaload
+[  34] bipush 55
+[  35] if_icmpeq 14
+[  36] aload_0
+[  37] getfield GifDecoder.Ç
+[  38] iconst_4
+[  39] iaload
+[  40] bipush 57
+[  41] if_icmpne 16
+[  42] aload_0
+[  43] getfield GifDecoder.Ç
+[  44] iconst_5
+[  45] iaload
+[  46] bipush 97
+[  47] if_icmpne 5
+[  48] iconst_1
+[  49] ireturn
+[  50] iconst_0
+[  51] ireturn

@@ -1,0 +1,77 @@
+// Classe: GifDecoder
+// Metodo: decodeImage
+// Descritor: (I)Ljavax/microedition/lcdui/Image;
+// Instrucoes: 72
+
+[   0] aconst_null
+[   1] astore_2
+[   2] iload_1
+[   3] aload_0
+[   4] getfield GifDecoder.Æ
+[   5] if_icmpgt 5
+[   6] aconst_null
+[   7] areturn
+[   8] aload_0
+[   9] getfield GifDecoder.Æ
+[  10] ifge 21
+[  11] aload_0
+[  12] invokespecial GifDecoder.É
+[  13] ifne 5
+[  14] aconst_null
+[  15] areturn
+[  16] aload_0
+[  17] invokespecial GifDecoder.Ê
+[  18] ifne 5
+[  19] aconst_null
+[  20] areturn
+[  21] aload_0
+[  22] iconst_1
+[  23] invokespecial GifDecoder.Ï
+[  24] ifne 5
+[  25] aconst_null
+[  26] areturn
+[  27] aload_0
+[  28] getfield GifDecoder.Ç
+[  29] iconst_0
+[  30] iaload
+[  31] istore_3
+[  32] iload_3
+[  33] bipush 59
+[  34] if_icmpne 5
+[  35] aconst_null
+[  36] areturn
+[  37] iload_3
+[  38] bipush 33
+[  39] if_icmpne 12
+[  40] aload_0
+[  41] invokespecial GifDecoder.Í
+[  42] ifne -35
+[  43] aconst_null
+[  44] areturn
+[  45] iload_3
+[  46] bipush 44
+[  47] if_icmpeq 6
+[  48] goto -46
+[  49] aload_0
+[  50] invokespecial GifDecoder.Ë
+[  51] ifne 5
+[  52] aconst_null
+[  53] areturn
+[  54] aload_0
+[  55] invokespecial GifDecoder.Æ
+[  56] astore_2
+[  57] aload_0
+[  58] dup
+[  59] getfield GifDecoder.Æ
+[  60] iconst_1
+[  61] iadd
+[  62] putfield GifDecoder.Æ
+[  63] aload_0
+[  64] getfield GifDecoder.Æ
+[  65] iload_1
+[  66] if_icmpge 8
+[  67] aconst_null
+[  68] astore_2
+[  69] goto -83
+[  70] aload_2
+[  71] areturn

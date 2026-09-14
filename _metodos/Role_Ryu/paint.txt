@@ -1,0 +1,150 @@
+// Classe: Role_Ryu
+// Metodo: paint
+// Descritor: (Ljavax/microedition/lcdui/Graphics;)V
+// Instrucoes: 145
+
+[   0] aload_0
+[   1] getfield Role_Ryu.status
+[   2] ifne 132
+[   3] getstatic Game.count
+[   4] sipush 300
+[   5] irem
+[   6] ifne 18
+[   7] aload_0
+[   8] dup
+[   9] getfield Role_Ryu.ą
+[  10] iconst_1
+[  11] ixor
+[  12] putfield Role_Ryu.ą
+[  13] aload_0
+[  14] iconst_1
+[  15] putfield Role_Ryu.ć
+[  16] aload_0
+[  17] getfield Role_Ryu.ć
+[  18] iconst_1
+[  19] if_icmpne 71
+[  20] aload_0
+[  21] iconst_0
+[  22] putfield Role_Ryu.ć
+[  23] getstatic msf.mc
+[  24] getfield MapCanvas.î
+[  25] aload_1
+[  26] aload_0
+[  27] getfield Role_Ryu.x
+[  28] aload_0
+[  29] getfield Role_Ryu.ą
+[  30] iadd
+[  31] aload_0
+[  32] getfield Role_Ryu.y
+[  33] aload_0
+[  34] getfield Role_Ryu.ą
+[  35] iadd
+[  36] invokevirtual MatrixImage.paint
+[  37] aload_0
+[  38] getfield Role_Ryu.ĉ
+[  39] getstatic MapCanvas.offimage
+[  40] aload_0
+[  41] getfield Role_Ryu.x
+[  42] ineg
+[  43] aload_0
+[  44] getfield Role_Ryu.ą
+[  45] isub
+[  46] aload_0
+[  47] getfield Role_Ryu.y
+[  48] ineg
+[  49] aload_0
+[  50] getfield Role_Ryu.ą
+[  51] isub
+[  52] bipush 20
+[  53] invokevirtual javax/microedition/lcdui/Graphics.drawImage
+[  54] goto 31
+[  55] aload_1
+[  56] aload_0
+[  57] getfield Role_Ryu.Ĉ
+[  58] aload_0
+[  59] getfield Role_Ryu.x
+[  60] aload_0
+[  61] getfield Role_Ryu.ą
+[  62] iadd
+[  63] aload_0
+[  64] getfield Role_Ryu.y
+[  65] aload_0
+[  66] getfield Role_Ryu.ą
+[  67] iadd
+[  68] bipush 20
+[  69] invokevirtual javax/microedition/lcdui/Graphics.drawImage
+[  70] aload_0
+[  71] getfield Role_Ryu.status
+[  72] iconst_1
+[  73] if_icmpne 43
+[  74] getstatic msf.mc
+[  75] getfield MapCanvas.ï
+[  76] aload_1
+[  77] aload_0
+[  78] getfield Role_Ryu.x
+[  79] aload_0
+[  80] getfield Role_Ryu.y
+[  81] invokevirtual MatrixImage.paint
+[  82] aload_0
+[  83] dup
+[  84] getfield Role_Ryu.count
+[  85] iconst_1
+[  86] isub
+[  87] putfield Role_Ryu.count
+[  88] aload_0
+[  89] getfield Role_Ryu.count
+[  90] ifgt 8
+[  91] aload_0
+[  92] iconst_0
+[  93] putfield Role_Ryu.status
+[  94] aload_0
+[  95] getfield Role_Ryu.status
+[  96] iconst_2
+[  97] if_icmpne 43
+[  98] getstatic msf.mc
+[  99] getfield MapCanvas.ð
+[ 100] aload_1
+[ 101] aload_0
+[ 102] getfield Role_Ryu.x
+[ 103] aload_0
+[ 104] getfield Role_Ryu.y
+[ 105] invokevirtual MatrixImage.paint
+[ 106] aload_0
+[ 107] dup
+[ 108] getfield Role_Ryu.count
+[ 109] iconst_1
+[ 110] isub
+[ 111] putfield Role_Ryu.count
+[ 112] aload_0
+[ 113] getfield Role_Ryu.count
+[ 114] ifgt 8
+[ 115] aload_0
+[ 116] iconst_0
+[ 117] putfield Role_Ryu.status
+[ 118] aload_0
+[ 119] getfield Role_Ryu.status
+[ 120] iconst_3
+[ 121] if_icmpne 46
+[ 122] getstatic msf.mc
+[ 123] getfield MapCanvas.ñ
+[ 124] aload_1
+[ 125] aload_0
+[ 126] getfield Role_Ryu.x
+[ 127] aload_0
+[ 128] getfield Role_Ryu.y
+[ 129] bipush 6
+[ 130] iadd
+[ 131] invokevirtual MatrixImage.paint
+[ 132] aload_0
+[ 133] dup
+[ 134] getfield Role_Ryu.count
+[ 135] iconst_1
+[ 136] isub
+[ 137] putfield Role_Ryu.count
+[ 138] aload_0
+[ 139] getfield Role_Ryu.count
+[ 140] ifgt 8
+[ 141] aload_0
+[ 142] iconst_0
+[ 143] putfield Role_Ryu.status
+[ 144] return

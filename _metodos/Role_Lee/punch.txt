@@ -1,0 +1,52 @@
+// Classe: Role_Lee
+// Metodo: punch
+// Descritor: ()V
+// Instrucoes: 47
+
+[   0] aload_0
+[   1] getfield Role_Lee.status
+[   2] ifeq 4
+[   3] return
+[   4] aload_0
+[   5] iconst_3
+[   6] putfield Role_Lee.count
+[   7] aload_0
+[   8] iconst_1
+[   9] putfield Role_Lee.status
+[  10] aload_0
+[  11] iconst_1
+[  12] putfield Role_Lee.ć
+[  13] getstatic msf.mc
+[  14] getfield MapCanvas.Ā
+[  15] getfield Role_Lee.x
+[  16] getstatic msf.mc
+[  17] getfield MapCanvas.ÿ
+[  18] getfield Role_Ryu.x
+[  19] isub
+[  20] bipush 18
+[  21] if_icmpgt 63
+[  22] getstatic msf.mc
+[  23] getstatic msf.mc
+[  24] getfield MapCanvas.ÿ
+[  25] getfield Role_Ryu.x
+[  26] iconst_2
+[  27] iadd
+[  28] putfield MapCanvas.ý
+[  29] getstatic msf.mc
+[  30] getstatic msf.mc
+[  31] getfield MapCanvas.ÿ
+[  32] getfield Role_Ryu.y
+[  33] putfield MapCanvas.þ
+[  34] getstatic msf.mc
+[  35] iconst_1
+[  36] putfield MapCanvas.ü
+[  37] getstatic msf.mc
+[  38] getfield MapCanvas.ÿ
+[  39] invokevirtual Role_Ryu.backward
+[  40] getstatic msf.mc
+[  41] dup
+[  42] getfield MapCanvas.ā
+[  43] iconst_5
+[  44] isub
+[  45] putfield MapCanvas.ā
+[  46] return

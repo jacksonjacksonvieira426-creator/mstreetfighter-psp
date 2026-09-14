@@ -1,0 +1,42 @@
+// Classe: Role_Ryu
+// Metodo: backward
+// Descritor: ()V
+// Instrucoes: 37
+
+[   0] aload_0
+[   1] dup
+[   2] getfield Role_Ryu.ċ
+[   3] iconst_1
+[   4] iadd
+[   5] putfield Role_Ryu.ċ
+[   6] aload_0
+[   7] dup
+[   8] getfield Role_Ryu.Ċ
+[   9] bipush 6
+[  10] aload_0
+[  11] getfield Role_Ryu.ċ
+[  12] imul
+[  13] iadd
+[  14] putfield Role_Ryu.Ċ
+[  15] aload_0
+[  16] getfield Role_Ryu.x
+[  17] iconst_2
+[  18] isub
+[  19] aload_0
+[  20] getfield Role_Ryu.ă
+[  21] if_icmple 16
+[  22] aload_0
+[  23] aload_0
+[  24] getfield Role_Ryu.x
+[  25] iconst_2
+[  26] isub
+[  27] putfield Role_Ryu.x
+[  28] goto 11
+[  29] aload_0
+[  30] aload_0
+[  31] getfield Role_Ryu.ă
+[  32] putfield Role_Ryu.x
+[  33] aload_0
+[  34] iconst_1
+[  35] putfield Role_Ryu.ć
+[  36] return

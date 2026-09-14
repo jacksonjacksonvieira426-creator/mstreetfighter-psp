@@ -1,0 +1,256 @@
+// Classe: MapCanvas
+// Metodo: init
+// Descritor: ()V
+// Instrucoes: 251
+
+[   0] iconst_0
+[   1] putstatic MapCanvas.mode
+[   2] aload_0
+[   3] invokevirtual javax/microedition/lcdui/Canvas.getWidth
+[   4] putstatic MapCanvas.CanvasWidth
+[   5] aload_0
+[   6] invokevirtual javax/microedition/lcdui/Canvas.getHeight
+[   7] putstatic MapCanvas.CanvasHeight
+[   8] getstatic MapCanvas.CanvasWidth
+[   9] getstatic MapCanvas.CanvasHeight
+[  10] invokestatic javax/microedition/lcdui/Image.createImage
+[  11] putstatic MapCanvas.offimage
+[  12] getstatic MapCanvas.offimage
+[  13] invokevirtual javax/microedition/lcdui/Image.getGraphics
+[  14] putstatic MapCanvas.offscreen
+[  15] getstatic MapCanvas.CanvasWidth
+[  16] bipush 120
+[  17] isub
+[  18] iconst_2
+[  19] idiv
+[  20] putstatic MapCanvas.OFFX
+[  21] getstatic MapCanvas.CanvasHeight
+[  22] bipush 80
+[  23] isub
+[  24] iconst_2
+[  25] idiv
+[  26] putstatic MapCanvas.OFFY
+[  27] ldc 22
+[  28] invokestatic javax/microedition/lcdui/Image.createImage
+[  29] astore_1
+[  30] aload_0
+[  31] bipush 60
+[  32] bipush 55
+[  33] invokestatic javax/microedition/lcdui/Image.createImage
+[  34] putfield MapCanvas.ç
+[  35] aload_0
+[  36] getfield MapCanvas.ç
+[  37] invokevirtual javax/microedition/lcdui/Image.getGraphics
+[  38] putstatic MapCanvas.G
+[  39] getstatic MapCanvas.G
+[  40] aload_1
+[  41] iconst_0
+[  42] iconst_0
+[  43] bipush 20
+[  44] invokevirtual javax/microedition/lcdui/Graphics.drawImage
+[  45] aload_0
+[  46] bipush 60
+[  47] bipush 55
+[  48] invokestatic javax/microedition/lcdui/Image.createImage
+[  49] putfield MapCanvas.è
+[  50] aload_0
+[  51] getfield MapCanvas.è
+[  52] invokevirtual javax/microedition/lcdui/Image.getGraphics
+[  53] putstatic MapCanvas.G
+[  54] getstatic MapCanvas.G
+[  55] aload_1
+[  56] iconst_0
+[  57] bipush -55
+[  58] bipush 20
+[  59] invokevirtual javax/microedition/lcdui/Graphics.drawImage
+[  60] aload_0
+[  61] bipush 60
+[  62] bipush 55
+[  63] invokestatic javax/microedition/lcdui/Image.createImage
+[  64] putfield MapCanvas.é
+[  65] aload_0
+[  66] getfield MapCanvas.é
+[  67] invokevirtual javax/microedition/lcdui/Image.getGraphics
+[  68] putstatic MapCanvas.G
+[  69] getstatic MapCanvas.G
+[  70] aload_1
+[  71] iconst_0
+[  72] bipush -110
+[  73] bipush 20
+[  74] invokevirtual javax/microedition/lcdui/Graphics.drawImage
+[  75] aload_0
+[  76] bipush 60
+[  77] bipush 55
+[  78] invokestatic javax/microedition/lcdui/Image.createImage
+[  79] putfield MapCanvas.ê
+[  80] aload_0
+[  81] getfield MapCanvas.ê
+[  82] invokevirtual javax/microedition/lcdui/Image.getGraphics
+[  83] putstatic MapCanvas.G
+[  84] getstatic MapCanvas.G
+[  85] aload_1
+[  86] iconst_0
+[  87] sipush -165
+[  88] bipush 20
+[  89] invokevirtual javax/microedition/lcdui/Graphics.drawImage
+[  90] aload_0
+[  91] bipush 60
+[  92] bipush 55
+[  93] invokestatic javax/microedition/lcdui/Image.createImage
+[  94] putfield MapCanvas.ë
+[  95] aload_0
+[  96] getfield MapCanvas.ë
+[  97] invokevirtual javax/microedition/lcdui/Image.getGraphics
+[  98] putstatic MapCanvas.G
+[  99] getstatic MapCanvas.G
+[ 100] aload_1
+[ 101] iconst_0
+[ 102] sipush -220
+[ 103] bipush 20
+[ 104] invokevirtual javax/microedition/lcdui/Graphics.drawImage
+[ 105] aload_0
+[ 106] bipush 60
+[ 107] bipush 55
+[ 108] invokestatic javax/microedition/lcdui/Image.createImage
+[ 109] putfield MapCanvas.ì
+[ 110] aload_0
+[ 111] getfield MapCanvas.ì
+[ 112] invokevirtual javax/microedition/lcdui/Image.getGraphics
+[ 113] putstatic MapCanvas.G
+[ 114] getstatic MapCanvas.G
+[ 115] aload_1
+[ 116] iconst_0
+[ 117] sipush -275
+[ 118] bipush 20
+[ 119] invokevirtual javax/microedition/lcdui/Graphics.drawImage
+[ 120] aconst_null
+[ 121] putstatic MapCanvas.G
+[ 122] aconst_null
+[ 123] astore_1
+[ 124] goto 11
+[ 125] astore_1
+[ 126] getstatic System.out
+[ 127] aload_1
+[ 128] invokevirtual java/io/PrintStream.println
+[ 129] aload_0
+[ 130] ldc 35
+[ 131] invokevirtual MapCanvas.CreateGifMatrixImage
+[ 132] astore_1
+[ 133] aload_0
+[ 134] aload_1
+[ 135] iconst_0
+[ 136] iconst_0
+[ 137] bipush 18
+[ 138] bipush 40
+[ 139] invokevirtual MatrixImage.crop
+[ 140] putfield MapCanvas.î
+[ 141] aload_0
+[ 142] aload_1
+[ 143] bipush 18
+[ 144] iconst_0
+[ 145] bipush 22
+[ 146] bipush 39
+[ 147] invokevirtual MatrixImage.crop
+[ 148] putfield MapCanvas.ï
+[ 149] aload_0
+[ 150] aload_1
+[ 151] bipush 40
+[ 152] iconst_0
+[ 153] bipush 29
+[ 154] bipush 39
+[ 155] invokevirtual MatrixImage.crop
+[ 156] putfield MapCanvas.ð
+[ 157] aload_0
+[ 158] aload_1
+[ 159] bipush 70
+[ 160] iconst_0
+[ 161] bipush 30
+[ 162] bipush 33
+[ 163] invokevirtual MatrixImage.crop
+[ 164] putfield MapCanvas.ñ
+[ 165] aload_0
+[ 166] aload_1
+[ 167] bipush 70
+[ 168] bipush 34
+[ 169] bipush 22
+[ 170] bipush 12
+[ 171] invokevirtual MatrixImage.crop
+[ 172] putfield MapCanvas.ò
+[ 173] aload_0
+[ 174] aload_1
+[ 175] iconst_0
+[ 176] bipush 41
+[ 177] bipush 15
+[ 178] bipush 34
+[ 179] invokevirtual MatrixImage.crop
+[ 180] putfield MapCanvas.ô
+[ 181] aload_0
+[ 182] aload_1
+[ 183] bipush 16
+[ 184] bipush 41
+[ 185] bipush 19
+[ 186] bipush 34
+[ 187] invokevirtual MatrixImage.crop
+[ 188] putfield MapCanvas.õ
+[ 189] aload_0
+[ 190] aload_1
+[ 191] bipush 37
+[ 192] bipush 41
+[ 193] bipush 33
+[ 194] bipush 34
+[ 195] invokevirtual MatrixImage.crop
+[ 196] putfield MapCanvas.ö
+[ 197] aload_0
+[ 198] aload_1
+[ 199] iconst_0
+[ 200] bipush 77
+[ 201] bipush 21
+[ 202] bipush 19
+[ 203] invokevirtual MatrixImage.crop
+[ 204] putfield MapCanvas.ø
+[ 205] aload_0
+[ 206] aload_1
+[ 207] bipush 22
+[ 208] bipush 77
+[ 209] bipush 38
+[ 210] bipush 19
+[ 211] invokevirtual MatrixImage.crop
+[ 212] putfield MapCanvas.ù
+[ 213] aload_0
+[ 214] aload_1
+[ 215] bipush 76
+[ 216] bipush 50
+[ 217] bipush 13
+[ 218] bipush 13
+[ 219] invokevirtual MatrixImage.crop
+[ 220] putfield MapCanvas.û
+[ 221] aconst_null
+[ 222] astore_1
+[ 223] iconst_0
+[ 224] putstatic MapCanvas.still
+[ 225] aload_0
+[ 226] iconst_0
+[ 227] putfield MapCanvas.ó
+[ 228] aload_0
+[ 229] iconst_0
+[ 230] putfield MapCanvas.ú
+[ 231] aload_0
+[ 232] iconst_0
+[ 233] putfield MapCanvas.ü
+[ 234] aload_0
+[ 235] new 53
+[ 236] dup
+[ 237] invokespecial Role_Lee.<init>
+[ 238] putfield MapCanvas.Ā
+[ 239] aload_0
+[ 240] new 56
+[ 241] dup
+[ 242] invokespecial Role_Ryu.<init>
+[ 243] putfield MapCanvas.ÿ
+[ 244] aload_0
+[ 245] bipush 100
+[ 246] putfield MapCanvas.ā
+[ 247] aload_0
+[ 248] bipush 100
+[ 249] putfield MapCanvas.Ă
+[ 250] return

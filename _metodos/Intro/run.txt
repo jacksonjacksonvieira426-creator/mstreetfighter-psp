@@ -1,0 +1,48 @@
+// Classe: Intro
+// Metodo: run
+// Descritor: ()V
+// Instrucoes: 43
+
+[   0] iconst_1
+[   1] putstatic Intro.flag
+[   2] iconst_1
+[   3] putstatic Intro.seq
+[   4] iconst_0
+[   5] putstatic Intro.count
+[   6] goto 3
+[   7] getstatic Intro.count
+[   8] iconst_1
+[   9] iadd
+[  10] putstatic Intro.count
+[  11] getstatic Intro.count
+[  12] bipush 6
+[  13] if_icmplt 6
+[  14] goto 25
+[  15] getstatic msf.mc
+[  16] invokevirtual javax/microedition/lcdui/Canvas.repaint
+[  17] getstatic msf.mc
+[  18] invokevirtual javax/microedition/lcdui/Canvas.serviceRepaints
+[  19] aload_0
+[  20] sipush 500
+[  21] invokevirtual Intro.sleep
+[  22] goto -38
+[  23] getstatic msf.mc
+[  24] invokevirtual javax/microedition/lcdui/Canvas.repaint
+[  25] getstatic msf.mc
+[  26] invokevirtual javax/microedition/lcdui/Canvas.serviceRepaints
+[  27] aload_0
+[  28] sipush 500
+[  29] invokevirtual Intro.sleep
+[  30] iconst_0
+[  31] putstatic Intro.flag
+[  32] getstatic msf.mc
+[  33] getstatic msf.CommandPlay
+[  34] invokevirtual javax/microedition/lcdui/Displayable.addCommand
+[  35] getstatic msf.mc
+[  36] getstatic msf.CommandExit
+[  37] invokevirtual javax/microedition/lcdui/Displayable.addCommand
+[  38] getstatic msf.mc
+[  39] invokevirtual javax/microedition/lcdui/Canvas.repaint
+[  40] getstatic msf.mc
+[  41] invokevirtual javax/microedition/lcdui/Canvas.serviceRepaints
+[  42] return

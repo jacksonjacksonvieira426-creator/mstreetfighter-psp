@@ -1,0 +1,405 @@
+// Classe: MapCanvas
+// Metodo: paint
+// Descritor: (Ljavax/microedition/lcdui/Graphics;)V
+// Instrucoes: 400
+
+[   0] getstatic MapCanvas.G
+[   1] ifnonnull 15
+[   2] aload_1
+[   3] putstatic MapCanvas.G
+[   4] aload_0
+[   5] aload_1
+[   6] invokevirtual javax/microedition/lcdui/Graphics.getFont
+[   7] putfield MapCanvas.ã
+[   8] getstatic Intro.flag
+[   9] iconst_1
+[  10] if_icmpne 228
+[  11] getstatic Intro.seq
+[  12] lookupswitch
+[  13] getstatic MapCanvas.CanvasWidth
+[  14] bipush 60
+[  15] isub
+[  16] iconst_2
+[  17] idiv
+[  18] istore_2
+[  19] getstatic MapCanvas.CanvasHeight
+[  20] bipush 55
+[  21] isub
+[  22] iconst_2
+[  23] idiv
+[  24] istore_3
+[  25] aconst_null
+[  26] astore 4
+[  27] getstatic Intro.count
+[  28] tableswitch 91
+[  29] aload_0
+[  30] getfield MapCanvas.ç
+[  31] astore 4
+[  32] goto 45
+[  33] aload_0
+[  34] getfield MapCanvas.è
+[  35] astore 4
+[  36] goto 36
+[  37] aload_0
+[  38] getfield MapCanvas.é
+[  39] astore 4
+[  40] goto 27
+[  41] aload_0
+[  42] getfield MapCanvas.ê
+[  43] astore 4
+[  44] goto 18
+[  45] aload_0
+[  46] getfield MapCanvas.ë
+[  47] astore 4
+[  48] goto 9
+[  49] aload_0
+[  50] getfield MapCanvas.ì
+[  51] astore 4
+[  52] getstatic Intro.count
+[  53] bipush 6
+[  54] if_icmplt 14
+[  55] getstatic MapCanvas.offscreen
+[  56] ldc 72
+[  57] invokevirtual javax/microedition/lcdui/Graphics.setColor
+[  58] goto 28
+[  59] getstatic Intro.count
+[  60] iconst_4
+[  61] if_icmplt 14
+[  62] getstatic MapCanvas.offscreen
+[  63] ldc 74
+[  64] invokevirtual javax/microedition/lcdui/Graphics.setColor
+[  65] goto 10
+[  66] getstatic MapCanvas.offscreen
+[  67] iconst_0
+[  68] invokevirtual javax/microedition/lcdui/Graphics.setColor
+[  69] getstatic MapCanvas.offscreen
+[  70] iconst_0
+[  71] iconst_0
+[  72] getstatic MapCanvas.CanvasWidth
+[  73] getstatic MapCanvas.CanvasHeight
+[  74] invokevirtual javax/microedition/lcdui/Graphics.fillRect
+[  75] aload 4
+[  76] ifnull 15
+[  77] getstatic MapCanvas.offscreen
+[  78] aload 4
+[  79] iload_2
+[  80] iload_3
+[  81] bipush 20
+[  82] invokevirtual javax/microedition/lcdui/Graphics.drawImage
+[  83] aload_1
+[  84] getstatic MapCanvas.offimage
+[  85] iconst_0
+[  86] iconst_0
+[  87] bipush 20
+[  88] invokevirtual javax/microedition/lcdui/Graphics.drawImage
+[  89] return
+[  90] getstatic MapCanvas.mode
+[  91] ifne 107
+[  92] aload_1
+[  93] ldc 72
+[  94] invokevirtual javax/microedition/lcdui/Graphics.setColor
+[  95] aload_1
+[  96] iconst_0
+[  97] iconst_0
+[  98] getstatic MapCanvas.CanvasWidth
+[  99] getstatic MapCanvas.CanvasHeight
+[ 100] invokevirtual javax/microedition/lcdui/Graphics.fillRect
+[ 101] aload_1
+[ 102] iconst_0
+[ 103] invokevirtual javax/microedition/lcdui/Graphics.setColor
+[ 104] getstatic MapCanvas.CanvasWidth
+[ 105] iconst_2
+[ 106] idiv
+[ 107] istore_2
+[ 108] getstatic MapCanvas.CanvasHeight
+[ 109] iconst_2
+[ 110] idiv
+[ 111] aload_0
+[ 112] getfield MapCanvas.ã
+[ 113] invokevirtual javax/microedition/lcdui/Font.getHeight
+[ 114] isub
+[ 115] istore_3
+[ 116] aload_1
+[ 117] aload_0
+[ 118] getfield MapCanvas.ä
+[ 119] iload_2
+[ 120] iload_3
+[ 121] bipush 33
+[ 122] invokevirtual javax/microedition/lcdui/Graphics.drawString
+[ 123] iload_3
+[ 124] aload_0
+[ 125] getfield MapCanvas.ã
+[ 126] invokevirtual javax/microedition/lcdui/Font.getHeight
+[ 127] iconst_2
+[ 128] iadd
+[ 129] iadd
+[ 130] istore_3
+[ 131] aload_1
+[ 132] aload_0
+[ 133] getfield MapCanvas.å
+[ 134] iload_2
+[ 135] iload_3
+[ 136] bipush 33
+[ 137] invokevirtual javax/microedition/lcdui/Graphics.drawString
+[ 138] iload_3
+[ 139] aload_0
+[ 140] getfield MapCanvas.ã
+[ 141] invokevirtual javax/microedition/lcdui/Font.getHeight
+[ 142] iconst_2
+[ 143] iadd
+[ 144] iadd
+[ 145] istore_3
+[ 146] aload_1
+[ 147] aload_0
+[ 148] getfield MapCanvas.æ
+[ 149] iload_2
+[ 150] iload_3
+[ 151] bipush 33
+[ 152] invokevirtual javax/microedition/lcdui/Graphics.drawString
+[ 153] return
+[ 154] aload_0
+[ 155] getfield MapCanvas.ç
+[ 156] ifnull 56
+[ 157] aload_0
+[ 158] aconst_null
+[ 159] putfield MapCanvas.ç
+[ 160] aload_0
+[ 161] aconst_null
+[ 162] putfield MapCanvas.è
+[ 163] aload_0
+[ 164] aconst_null
+[ 165] putfield MapCanvas.é
+[ 166] aload_0
+[ 167] aconst_null
+[ 168] putfield MapCanvas.ê
+[ 169] aload_0
+[ 170] aconst_null
+[ 171] putfield MapCanvas.ë
+[ 172] aload_0
+[ 173] aconst_null
+[ 174] putfield MapCanvas.ì
+[ 175] aload_0
+[ 176] ldc 78
+[ 177] invokestatic javax/microedition/lcdui/Image.createImage
+[ 178] putfield MapCanvas.í
+[ 179] goto 4
+[ 180] astore_2
+[ 181] new 80
+[ 182] dup
+[ 183] invokespecial Game.<init>
+[ 184] invokevirtual java/lang/Thread.start
+[ 185] getstatic MapCanvas.offscreen
+[ 186] iconst_0
+[ 187] iconst_0
+[ 188] getstatic MapCanvas.CanvasWidth
+[ 189] getstatic MapCanvas.CanvasHeight
+[ 190] invokevirtual javax/microedition/lcdui/Graphics.setClip
+[ 191] getstatic MapCanvas.offscreen
+[ 192] ldc 72
+[ 193] invokevirtual javax/microedition/lcdui/Graphics.setColor
+[ 194] getstatic MapCanvas.offscreen
+[ 195] iconst_0
+[ 196] iconst_0
+[ 197] getstatic MapCanvas.CanvasWidth
+[ 198] getstatic MapCanvas.CanvasHeight
+[ 199] invokevirtual javax/microedition/lcdui/Graphics.fillRect
+[ 200] getstatic MapCanvas.offscreen
+[ 201] aload_0
+[ 202] getfield MapCanvas.í
+[ 203] getstatic MapCanvas.OFFX
+[ 204] getstatic MapCanvas.OFFY
+[ 205] bipush 20
+[ 206] invokevirtual javax/microedition/lcdui/Graphics.drawImage
+[ 207] getstatic MapCanvas.lightflag
+[ 208] ifne 14
+[ 209] getstatic MapCanvas.offscreen
+[ 210] ldc 85
+[ 211] invokevirtual javax/microedition/lcdui/Graphics.setColor
+[ 212] goto 11
+[ 213] getstatic MapCanvas.offscreen
+[ 214] ldc 86
+[ 215] invokevirtual javax/microedition/lcdui/Graphics.setColor
+[ 216] getstatic MapCanvas.offscreen
+[ 217] getstatic MapCanvas.OFFX
+[ 218] bipush 88
+[ 219] iadd
+[ 220] getstatic MapCanvas.OFFY
+[ 221] bipush 18
+[ 222] iadd
+[ 223] iconst_4
+[ 224] iconst_4
+[ 225] iconst_4
+[ 226] iconst_4
+[ 227] invokevirtual javax/microedition/lcdui/Graphics.fillRoundRect
+[ 228] aload_0
+[ 229] getfield MapCanvas.Ā
+[ 230] getstatic MapCanvas.offscreen
+[ 231] invokevirtual Role_Lee.paint
+[ 232] aload_0
+[ 233] getfield MapCanvas.ÿ
+[ 234] getstatic MapCanvas.offscreen
+[ 235] invokevirtual Role_Ryu.paint
+[ 236] aload_0
+[ 237] getfield MapCanvas.ó
+[ 238] ifle 23
+[ 239] aload_0
+[ 240] getfield MapCanvas.ò
+[ 241] getstatic MapCanvas.offscreen
+[ 242] aload_0
+[ 243] getfield MapCanvas.ó
+[ 244] getstatic MapCanvas.OFFY
+[ 245] bipush 46
+[ 246] iadd
+[ 247] invokevirtual MatrixImage.paint
+[ 248] aload_0
+[ 249] getfield MapCanvas.ü
+[ 250] iconst_1
+[ 251] if_icmpne 26
+[ 252] aload_0
+[ 253] iconst_0
+[ 254] putfield MapCanvas.ü
+[ 255] aload_0
+[ 256] getfield MapCanvas.û
+[ 257] getstatic MapCanvas.offscreen
+[ 258] aload_0
+[ 259] getfield MapCanvas.ý
+[ 260] aload_0
+[ 261] getfield MapCanvas.þ
+[ 262] invokevirtual MatrixImage.paint
+[ 263] getstatic MapCanvas.offscreen
+[ 264] ldc 91
+[ 265] invokevirtual javax/microedition/lcdui/Graphics.setColor
+[ 266] aload_0
+[ 267] getfield MapCanvas.ā
+[ 268] iconst_5
+[ 269] idiv
+[ 270] istore_2
+[ 271] getstatic MapCanvas.offscreen
+[ 272] iconst_4
+[ 273] getstatic MapCanvas.OFFY
+[ 274] iconst_4
+[ 275] iadd
+[ 276] iconst_4
+[ 277] iload_2
+[ 278] invokevirtual javax/microedition/lcdui/Graphics.fillRect
+[ 279] aload_0
+[ 280] getfield MapCanvas.Ă
+[ 281] iconst_5
+[ 282] idiv
+[ 283] istore_2
+[ 284] getstatic MapCanvas.offscreen
+[ 285] getstatic MapCanvas.CanvasWidth
+[ 286] bipush 8
+[ 287] isub
+[ 288] getstatic MapCanvas.OFFY
+[ 289] iconst_4
+[ 290] iadd
+[ 291] iconst_4
+[ 292] iload_2
+[ 293] invokevirtual javax/microedition/lcdui/Graphics.fillRect
+[ 294] aload_1
+[ 295] getstatic MapCanvas.offimage
+[ 296] iconst_0
+[ 297] iconst_0
+[ 298] bipush 20
+[ 299] invokevirtual javax/microedition/lcdui/Graphics.drawImage
+[ 300] aload_0
+[ 301] getfield MapCanvas.ā
+[ 302] ifle 10
+[ 303] aload_0
+[ 304] getfield MapCanvas.Ă
+[ 305] ifgt 173
+[ 306] aload_0
+[ 307] getfield MapCanvas.Ă
+[ 308] ifgt 9
+[ 309] ldc 92
+[ 310] astore_3
+[ 311] goto 6
+[ 312] ldc 93
+[ 313] astore_3
+[ 314] aload_0
+[ 315] getfield MapCanvas.ã
+[ 316] aload_3
+[ 317] invokevirtual javax/microedition/lcdui/Font.stringWidth
+[ 318] istore 4
+[ 319] getstatic MapCanvas.CanvasWidth
+[ 320] iload 4
+[ 321] isub
+[ 322] iconst_2
+[ 323] idiv
+[ 324] istore 5
+[ 325] getstatic MapCanvas.CanvasHeight
+[ 326] aload_0
+[ 327] getfield MapCanvas.ã
+[ 328] invokevirtual javax/microedition/lcdui/Font.getHeight
+[ 329] isub
+[ 330] iconst_2
+[ 331] idiv
+[ 332] istore 6
+[ 333] aload_1
+[ 334] ldc 74
+[ 335] invokevirtual javax/microedition/lcdui/Graphics.setColor
+[ 336] aload_1
+[ 337] iload 5
+[ 338] getstatic MapCanvas.OFFY
+[ 339] iload 6
+[ 340] iadd
+[ 341] iconst_2
+[ 342] isub
+[ 343] iload 4
+[ 344] aload_0
+[ 345] getfield MapCanvas.ã
+[ 346] invokevirtual javax/microedition/lcdui/Font.getHeight
+[ 347] iconst_4
+[ 348] iadd
+[ 349] invokevirtual javax/microedition/lcdui/Graphics.fillRect
+[ 350] aload_1
+[ 351] iconst_0
+[ 352] invokevirtual javax/microedition/lcdui/Graphics.setColor
+[ 353] aload_1
+[ 354] iload 5
+[ 355] getstatic MapCanvas.OFFY
+[ 356] iload 6
+[ 357] iadd
+[ 358] iconst_2
+[ 359] isub
+[ 360] iload 4
+[ 361] aload_0
+[ 362] getfield MapCanvas.ã
+[ 363] invokevirtual javax/microedition/lcdui/Font.getHeight
+[ 364] iconst_4
+[ 365] iadd
+[ 366] invokevirtual javax/microedition/lcdui/Graphics.drawRect
+[ 367] aload_1
+[ 368] aload_3
+[ 369] getstatic MapCanvas.CanvasWidth
+[ 370] iconst_2
+[ 371] idiv
+[ 372] getstatic MapCanvas.OFFY
+[ 373] iload 6
+[ 374] iadd
+[ 375] aload_0
+[ 376] getfield MapCanvas.ã
+[ 377] invokevirtual javax/microedition/lcdui/Font.getHeight
+[ 378] iadd
+[ 379] bipush 33
+[ 380] invokevirtual javax/microedition/lcdui/Graphics.drawString
+[ 381] aload_1
+[ 382] aload_3
+[ 383] getstatic MapCanvas.CanvasWidth
+[ 384] iconst_2
+[ 385] idiv
+[ 386] iconst_1
+[ 387] iadd
+[ 388] getstatic MapCanvas.OFFY
+[ 389] iload 6
+[ 390] iadd
+[ 391] aload_0
+[ 392] getfield MapCanvas.ã
+[ 393] invokevirtual javax/microedition/lcdui/Font.getHeight
+[ 394] iadd
+[ 395] bipush 33
+[ 396] invokevirtual javax/microedition/lcdui/Graphics.drawString
+[ 397] iconst_1
+[ 398] putstatic MapCanvas.still
+[ 399] return

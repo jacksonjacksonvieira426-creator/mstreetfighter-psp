@@ -1,0 +1,287 @@
+{
+  "jogo": "",
+  "classes": {
+    "Game": [
+      {
+        "nome": "constructor",
+        "instrucoes": 18
+      },
+      {
+        "nome": "randomInt",
+        "instrucoes": 19
+      },
+      {
+        "nome": "run",
+        "instrucoes": 215
+      },
+      {
+        "nome": "sleep",
+        "instrucoes": 6
+      }
+    ],
+    "GifDecoder": [
+      {
+        "nome": "clear",
+        "instrucoes": 16
+      },
+      {
+        "nome": "constructor",
+        "instrucoes": 140
+      },
+      {
+        "nome": "decodeImage",
+        "instrucoes": 72
+      },
+      {
+        "nome": "decodeMatrix",
+        "instrucoes": 10
+      },
+      {
+        "nome": "Æ",
+        "instrucoes": 300
+      },
+      {
+        "nome": "Ç",
+        "instrucoes": 83
+      },
+      {
+        "nome": "È",
+        "instrucoes": 16
+      },
+      {
+        "nome": "É",
+        "instrucoes": 52
+      },
+      {
+        "nome": "Ê",
+        "instrucoes": 72
+      },
+      {
+        "nome": "Ë",
+        "instrucoes": 88
+      },
+      {
+        "nome": "Ì",
+        "instrucoes": 50
+      },
+      {
+        "nome": "Í",
+        "instrucoes": 47
+      },
+      {
+        "nome": "Î",
+        "instrucoes": 21
+      },
+      {
+        "nome": "Ï",
+        "instrucoes": 43
+      },
+      {
+        "nome": "Ð",
+        "instrucoes": 6
+      },
+      {
+        "nome": "Ñ",
+        "instrucoes": 9
+      }
+    ],
+    "Intro": [
+      {
+        "nome": "constructor",
+        "instrucoes": 9
+      },
+      {
+        "nome": "run",
+        "instrucoes": 43
+      },
+      {
+        "nome": "sleep",
+        "instrucoes": 6
+      }
+    ],
+    "MapCanvas": [
+      {
+        "nome": "CreateGifMatrixImage",
+        "instrucoes": 24
+      },
+      {
+        "nome": "constructor",
+        "instrucoes": 21
+      },
+      {
+        "nome": "init",
+        "instrucoes": 251
+      },
+      {
+        "nome": "keyPressed",
+        "instrucoes": 4
+      },
+      {
+        "nome": "keyProc",
+        "instrucoes": 43
+      },
+      {
+        "nome": "keyRepeated",
+        "instrucoes": 4
+      },
+      {
+        "nome": "paint",
+        "instrucoes": 400
+      }
+    ],
+    "MatrixImage": [
+      {
+        "nome": "constructor",
+        "instrucoes": 14
+      },
+      {
+        "nome": "crop",
+        "instrucoes": 38
+      },
+      {
+        "nome": "paint",
+        "instrucoes": 43
+      },
+      {
+        "nome": "setColor",
+        "instrucoes": 8
+      }
+    ],
+    "Role_Lee": [
+      {
+        "nome": "backward",
+        "instrucoes": 22
+      },
+      {
+        "nome": "constructor",
+        "instrucoes": 27
+      },
+      {
+        "nome": "fire",
+        "instrucoes": 29
+      },
+      {
+        "nome": "forward",
+        "instrucoes": 29
+      },
+      {
+        "nome": "kick",
+        "instrucoes": 47
+      },
+      {
+        "nome": "paint",
+        "instrucoes": 162
+      },
+      {
+        "nome": "punch",
+        "instrucoes": 47
+      },
+      {
+        "nome": "reset",
+        "instrucoes": 25
+      }
+    ],
+    "Role_Ryu": [
+      {
+        "nome": "backward",
+        "instrucoes": 37
+      },
+      {
+        "nome": "constructor",
+        "instrucoes": 30
+      },
+      {
+        "nome": "fire",
+        "instrucoes": 34
+      },
+      {
+        "nome": "forward",
+        "instrucoes": 51
+      },
+      {
+        "nome": "kick",
+        "instrucoes": 62
+      },
+      {
+        "nome": "paint",
+        "instrucoes": 145
+      },
+      {
+        "nome": "punch",
+        "instrucoes": 62
+      },
+      {
+        "nome": "reset",
+        "instrucoes": 23
+      }
+    ],
+    "msf": [
+      {
+        "nome": "commandAction",
+        "instrucoes": 53
+      },
+      {
+        "nome": "constructor",
+        "instrucoes": 3
+      },
+      {
+        "nome": "destroyApp",
+        "instrucoes": 1
+      },
+      {
+        "nome": "pauseApp",
+        "instrucoes": 1
+      },
+      {
+        "nome": "sleep",
+        "instrucoes": 6
+      },
+      {
+        "nome": "startApp",
+        "instrucoes": 36
+      }
+    ]
+  },
+  "metodos_criticos": [
+    {
+      "classe": "MapCanvas",
+      "metodo": "keyPressed",
+      "instrucoes": 4
+    },
+    {
+      "classe": "Intro",
+      "metodo": "run",
+      "instrucoes": 43
+    },
+    {
+      "classe": "MapCanvas",
+      "metodo": "keyProc",
+      "instrucoes": 43
+    },
+    {
+      "classe": "MatrixImage",
+      "metodo": "paint",
+      "instrucoes": 43
+    },
+    {
+      "classe": "Role_Ryu",
+      "metodo": "paint",
+      "instrucoes": 145
+    },
+    {
+      "classe": "Role_Lee",
+      "metodo": "paint",
+      "instrucoes": 162
+    },
+    {
+      "classe": "Game",
+      "metodo": "run",
+      "instrucoes": 215
+    },
+    {
+      "classe": "MapCanvas",
+      "metodo": "paint",
+      "instrucoes": 400
+    }
+  ]
+}

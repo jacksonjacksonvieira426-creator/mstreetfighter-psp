@@ -1,0 +1,28 @@
+// Classe: Role_Ryu
+// Metodo: reset
+// Descritor: ()V
+// Instrucoes: 23
+
+[   0] aload_0
+[   1] iconst_4
+[   2] putfield Role_Ryu.x
+[   3] aload_0
+[   4] getstatic MapCanvas.OFFY
+[   5] bipush 39
+[   6] iadd
+[   7] putfield Role_Ryu.y
+[   8] aload_0
+[   9] iconst_0
+[  10] putfield Role_Ryu.status
+[  11] aload_0
+[  12] iconst_0
+[  13] putfield Role_Ryu.ă
+[  14] aload_0
+[  15] getstatic MapCanvas.CanvasWidth
+[  16] bipush 16
+[  17] isub
+[  18] putfield Role_Ryu.Ą
+[  19] aload_0
+[  20] iconst_1
+[  21] putfield Role_Ryu.ć
+[  22] return

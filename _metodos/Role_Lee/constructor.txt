@@ -1,0 +1,32 @@
+// Classe: Role_Lee
+// Metodo: <init>
+// Descritor: ()V
+// Instrucoes: 27
+
+[   0] aload_0
+[   1] invokespecial java/lang/Object.<init>
+[   2] aload_0
+[   3] iconst_0
+[   4] putfield Role_Lee.status
+[   5] aload_0
+[   6] iconst_0
+[   7] putfield Role_Lee.ą
+[   8] aload_0
+[   9] iconst_0
+[  10] putfield Role_Lee.count
+[  11] aload_0
+[  12] iconst_0
+[  13] putfield Role_Lee.Ć
+[  14] aload_0
+[  15] invokevirtual Role_Lee.reset
+[  16] aload_0
+[  17] bipush 16
+[  18] bipush 35
+[  19] invokestatic javax/microedition/lcdui/Image.createImage
+[  20] putfield Role_Lee.Ĉ
+[  21] aload_0
+[  22] aload_0
+[  23] getfield Role_Lee.Ĉ
+[  24] invokevirtual javax/microedition/lcdui/Image.getGraphics
+[  25] putfield Role_Lee.ĉ
+[  26] return

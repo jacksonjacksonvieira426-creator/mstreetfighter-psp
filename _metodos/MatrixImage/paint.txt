@@ -1,0 +1,48 @@
+// Classe: MatrixImage
+// Metodo: paint
+// Descritor: (Ljavax/microedition/lcdui/Graphics;II)V
+// Instrucoes: 43
+
+[   0] iconst_0
+[   1] istore 4
+[   2] goto 66
+[   3] iconst_0
+[   4] istore 5
+[   5] goto 48
+[   6] aload_0
+[   7] getfield MatrixImage.matrix
+[   8] iload 4
+[   9] aaload
+[  10] iload 5
+[  11] iaload
+[  12] iconst_m1
+[  13] if_icmpeq 31
+[  14] aload_1
+[  15] aload_0
+[  16] getfield MatrixImage.matrix
+[  17] iload 4
+[  18] aaload
+[  19] iload 5
+[  20] iaload
+[  21] invokevirtual javax/microedition/lcdui/Graphics.setColor
+[  22] aload_1
+[  23] iload_2
+[  24] iload 4
+[  25] iadd
+[  26] iload_3
+[  27] iload 5
+[  28] iadd
+[  29] iconst_1
+[  30] iconst_1
+[  31] invokevirtual javax/microedition/lcdui/Graphics.drawRect
+[  32] iinc 5
+[  33] iload 5
+[  34] aload_0
+[  35] getfield MatrixImage.height
+[  36] if_icmplt -51
+[  37] iinc 4
+[  38] iload 4
+[  39] aload_0
+[  40] getfield MatrixImage.width
+[  41] if_icmplt -69
+[  42] return

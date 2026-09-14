@@ -1,0 +1,41 @@
+// Classe: msf
+// Metodo: startApp
+// Descritor: ()V
+// Instrucoes: 36
+
+[   0] new 2
+[   1] dup
+[   2] ldc 3
+[   3] iconst_1
+[   4] iconst_1
+[   5] invokespecial javax/microedition/lcdui/Command.<init>
+[   6] putstatic msf.CommandPlay
+[   7] new 2
+[   8] dup
+[   9] ldc 6
+[  10] iconst_1
+[  11] iconst_2
+[  12] invokespecial javax/microedition/lcdui/Command.<init>
+[  13] putstatic msf.CommandExit
+[  14] new 8
+[  15] dup
+[  16] invokespecial MapCanvas.<init>
+[  17] putstatic msf.mc
+[  18] getstatic msf.mc
+[  19] getstatic msf.CommandPlay
+[  20] invokevirtual javax/microedition/lcdui/Displayable.addCommand
+[  21] getstatic msf.mc
+[  22] getstatic msf.CommandExit
+[  23] invokevirtual javax/microedition/lcdui/Displayable.addCommand
+[  24] getstatic msf.mc
+[  25] aload_0
+[  26] invokevirtual javax/microedition/lcdui/Displayable.setCommandListener
+[  27] getstatic msf.mc
+[  28] invokevirtual MapCanvas.init
+[  29] aload_0
+[  30] invokestatic javax/microedition/lcdui/Display.getDisplay
+[  31] putstatic msf.display
+[  32] getstatic msf.display
+[  33] getstatic msf.mc
+[  34] invokevirtual javax/microedition/lcdui/Display.setCurrent
+[  35] return

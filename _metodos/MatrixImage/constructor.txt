@@ -1,0 +1,19 @@
+// Classe: MatrixImage
+// Metodo: <init>
+// Descritor: (II)V
+// Instrucoes: 14
+
+[   0] aload_0
+[   1] invokespecial java/lang/Object.<init>
+[   2] aload_0
+[   3] iload_1
+[   4] putfield MatrixImage.width
+[   5] aload_0
+[   6] iload_2
+[   7] putfield MatrixImage.height
+[   8] aload_0
+[   9] iload_1
+[  10] iload_2
+[  11] multianewarray 4
+[  12] putfield MatrixImage.matrix
+[  13] return

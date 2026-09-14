@@ -1,0 +1,67 @@
+// Classe: Role_Ryu
+// Metodo: punch
+// Descritor: ()V
+// Instrucoes: 62
+
+[   0] aload_0
+[   1] dup
+[   2] getfield Role_Ryu.ċ
+[   3] iconst_1
+[   4] iadd
+[   5] putfield Role_Ryu.ċ
+[   6] aload_0
+[   7] dup
+[   8] getfield Role_Ryu.Ċ
+[   9] bipush 7
+[  10] aload_0
+[  11] getfield Role_Ryu.ċ
+[  12] imul
+[  13] iadd
+[  14] putfield Role_Ryu.Ċ
+[  15] aload_0
+[  16] getfield Role_Ryu.status
+[  17] ifeq 4
+[  18] return
+[  19] aload_0
+[  20] iconst_3
+[  21] putfield Role_Ryu.count
+[  22] aload_0
+[  23] iconst_1
+[  24] putfield Role_Ryu.status
+[  25] aload_0
+[  26] iconst_1
+[  27] putfield Role_Ryu.ć
+[  28] getstatic msf.mc
+[  29] getfield MapCanvas.Ā
+[  30] getfield Role_Lee.x
+[  31] getstatic msf.mc
+[  32] getfield MapCanvas.ÿ
+[  33] getfield Role_Ryu.x
+[  34] isub
+[  35] bipush 18
+[  36] if_icmpgt 63
+[  37] getstatic msf.mc
+[  38] getstatic msf.mc
+[  39] getfield MapCanvas.Ā
+[  40] getfield Role_Lee.x
+[  41] iconst_2
+[  42] iadd
+[  43] putfield MapCanvas.ý
+[  44] getstatic msf.mc
+[  45] getstatic msf.mc
+[  46] getfield MapCanvas.Ā
+[  47] getfield Role_Lee.y
+[  48] putfield MapCanvas.þ
+[  49] getstatic msf.mc
+[  50] iconst_1
+[  51] putfield MapCanvas.ü
+[  52] getstatic msf.mc
+[  53] getfield MapCanvas.Ā
+[  54] invokevirtual Role_Lee.backward
+[  55] getstatic msf.mc
+[  56] dup
+[  57] getfield MapCanvas.Ă
+[  58] iconst_5
+[  59] isub
+[  60] putfield MapCanvas.Ă
+[  61] return

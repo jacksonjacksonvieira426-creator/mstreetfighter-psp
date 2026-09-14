@@ -1,0 +1,167 @@
+// Classe: Role_Lee
+// Metodo: paint
+// Descritor: (Ljavax/microedition/lcdui/Graphics;)V
+// Instrucoes: 162
+
+[   0] aload_0
+[   1] getfield Role_Lee.status
+[   2] ifne 135
+[   3] getstatic Game.count
+[   4] sipush 300
+[   5] irem
+[   6] sipush 150
+[   7] if_icmpne 18
+[   8] aload_0
+[   9] dup
+[  10] getfield Role_Lee.ą
+[  11] iconst_1
+[  12] ixor
+[  13] putfield Role_Lee.ą
+[  14] aload_0
+[  15] iconst_1
+[  16] putfield Role_Lee.ć
+[  17] aload_0
+[  18] getfield Role_Lee.ć
+[  19] iconst_1
+[  20] if_icmpne 71
+[  21] aload_0
+[  22] iconst_0
+[  23] putfield Role_Lee.ć
+[  24] getstatic msf.mc
+[  25] getfield MapCanvas.ô
+[  26] aload_1
+[  27] aload_0
+[  28] getfield Role_Lee.x
+[  29] aload_0
+[  30] getfield Role_Lee.ą
+[  31] iadd
+[  32] aload_0
+[  33] getfield Role_Lee.y
+[  34] aload_0
+[  35] getfield Role_Lee.ą
+[  36] iadd
+[  37] invokevirtual MatrixImage.paint
+[  38] aload_0
+[  39] getfield Role_Lee.ĉ
+[  40] getstatic MapCanvas.offimage
+[  41] aload_0
+[  42] getfield Role_Lee.x
+[  43] ineg
+[  44] aload_0
+[  45] getfield Role_Lee.ą
+[  46] isub
+[  47] aload_0
+[  48] getfield Role_Lee.y
+[  49] ineg
+[  50] aload_0
+[  51] getfield Role_Lee.ą
+[  52] isub
+[  53] bipush 20
+[  54] invokevirtual javax/microedition/lcdui/Graphics.drawImage
+[  55] goto 31
+[  56] aload_1
+[  57] aload_0
+[  58] getfield Role_Lee.Ĉ
+[  59] aload_0
+[  60] getfield Role_Lee.x
+[  61] aload_0
+[  62] getfield Role_Lee.ą
+[  63] iadd
+[  64] aload_0
+[  65] getfield Role_Lee.y
+[  66] aload_0
+[  67] getfield Role_Lee.ą
+[  68] iadd
+[  69] bipush 20
+[  70] invokevirtual javax/microedition/lcdui/Graphics.drawImage
+[  71] aload_0
+[  72] getfield Role_Lee.status
+[  73] iconst_1
+[  74] if_icmpne 43
+[  75] getstatic msf.mc
+[  76] getfield MapCanvas.õ
+[  77] aload_1
+[  78] aload_0
+[  79] getfield Role_Lee.x
+[  80] aload_0
+[  81] getfield Role_Lee.y
+[  82] invokevirtual MatrixImage.paint
+[  83] aload_0
+[  84] dup
+[  85] getfield Role_Lee.count
+[  86] iconst_1
+[  87] isub
+[  88] putfield Role_Lee.count
+[  89] aload_0
+[  90] getfield Role_Lee.count
+[  91] ifgt 8
+[  92] aload_0
+[  93] iconst_0
+[  94] putfield Role_Lee.status
+[  95] aload_0
+[  96] getfield Role_Lee.status
+[  97] iconst_2
+[  98] if_icmpne 43
+[  99] getstatic msf.mc
+[ 100] getfield MapCanvas.ö
+[ 101] aload_1
+[ 102] aload_0
+[ 103] getfield Role_Lee.x
+[ 104] aload_0
+[ 105] getfield Role_Lee.y
+[ 106] invokevirtual MatrixImage.paint
+[ 107] aload_0
+[ 108] dup
+[ 109] getfield Role_Lee.count
+[ 110] iconst_1
+[ 111] isub
+[ 112] putfield Role_Lee.count
+[ 113] aload_0
+[ 114] getfield Role_Lee.count
+[ 115] ifgt 8
+[ 116] aload_0
+[ 117] iconst_0
+[ 118] putfield Role_Lee.status
+[ 119] aload_0
+[ 120] getfield Role_Lee.status
+[ 121] iconst_3
+[ 122] if_icmpne 87
+[ 123] getstatic msf.mc
+[ 124] getfield MapCanvas.ú
+[ 125] ifle 73
+[ 126] aload_0
+[ 127] getstatic msf.mc
+[ 128] getfield MapCanvas.ú
+[ 129] putfield Role_Lee.x
+[ 130] aload_0
+[ 131] dup
+[ 132] getfield Role_Lee.Ć
+[ 133] iconst_1
+[ 134] ixor
+[ 135] putfield Role_Lee.Ć
+[ 136] aload_0
+[ 137] getfield Role_Lee.Ć
+[ 138] iconst_1
+[ 139] if_icmpne 24
+[ 140] getstatic msf.mc
+[ 141] getfield MapCanvas.ø
+[ 142] aload_1
+[ 143] aload_0
+[ 144] getfield Role_Lee.x
+[ 145] aload_0
+[ 146] getfield Role_Lee.y
+[ 147] invokevirtual MatrixImage.paint
+[ 148] goto 29
+[ 149] getstatic msf.mc
+[ 150] getfield MapCanvas.ù
+[ 151] aload_1
+[ 152] aload_0
+[ 153] getfield Role_Lee.x
+[ 154] aload_0
+[ 155] getfield Role_Lee.y
+[ 156] invokevirtual MatrixImage.paint
+[ 157] goto 8
+[ 158] aload_0
+[ 159] iconst_0
+[ 160] putfield Role_Lee.status
+[ 161] return

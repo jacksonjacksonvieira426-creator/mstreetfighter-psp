@@ -1,0 +1,29 @@
+// Classe: MapCanvas
+// Metodo: CreateGifMatrixImage
+// Descritor: (Ljava/lang/String;)LMatrixImage;
+// Instrucoes: 24
+
+[   0] aload_0
+[   1] invokevirtual java/lang/Object.getClass
+[   2] aload_1
+[   3] invokevirtual java/lang/Class.getResourceAsStream
+[   4] astore_2
+[   5] new 63
+[   6] dup
+[   7] aload_2
+[   8] invokespecial GifDecoder.<init>
+[   9] astore_3
+[  10] aload_3
+[  11] invokevirtual GifDecoder.decodeMatrix
+[  12] astore 4
+[  13] aload_2
+[  14] invokevirtual java/io/InputStream.close
+[  15] aload_3
+[  16] invokevirtual GifDecoder.clear
+[  17] aconst_null
+[  18] astore_3
+[  19] aload 4
+[  20] areturn
+[  21] astore_2
+[  22] aconst_null
+[  23] areturn

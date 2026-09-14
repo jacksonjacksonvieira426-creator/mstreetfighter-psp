@@ -1,0 +1,14 @@
+// Classe: Intro
+// Metodo: <init>
+// Descritor: ()V
+// Instrucoes: 9
+
+[   0] aload_0
+[   1] invokespecial java/lang/Thread.<init>
+[   2] iconst_1
+[   3] putstatic Intro.seq
+[   4] iconst_1
+[   5] putstatic Intro.flag
+[   6] iconst_0
+[   7] putstatic Intro.count
+[   8] return
