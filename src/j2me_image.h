@@ -29,4 +29,7 @@ void j2me_image_blit(J2MEImage* img, int x, int y);
 // Blit com transparencia (cor 0xFF000000 considerada transparente)
 void j2me_image_blit_masked(J2MEImage* img, int x, int y);
 
+// Retorna "Graphics" da imagem (na pratica, a propria imagem)
+void* j2me_image_get_graphics(void* img);
+
 #endif

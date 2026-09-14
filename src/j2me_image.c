@@ -89,3 +89,8 @@ void j2me_image_blit_masked(J2MEImage* img, int x, int y) {
         }
     }
 }
+
+// Retorna "Graphics" da imagem (retorna a propria imagem como contexto)
+void* j2me_image_get_graphics(void* img) {
+    return img;
+}
