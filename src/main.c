@@ -26,6 +26,10 @@ typedef void* Displayable;
 typedef void* MIDlet;
 typedef void* Canvas;
 
+// Globais do jogo
+void* msf_mc = 0;
+int Game_count = 0;
+
 // Globais do jogo (do <clinit> e <init>)
 int MapCanvas_OFFY = 50;
 int MapCanvas_CanvasWidth = 480;
@@ -531,7 +535,7 @@ void MatrixImage_setColor() {
 // APIs usadas:
 //   1x javax/microedition/lcdui/Graphics.setColor -> j2me_gfx_set_color
 //   1x javax/microedition/lcdui/Graphics.drawRect -> ??? javax/microedition/lcdui/Graphics.drawRect
-void MatrixImage_paint() {
+void MatrixImage_paint(void* self, void* g, int x, int y) {
     // TODO: traduzir logica do bytecode
 }
 
@@ -612,9 +616,9 @@ void Role_Lee_paint(void* arg1) {
         if (s->ofusc_0107 == 1) {
             s->ofusc_0107 = 0;
             MatrixImage_paint(msf_mc->ofusc_00f4, arg1, s->x + s->ofusc_0105, s->y + s->ofusc_0105);
-            j2me_image_blit(s->ofusc_0109, -(s->x) - s->ofusc_0105, -(s->y) - s->ofusc_0105);
+            j2me_image_blit((J2MEImage*)s->ofusc_0109, -(s->x) - s->ofusc_0105, -(s->y) - s->ofusc_0105);
         } else {
-            j2me_image_blit(s->ofusc_0108, s->x + s->ofusc_0105, s->y + s->ofusc_0105);
+            j2me_image_blit((J2MEImage*)s->ofusc_0108, s->x + s->ofusc_0105, s->y + s->ofusc_0105);
         }
     } else if (s->status == 1) {
         MatrixImage_paint(msf_mc->ofusc_00f5, arg1, s->x, s->y);
@@ -709,9 +713,9 @@ void Role_Ryu_paint(void* arg1) {
         if (s->ofusc_0107 == 1) {
             s->ofusc_0107 = 0;
             MatrixImage_paint(msf_mc->ofusc_00ee, arg1, s->x + s->ofusc_0105, s->y + s->ofusc_0105);
-            j2me_image_blit(s->ofusc_0109, -(s->x) - s->ofusc_0105, -(s->y) - s->ofusc_0105);
+            j2me_image_blit((J2MEImage*)s->ofusc_0109, -(s->x) - s->ofusc_0105, -(s->y) - s->ofusc_0105);
         } else {
-            j2me_image_blit(s->ofusc_0108, s->x + s->ofusc_0105, s->y + s->ofusc_0105);
+            j2me_image_blit((J2MEImage*)s->ofusc_0108, s->x + s->ofusc_0105, s->y + s->ofusc_0105);
         }
     } else if (s->status == 1) {
         MatrixImage_paint(msf_mc->ofusc_00ef, arg1, s->x, s->y);
