@@ -451,6 +451,21 @@ void MapCanvas_paint() {
     // TODO: traduzir logica do bytecode
 }
 
+// ===== PROTOTIPOS (auto-gerados) =====
+void Role_Ryu_forward();
+void Role_Ryu_backward();
+void Role_Ryu_punch();
+void Role_Ryu_kick();
+void Role_Ryu_fire();
+void Role_Lee_forward();
+void Role_Lee_backward();
+void Role_Lee_punch();
+void Role_Lee_kick();
+void Role_Lee_fire();
+void* _role_self = 0;
+void* _p1_self = 0;
+void* _p2_self = 0;
+
 // === MapCanvas.MapCanvas_keyProc ((I)V) ===
 // Instrucoes: 43
 // APIs usadas:
@@ -460,8 +475,7 @@ void MapCanvas_keyProc() {
     // Traduzido do bytecode (43 instrucoes)
     // Detecta direcao e chama metodo correspondente
     int acoes = j2me_input_get_actions();
-    extern void* _p1_self;  // Ponteiro pro Ryu (jogador 1)
-    Role_Ryu_s* p1 = (Role_Ryu_s*)_p1_self;
+    Role_Ryu* p1 = (Role_Ryu*)_p1_self;
     if (!p1) return;
     if (acoes & J2ME_LEFT)       Role_Ryu_backward();
     else if (acoes & J2ME_RIGHT) Role_Ryu_forward();
@@ -529,8 +543,7 @@ void Role_Lee_constructor() {
 // Instrucoes: 25
 void Role_Lee_reset() {
     // Traduzido do bytecode (25 instrucoes)
-    extern void* _role_self;
-    Role_Lee_s* s = (Role_Lee_s*)_role_self;
+    Role_Lee* s = (Role_Lee*)_role_self;
     if (!s) return;
     s->x = MapCanvas_CanvasWidth - 20;
     s->y = MapCanvas_OFFY + 44;
@@ -593,8 +606,7 @@ void Role_Ryu_constructor() {
 void Role_Ryu_reset() {
     // Traduzido do bytecode (23 instrucoes)
     // NOTA: precisa receber self como void* — vamos usar global temporaria
-    extern void* _role_self;
-    Role_Ryu_s* s = (Role_Ryu_s*)_role_self;
+    Role_Ryu* s = (Role_Ryu*)_role_self;
     if (!s) return;
     s->x = 4;
     s->y = MapCanvas_OFFY + 39;
