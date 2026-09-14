@@ -453,8 +453,11 @@ void MapCanvas_paint() {
 
 // ===== PROTOTIPOS (auto-gerados) =====
 void Role_Ryu_constructor();
+void Role_Ryu_reset();
+void Role_Lee_reset();
+void* j2me_image_get_graphics(void* img);
 void Role_Lee_constructor();
-void j2me_image_get_graphics();
+void* j2me_image_get_graphics(void* img);
 void Role_Ryu_forward();
 void Role_Ryu_backward();
 void Role_Ryu_punch();
@@ -547,7 +550,7 @@ void Role_Lee_constructor() {
     s->ofusc_0106 = 0;
     Role_Lee_reset();
     s->ofusc_0108 = (void*)j2me_image_create(16, 35);
-    s->ofusc_0109 = (void*)j2me_image_get_graphics(s->ofusc_0108);
+    s->ofusc_0109 = j2me_image_get_graphics(s->ofusc_0108);
 }
 
 // === Role_Lee.Role_Lee_reset (()V) ===
@@ -618,7 +621,7 @@ void Role_Ryu_constructor() {
     s->ofusc_010b = 0;
     Role_Ryu_reset();
     s->ofusc_0108 = (void*)j2me_image_create(19, 41);
-    s->ofusc_0109 = (void*)j2me_image_get_graphics(s->ofusc_0108);
+    s->ofusc_0109 = j2me_image_get_graphics(s->ofusc_0108);
 }
 
 // === Role_Ryu.Role_Ryu_reset (()V) ===
