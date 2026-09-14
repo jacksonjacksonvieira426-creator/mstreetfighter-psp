@@ -788,7 +788,6 @@ void msf_destroyApp() {
 
 // Definicao das globais
 MapCanvas* msf_mc = 0;
-int Game_count = 0;
 
 int main(void) {
     j2me_gfx_init();
