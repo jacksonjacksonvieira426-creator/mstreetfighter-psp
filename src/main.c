@@ -27,7 +27,6 @@ typedef void* MIDlet;
 typedef void* Canvas;
 
 // Globais do jogo
-void* msf_mc = 0;
 int Game_count = 0;
 
 // Globais do jogo (do <clinit> e <init>)
@@ -48,6 +47,8 @@ typedef struct Game_s Game;
 typedef struct GifDecoder_s GifDecoder;
 typedef struct Intro_s Intro;
 typedef struct MapCanvas_s MapCanvas;
+
+extern MapCanvas* msf_mc;
 typedef struct MatrixImage_s MatrixImage;
 typedef struct Role_Lee_s Role_Lee;
 typedef struct Role_Ryu_s Role_Ryu;
@@ -783,6 +784,11 @@ void msf_destroyApp() {
 // ============================================
 // GAME LOOP PRINCIPAL
 // ============================================
+
+
+// Definicao das globais
+MapCanvas* msf_mc = 0;
+int Game_count = 0;
 
 int main(void) {
     j2me_gfx_init();
