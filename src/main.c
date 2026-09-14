@@ -601,8 +601,33 @@ void Role_Lee_fire() {
 // Instrucoes: 162
 // APIs usadas:
 //   2x javax/microedition/lcdui/Graphics.drawImage -> j2me_image_blit
-void Role_Lee_paint() {
-    // TODO: traduzir logica do bytecode
+void Role_Lee_paint(void* arg1) {
+    Role_Lee* s = (Role_Lee*)_role_self;
+    if (!s || !msf_mc) return;
+    if (s->status == 0) {
+        if ((Game_count % 300) == 150) {
+            s->ofusc_0105 ^= 1;
+            s->ofusc_0107 = 1;
+        }
+        if (s->ofusc_0107 == 1) {
+            s->ofusc_0107 = 0;
+            MatrixImage_paint(msf_mc->ofusc_00f4, arg1, s->x + s->ofusc_0105, s->y + s->ofusc_0105);
+            j2me_image_blit(s->ofusc_0109, -(s->x) - s->ofusc_0105, -(s->y) - s->ofusc_0105);
+        } else {
+            j2me_image_blit(s->ofusc_0108, s->x + s->ofusc_0105, s->y + s->ofusc_0105);
+        }
+    } else if (s->status == 1) {
+        MatrixImage_paint(msf_mc->ofusc_00f5, arg1, s->x, s->y);
+        s->count--; if (s->count <= 0) s->status = 0;
+    } else if (s->status == 2) {
+        MatrixImage_paint(msf_mc->ofusc_00f6, arg1, s->x, s->y);
+        s->count--; if (s->count <= 0) s->status = 0;
+    } else if (s->status == 3) {
+        if (msf_mc->ofusc_00fa > 0) s->x = msf_mc->ofusc_00fa;
+        s->ofusc_0106 ^= 1;
+        if (s->ofusc_0106 == 1) MatrixImage_paint(msf_mc->ofusc_00f8, arg1, s->x, s->y);
+        else                     MatrixImage_paint(msf_mc->ofusc_00f9, arg1, s->x, s->y);
+    }
 }
 
 // === Role_Ryu.Role_Ryu_constructor (()V) ===
@@ -673,8 +698,31 @@ void Role_Ryu_fire() {
 // Instrucoes: 145
 // APIs usadas:
 //   2x javax/microedition/lcdui/Graphics.drawImage -> j2me_image_blit
-void Role_Ryu_paint() {
-    // TODO: traduzir logica do bytecode
+void Role_Ryu_paint(void* arg1) {
+    Role_Ryu* s = (Role_Ryu*)_role_self;
+    if (!s || !msf_mc) return;
+    if (s->status == 0) {
+        if ((Game_count % 300) == 0) {
+            s->ofusc_0105 ^= 1;
+            s->ofusc_0107 = 1;
+        }
+        if (s->ofusc_0107 == 1) {
+            s->ofusc_0107 = 0;
+            MatrixImage_paint(msf_mc->ofusc_00ee, arg1, s->x + s->ofusc_0105, s->y + s->ofusc_0105);
+            j2me_image_blit(s->ofusc_0109, -(s->x) - s->ofusc_0105, -(s->y) - s->ofusc_0105);
+        } else {
+            j2me_image_blit(s->ofusc_0108, s->x + s->ofusc_0105, s->y + s->ofusc_0105);
+        }
+    } else if (s->status == 1) {
+        MatrixImage_paint(msf_mc->ofusc_00ef, arg1, s->x, s->y);
+        s->count--; if (s->count <= 0) s->status = 0;
+    } else if (s->status == 2) {
+        MatrixImage_paint(msf_mc->ofusc_00f0, arg1, s->x, s->y);
+        s->count--; if (s->count <= 0) s->status = 0;
+    } else if (s->status == 3) {
+        MatrixImage_paint(msf_mc->ofusc_00f1, arg1, s->x, s->y + 6);
+        s->count--; if (s->count <= 0) s->status = 0;
+    }
 }
 
 // === msf.msf_constructor (()V) ===
