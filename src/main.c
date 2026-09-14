@@ -452,6 +452,9 @@ void MapCanvas_paint() {
 }
 
 // ===== PROTOTIPOS (auto-gerados) =====
+void Role_Ryu_constructor();
+void Role_Lee_constructor();
+void j2me_image_get_graphics();
 void Role_Ryu_forward();
 void Role_Ryu_backward();
 void Role_Ryu_punch();
@@ -536,7 +539,15 @@ void MatrixImage_paint() {
 //   1x javax/microedition/lcdui/Image.createImage -> j2me_image_create
 //   1x javax/microedition/lcdui/Image.getGraphics -> j2me_image_get_graphics
 void Role_Lee_constructor() {
-    // TODO: traduzir logica do bytecode
+    Role_Lee* s = (Role_Lee*)_role_self;
+    if (!s) return;
+    s->status = 0;
+    s->ofusc_0103 = 0;
+    s->count = 0;
+    s->ofusc_0106 = 0;
+    Role_Lee_reset();
+    s->ofusc_0108 = (void*)j2me_image_create(16, 35);
+    s->ofusc_0109 = (void*)j2me_image_get_graphics(s->ofusc_0108);
 }
 
 // === Role_Lee.Role_Lee_reset (()V) ===
@@ -598,7 +609,16 @@ void Role_Lee_paint() {
 //   1x javax/microedition/lcdui/Image.createImage -> j2me_image_create
 //   1x javax/microedition/lcdui/Image.getGraphics -> j2me_image_get_graphics
 void Role_Ryu_constructor() {
-    // TODO: traduzir logica do bytecode
+    Role_Ryu* s = (Role_Ryu*)_role_self;
+    if (!s) return;
+    s->status = 0;
+    s->ofusc_0103 = 0;
+    s->count = 0;
+    s->ofusc_010a = 0;
+    s->ofusc_010b = 0;
+    Role_Ryu_reset();
+    s->ofusc_0108 = (void*)j2me_image_create(19, 41);
+    s->ofusc_0109 = (void*)j2me_image_get_graphics(s->ofusc_0108);
 }
 
 // === Role_Ryu.Role_Ryu_reset (()V) ===
