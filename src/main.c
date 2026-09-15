@@ -618,7 +618,7 @@ void Role_Lee_constructor() {
 // Instrucoes: 25
 void Role_Lee_reset() {
     // Traduzido do bytecode (25 instrucoes)
-    Role_Lee* s = (Role_Lee*)_role_self;
+    Role_Lee* s = (Role_Lee*)_p2_self;
     if (!s) return;
     s->x = 380;
     s->y = 250;
