@@ -41,8 +41,8 @@ int Intro_count = 0;
 int MapCanvas_still = 0;
 int MapCanvas_mode = 0;
 int MapCanvas_lightflag = 0;
-int MapCanvas_OFFX = 0;
-int MapCanvas_OFFY = 50;
+int MapCanvas_OFFX = 180;
+int MapCanvas_OFFY = 96;
 int MapCanvas_CanvasWidth = 480;
 int MapCanvas_CanvasHeight = 272;
 
