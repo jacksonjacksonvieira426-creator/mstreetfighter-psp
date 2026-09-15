@@ -921,7 +921,7 @@ int main(void) {
     mc->ofusc_0100 = p2;   // Jogador 2
     mc->ofusc_0101 = 100;  // HP P1
     mc->ofusc_0102 = 100;  // HP P2
-    mc->ofusc_00e6 = j2me_image_create(480, 272);
+    mc->ofusc_00e6 = (void**)j2me_image_create(480, 272);
 
     Role_Ryu_constructor();
     Role_Lee_constructor();
@@ -935,55 +935,6 @@ int main(void) {
         j2me_gfx_clear(0x101020);
 
         MapCanvas_keyProc();
-        MapCanvas_paint(NULL);
-
-        j2me_gfx_flip();
-    }
-
-    j2me_gfx_shutdown();
-    sceKernelExitGame();
-    return 0;
-}
-t main(void) {
-    j2me_gfx_init();
-    j2me_input_init();
-    j2me_random_init();
-
-    // ===== Cria os objetos do jogo =====
-    MapCanvas* mc = (MapCanvas*)calloc(1, sizeof(MapCanvas));
-    Role_Ryu* ryu = (Role_Ryu*)calloc(1, sizeof(Role_Ryu));
-    Role_Lee* lee = (Role_Lee*)calloc(1, sizeof(Role_Lee));
-
-    // ===== Seta os ponteiros globais =====
-    _self = mc;
-    msf_mc = mc;
-    _role_self = ryu;
-    _p1_self = ryu;
-    _p2_self = lee;
-
-    // ===== Liga tudo =====
-    mc->ofusc_00ff = ryu;
-    mc->ofusc_0100 = lee;
-    mc->ofusc_0101 = 100;
-    ryu->x = 80;
-    ryu->y = 200;
-    lee->x = 380;
-    lee->y = 200;
-    mc->ofusc_0102 = 100;
-    mc->ofusc_00e6 = (void**)j2me_image_create(480, 272);
-
-    // ===== Constroi os personagens =====
-    Role_Ryu_constructor();
-    Role_Lee_constructor();
-
-    // ===== Game loop =====
-    while (1) {
-        j2me_input_update();
-        if (j2me_input_should_quit()) break;
-
-        j2me_gfx_begin_frame();
-        j2me_gfx_clear(0x101020);
-
         MapCanvas_paint(NULL);
 
         j2me_gfx_flip();
