@@ -495,9 +495,19 @@ void MapCanvas_paint(void* arg1) {
     Role_Lee_paint(NULL);
     
     // Barras de HP (topo)
-    j2me_gfx_set_color(0x808080);
-    j2me_gfx_fill_rect(10, 10, 100, 8);
-    j2me_gfx_fill_rect(370, 10, 100, 8);
+    Role_Ryu* p1 = (Role_Ryu*)_p1_self;
+    Role_Lee* p2 = (Role_Lee*)_p2_self;
+    if (msf_mc) {
+        // Fundo das barras
+        j2me_gfx_set_color(0x400000);
+        j2me_gfx_fill_rect(10, 10, 160, 12);
+        j2me_gfx_fill_rect(310, 10, 160, 12);
+        // Preenchimento (HP)
+        j2me_gfx_set_color(0x00FF00);
+        j2me_gfx_fill_rect(10, 10, msf_mc->ofusc_0101 * 160 / 100, 12);
+        j2me_gfx_fill_rect(310 + (160 - msf_mc->ofusc_0102 * 160 / 100), 10,
+                            msf_mc->ofusc_0102 * 160 / 100, 12);
+    }
 }
 
 // ===== PROTOTIPOS (auto-gerados) =====
@@ -524,13 +534,17 @@ void Role_Lee_fire();
 //   1x javax/microedition/lcdui/Canvas.getGameAction -> j2me_input_get_actions
 //   1x javax/microedition/lcdui/Canvas.repaint -> j2me_canvas_repaint
 void MapCanvas_keyProc() {
-    // Traduzido do bytecode (43 instrucoes)
-    // Detecta direcao e chama metodo correspondente
     int acoes = j2me_input_get_actions();
     Role_Ryu* p1 = (Role_Ryu*)_p1_self;
+    Role_Lee* p2 = (Role_Lee*)_p2_self;
     if (!p1) return;
-    if (acoes & J2ME_LEFT)       Role_Ryu_backward();
-    else if (acoes & J2ME_RIGHT) Role_Ryu_forward();
+    
+    // D-pad: limitado pela posicao do Lee (nao deixa atravessar)
+    if (acoes & J2ME_LEFT) {
+        if (!p2 || p1->x > p2->x + 30) Role_Ryu_backward();
+    } else if (acoes & J2ME_RIGHT) {
+        if (!p2 || p1->x + 30 < p2->x) Role_Ryu_forward();
+    }
     if (j2me_input_is_pressed(J2ME_UP))    Role_Ryu_punch();
     if (j2me_input_is_pressed(J2ME_FIRE))  Role_Ryu_kick();
 }
@@ -666,7 +680,7 @@ void Role_Lee_punch() {
     s->ofusc_0107 = 1;
     Role_Ryu* ryu = (Role_Ryu*)_p1_self;
     if (!ryu) return;
-    if (s->x - ryu->x > 18) return;
+    if (s->x - ryu->x > 50) return;
     msf_mc->ofusc_00fd = ryu->x + 2;
     msf_mc->ofusc_00fe = ryu->y;
     msf_mc->ofusc_00fc = 1;
@@ -685,7 +699,7 @@ void Role_Lee_kick() {
     s->ofusc_0107 = 1;
     Role_Ryu* ryu = (Role_Ryu*)_p1_self;
     if (!ryu) return;
-    if (s->x - ryu->x > 20) return;
+    if (s->x - ryu->x > 55) return;
     msf_mc->ofusc_00fd = ryu->x + 2;
     msf_mc->ofusc_00fe = ryu->y;
     msf_mc->ofusc_00fc = 1;
@@ -702,7 +716,7 @@ void Role_Lee_fire() {
     if (msf_mc->ofusc_00fa > 0) return;
     Role_Ryu* ryu = (Role_Ryu*)_p1_self;
     if (!ryu) return;
-    if (s->x - ryu->x >= 42) return;
+    if (s->x - ryu->x >= 80) return;
     msf_mc->ofusc_00fa = s->x;
     s->status = 3;
     s->ofusc_0107 = 1;
@@ -720,8 +734,12 @@ void Role_Lee_paint(void* arg1) {
     int w, h;
     if (s->status == 1) {
         sprite = msf_lee_soco_pixels; w = MSF_LEE_SOCO_W; h = MSF_LEE_SOCO_H;
+        s->count--;
+        if (s->count <= 0) s->status = 0;
     } else if (s->status == 2) {
         sprite = msf_lee_chute_pixels; w = MSF_LEE_CHUTE_W; h = MSF_LEE_CHUTE_H;
+        s->count--;
+        if (s->count <= 0) s->status = 0;
     } else {
         sprite = msf_lee_parado_pixels; w = MSF_LEE_PARADO_W; h = MSF_LEE_PARADO_H;
     }
@@ -795,7 +813,7 @@ void Role_Ryu_punch() {
     Role_Lee* lee = (Role_Lee*)msf_mc->ofusc_0100;
     Role_Ryu* ryu = (Role_Ryu*)msf_mc->ofusc_00ff;
     if (!lee || !ryu) return;
-    if (lee->x - ryu->x > 18) return;
+    if (lee->x - ryu->x > 50) return;
     msf_mc->ofusc_00fd = lee->x + 2;
     msf_mc->ofusc_00fe = lee->y;
     msf_mc->ofusc_00fc = 1;
@@ -818,7 +836,7 @@ void Role_Ryu_kick() {
     Role_Lee* lee = (Role_Lee*)msf_mc->ofusc_0100;
     Role_Ryu* ryu = (Role_Ryu*)msf_mc->ofusc_00ff;
     if (!lee || !ryu) return;
-    if (lee->x - ryu->x > 20) return;
+    if (lee->x - ryu->x > 55) return;
     msf_mc->ofusc_00fd = lee->x + 2;
     msf_mc->ofusc_00fe = lee->y;
     msf_mc->ofusc_00fc = 1;
@@ -843,8 +861,12 @@ void Role_Ryu_paint(void* arg1) {
     int w, h;
     if (s->status == 1) {
         sprite = msf_ryu_soco_pixels; w = MSF_RYU_SOCO_W; h = MSF_RYU_SOCO_H;
+        s->count--;
+        if (s->count <= 0) s->status = 0;
     } else if (s->status == 2) {
         sprite = msf_ryu_chute_pixels; w = MSF_RYU_CHUTE_W; h = MSF_RYU_CHUTE_H;
+        s->count--;
+        if (s->count <= 0) s->status = 0;
     } else {
         sprite = msf_ryu_parado_pixels; w = MSF_RYU_PARADO_W; h = MSF_RYU_PARADO_H;
     }
@@ -957,9 +979,11 @@ int main(void) {
             ia_timer++;
             int dist = lee->x - ryu->x;
             
-            // Se longe, aproxima
-            if (dist > 60) {
+            // Se longe, aproxima (para em 50px)
+            if (dist > 50) {
                 if (ia_timer % 4 == 0) Role_Lee_forward();
+            } else if (dist < -50) {
+                if (ia_timer % 4 == 0) Role_Lee_backward();
             } else {
                 // Perto: ataca
                 if (ia_timer % 30 == 0) {
