@@ -12,6 +12,10 @@
 #include "j2me_clip.h"
 #include "j2me_runtime.h"
 #include "msf_ryu_parado.h"
+#include "msf_ryu_soco.h"
+#include "msf_ryu_chute.h"
+#include "msf_lee_soco.h"
+#include "msf_lee_chute.h"
 #include "msf_lee_parado.h"
 #include <stdint.h>
 
@@ -484,19 +488,11 @@ void MapCanvas_paint(void* arg1) {
     j2me_gfx_set_color(0x404020);
     j2me_gfx_fill_rect(0, 200, 480, 72);
     
-    // Desenha Ryu (esquerda, sprite parado)
-    Role_Ryu* ryu = (Role_Ryu*)_p1_self;
-    int ryu_x = ryu ? ryu->x : 100;
-    int ryu_y = ryu ? ryu->y : 160;
-    desenha_sprite_direto(msf_ryu_parado_pixels, MSF_RYU_PARADO_W, MSF_RYU_PARADO_H,
-                          ryu_x, ryu_y - MSF_RYU_PARADO_H*2, 0);
+    // Desenha Ryu (chama Role_Ryu_paint)
+    Role_Ryu_paint(NULL);
     
-    // Desenha Lee (direita, espelhado)
-    Role_Lee* lee = (Role_Lee*)_p2_self;
-    int lee_x = lee ? lee->x : 340;
-    int lee_y = lee ? lee->y : 160;
-    desenha_sprite_direto(msf_lee_parado_pixels, MSF_LEE_PARADO_W, MSF_LEE_PARADO_H,
-                          lee_x, lee_y - MSF_LEE_PARADO_H*2, 1);
+    // Desenha Lee (chama Role_Lee_paint)
+    Role_Lee_paint(NULL);
     
     // Barras de HP (topo)
     j2me_gfx_set_color(0x808080);
