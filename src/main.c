@@ -716,7 +716,16 @@ void Role_Lee_paint(void* arg1) {
     Role_Lee* s = (Role_Lee*)_p2_self;
     if (!s) s = (Role_Lee*)_role_self;
     if (!s) return;
-    desenha_sprite_direto(msf_lee_parado_pixels, MSF_LEE_PARADO_W, MSF_LEE_PARADO_H, s->x, s->y - MSF_LEE_PARADO_H*2, 1);
+    const unsigned int* sprite;
+    int w, h;
+    if (s->status == 1) {
+        sprite = msf_lee_soco_pixels; w = MSF_LEE_SOCO_W; h = MSF_LEE_SOCO_H;
+    } else if (s->status == 2) {
+        sprite = msf_lee_chute_pixels; w = MSF_LEE_CHUTE_W; h = MSF_LEE_CHUTE_H;
+    } else {
+        sprite = msf_lee_parado_pixels; w = MSF_LEE_PARADO_W; h = MSF_LEE_PARADO_H;
+    }
+    desenha_sprite_direto(sprite, w, h, s->x, s->y - h*2, 1);
 }
 
 // === Role_Ryu.Role_Ryu_constructor (()V) ===
@@ -830,8 +839,16 @@ void Role_Ryu_fire() {
 void Role_Ryu_paint(void* arg1) {
     Role_Ryu* s = (Role_Ryu*)_role_self;
     if (!s) return;
-    // Simplificado: sempre usa sprite parado
-    desenha_sprite_direto(msf_ryu_parado_pixels, MSF_RYU_PARADO_W, MSF_RYU_PARADO_H, s->x, s->y - MSF_RYU_PARADO_H*2, 0);
+    const unsigned int* sprite;
+    int w, h;
+    if (s->status == 1) {
+        sprite = msf_ryu_soco_pixels; w = MSF_RYU_SOCO_W; h = MSF_RYU_SOCO_H;
+    } else if (s->status == 2) {
+        sprite = msf_ryu_chute_pixels; w = MSF_RYU_CHUTE_W; h = MSF_RYU_CHUTE_H;
+    } else {
+        sprite = msf_ryu_parado_pixels; w = MSF_RYU_PARADO_W; h = MSF_RYU_PARADO_H;
+    }
+    desenha_sprite_direto(sprite, w, h, s->x, s->y - h*2, 0);
 }
 
 // === msf.msf_constructor (()V) ===
@@ -931,6 +948,40 @@ int main(void) {
         j2me_gfx_clear(0x101020);
 
         MapCanvas_keyProc();
+        
+        // ===== IA DO LEE =====
+        Role_Lee* lee = (Role_Lee*)_p2_self;
+        Role_Ryu* ryu = (Role_Ryu*)_p1_self;
+        static int ia_timer = 0;
+        if (lee && ryu && lee->status == 0) {
+            ia_timer++;
+            int dist = lee->x - ryu->x;
+            
+            // Se longe, aproxima
+            if (dist > 60) {
+                if (ia_timer % 4 == 0) Role_Lee_forward();
+            } else {
+                // Perto: ataca
+                if (ia_timer % 30 == 0) {
+                    int r = j2me_random_next(10);
+                    if (r < 4) Role_Lee_punch();
+                    else if (r < 7) Role_Lee_kick();
+                    else Role_Lee_fire();
+                }
+            }
+        }
+        
+        // ===== FIM DE JOGO =====
+        if (msf_mc) {
+            if (msf_mc->ofusc_0101 <= 0 || msf_mc->ofusc_0102 <= 0) {
+                // Alguem morreu: reseta HP
+                msf_mc->ofusc_0101 = 100;
+                msf_mc->ofusc_0102 = 100;
+                Role_Ryu_reset();
+                Role_Lee_reset();
+            }
+        }
+        
         MapCanvas_paint(NULL);
 
         j2me_gfx_flip();
