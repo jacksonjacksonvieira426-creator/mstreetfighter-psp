@@ -43,9 +43,6 @@ int MapCanvas_CanvasHeight = 272;
 
 
 // Globais do jogo (do <clinit> e <init>)
-int MapCanvas_OFFY = 50;
-int MapCanvas_CanvasWidth = 480;
-int MapCanvas_CanvasHeight = 272;
 
 PSP_MODULE_INFO("mstreetfighter", 0, 1, 0);
 PSP_MAIN_THREAD_ATTR(THREAD_ATTR_USER);
