@@ -634,7 +634,7 @@ void Role_Lee_reset() {
     // Traduzido do bytecode (25 instrucoes)
     Role_Lee* s = (Role_Lee*)_p2_self;
     if (!s) return;
-    s->x = 380;
+    s->x = 408;
     s->y = 250;
     s->status = 0;
     s->ofusc_0103 = 0;
@@ -772,7 +772,7 @@ void Role_Ryu_reset() {
     // NOTA: precisa receber self como void* — vamos usar global temporaria
     Role_Ryu* s = (Role_Ryu*)_role_self;
     if (!s) return;
-    s->x = 60;
+    s->x = 72;
     s->y = 250;
     s->status = 0;
     s->ofusc_0103 = 0;
