@@ -634,31 +634,81 @@ void Role_Lee_reset() {
 // === Role_Lee.Role_Lee_forward (()V) ===
 // Instrucoes: 29
 void Role_Lee_forward() {
-    // TODO: traduzir logica do bytecode
+    Role_Lee* s = (Role_Lee*)_p2_self;
+    if (!s) return;
+    Role_Ryu* ryu = (Role_Ryu*)_p1_self;
+    if (!ryu) return;
+    s->ofusc_0103 = ryu->x + 16;
+    if (s->x - 2 <= s->ofusc_0103) {
+        s->x -= 2;
+        if (s->x < s->ofusc_0103) s->x = s->ofusc_0103;
+    }
+    s->ofusc_0107 = 1;
 }
 
 // === Role_Lee.Role_Lee_backward (()V) ===
 // Instrucoes: 22
 void Role_Lee_backward() {
-    // TODO: traduzir logica do bytecode
+    Role_Lee* s = (Role_Lee*)_p2_self;
+    if (!s) return;
+    if (s->x + 2 < s->ofusc_0104) {
+        s->x += 2;
+        if (s->x > s->ofusc_0104) s->x = s->ofusc_0104;
+    }
+    s->ofusc_0107 = 1;
 }
 
 // === Role_Lee.Role_Lee_punch (()V) ===
 // Instrucoes: 47
 void Role_Lee_punch() {
-    // TODO: traduzir logica do bytecode
+    Role_Lee* s = (Role_Lee*)_p2_self;
+    if (!s || !msf_mc) return;
+    if (s->status != 0) return;
+    s->count = 3;
+    s->status = 1;
+    s->ofusc_0107 = 1;
+    Role_Ryu* ryu = (Role_Ryu*)_p1_self;
+    if (!ryu) return;
+    if (s->x - ryu->x > 18) return;
+    msf_mc->ofusc_00fd = ryu->x + 2;
+    msf_mc->ofusc_00fe = ryu->y;
+    msf_mc->ofusc_00fc = 1;
+    Role_Ryu_backward();
+    msf_mc->ofusc_0101 -= 5;
 }
 
 // === Role_Lee.Role_Lee_kick (()V) ===
 // Instrucoes: 47
 void Role_Lee_kick() {
-    // TODO: traduzir logica do bytecode
+    Role_Lee* s = (Role_Lee*)_p2_self;
+    if (!s || !msf_mc) return;
+    if (s->status != 0) return;
+    s->count = 3;
+    s->status = 2;
+    s->ofusc_0107 = 1;
+    Role_Ryu* ryu = (Role_Ryu*)_p1_self;
+    if (!ryu) return;
+    if (s->x - ryu->x > 20) return;
+    msf_mc->ofusc_00fd = ryu->x + 2;
+    msf_mc->ofusc_00fe = ryu->y;
+    msf_mc->ofusc_00fc = 1;
+    Role_Ryu_backward();
+    msf_mc->ofusc_0101 -= 10;
 }
 
 // === Role_Lee.Role_Lee_fire (()V) ===
 // Instrucoes: 29
 void Role_Lee_fire() {
-    // TODO: traduzir logica do bytecode
+    Role_Lee* s = (Role_Lee*)_p2_self;
+    if (!s || !msf_mc) return;
+    if (s->status != 0) return;
+    if (msf_mc->ofusc_00fa > 0) return;
+    Role_Ryu* ryu = (Role_Ryu*)_p1_self;
+    if (!ryu) return;
+    if (s->x - ryu->x >= 42) return;
+    msf_mc->ofusc_00fa = s->x;
+    s->status = 3;
+    s->ofusc_0107 = 1;
 }
 
 // === Role_Lee.Role_Lee_paint ((Ljavax/microedition/lcdui/Graphics;)V) ===
