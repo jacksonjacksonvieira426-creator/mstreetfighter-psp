@@ -906,8 +906,33 @@ int main(void) {
         j2me_gfx_begin_frame();
         j2me_gfx_clear(0x101020);
 
-        MapCanvas_keyProc();
+        // ===== DEBUG: mostra que o loop ta rodando =====
+        j2me_gfx_set_color(0xFF0000);
+        j2me_gfx_fill_rect(10, 10, 50, 50);      // Quadrado vermelho (loop OK)
+        
+        j2me_gfx_set_color(0x00FF00);
+        j2me_gfx_fill_rect(70, 10, 50, 50);      // Verde (main OK)
+        
+        // Mostra se _self foi setado
+        if (_self != 0) {
+            j2me_gfx_set_color(0x0000FF);
+            j2me_gfx_fill_rect(130, 10, 50, 50); // Azul (_self OK)
+        }
+        
+        if (msf_mc != 0) {
+            j2me_gfx_set_color(0xFFFF00);
+            j2me_gfx_fill_rect(190, 10, 50, 50); // Amarelo (msf_mc OK)
+        }
+        
+        // Chama o paint
         MapCanvas_paint(NULL);
+        
+        // Mostra que paint retornou
+        j2me_gfx_set_color(0xFF00FF);
+        j2me_gfx_fill_rect(250, 10, 50, 50);     // Magenta (paint retornou)
+        
+        j2me_gfx_set_color(0x00FFFF);
+        j2me_gfx_fill_rect(310, 10, 50, 50);     // Ciano (tudo OK)
 
         j2me_gfx_flip();
     }
