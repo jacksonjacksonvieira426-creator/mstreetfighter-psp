@@ -852,7 +852,7 @@ int main(void) {
     mc->ofusc_0100 = lee;
     mc->ofusc_0101 = 100;
     mc->ofusc_0102 = 100;
-    mc->ofusc_00e6 = j2me_image_create(480, 272);
+    mc->ofusc_00e6 = (void**)j2me_image_create(480, 272);
 
     // ===== Constroi os personagens =====
     Role_Ryu_constructor();
