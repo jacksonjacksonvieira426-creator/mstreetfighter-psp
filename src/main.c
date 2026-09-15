@@ -620,8 +620,8 @@ void Role_Lee_reset() {
     // Traduzido do bytecode (25 instrucoes)
     Role_Lee* s = (Role_Lee*)_role_self;
     if (!s) return;
-    s->x = MapCanvas_CanvasWidth - 20;
-    s->y = MapCanvas_OFFY + 44;
+    s->x = 380;
+    s->y = 220;
     s->status = 0;
     s->ofusc_0103 = 0;
     s->ofusc_0104 = MapCanvas_CanvasWidth - 16;
@@ -745,8 +745,8 @@ void Role_Ryu_reset() {
     // NOTA: precisa receber self como void* — vamos usar global temporaria
     Role_Ryu* s = (Role_Ryu*)_role_self;
     if (!s) return;
-    s->x = 4;
-    s->y = MapCanvas_OFFY + 39;
+    s->x = 60;
+    s->y = 220;
     s->status = 0;
     s->ofusc_0103 = 0;
     s->ofusc_0104 = MapCanvas_CanvasWidth - 16;
