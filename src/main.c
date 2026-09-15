@@ -650,7 +650,7 @@ void Role_Lee_forward() {
     Role_Ryu* ryu = (Role_Ryu*)_p1_self;
     if (!ryu) return;
     s->ofusc_0103 = ryu->x + 16;
-    if (s->x - 2 <= s->ofusc_0103) {
+    if (s->x - 2 > s->ofusc_0103) {
         s->x -= 2;
         if (s->x < s->ofusc_0103) s->x = s->ofusc_0103;
     }
