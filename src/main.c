@@ -781,16 +781,8 @@ void Role_Ryu_fire() {
 void Role_Ryu_paint(void* arg1) {
     Role_Ryu* s = (Role_Ryu*)_role_self;
     if (!s) return;
-    const unsigned int* sprite;
-    int w, h;
-    if (s->status == 1) {
-        sprite = msf_ryu_soco_pixels; w = MSF_RYU_SOCO_W; h = MSF_RYU_SOCO_H;
-    } else if (s->status == 2) {
-        sprite = msf_ryu_chute_pixels; w = MSF_RYU_CHUTE_W; h = MSF_RYU_CHUTE_H;
-    } else {
-        sprite = msf_ryu_parado_pixels; w = MSF_RYU_PARADO_W; h = MSF_RYU_PARADO_H;
-    }
-    desenha_sprite_direto(sprite, w, h, s->x, s->y, 0);
+    // Simplificado: sempre usa sprite parado
+    desenha_sprite_direto(msf_ryu_parado_pixels, MSF_RYU_PARADO_W, MSF_RYU_PARADO_H, s->x, s->y, 0);
 }
 
 // === msf.msf_constructor (()V) ===
