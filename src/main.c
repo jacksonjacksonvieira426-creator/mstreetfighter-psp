@@ -469,6 +469,7 @@ void Role_Ryu_paint(void* arg1);
 // Globais compartilhadas
 void* _self = 0;
 void* _p1_self = 0;
+void* _role_self = 0;
 void* _p2_self = 0;
 
 // Prototipo do helper (definido mais abaixo)
