@@ -462,6 +462,9 @@ MatrixImage* MapCanvas_CreateGifMatrixImage() {
 //   1x javax/microedition/lcdui/Graphics.getFont -> ??? javax/microedition/lcdui/Graphics.getFont
 //   1x javax/microedition/lcdui/Image.createImage -> j2me_image_create
 //   1x java/lang/Thread.start -> j2me_thread_start
+void Role_Lee_paint(void* arg1);
+void Role_Ryu_paint(void* arg1);
+
 void MapCanvas_paint(void* arg1) {
     MapCanvas* s = (MapCanvas*)_self;
     if (!s) return;
