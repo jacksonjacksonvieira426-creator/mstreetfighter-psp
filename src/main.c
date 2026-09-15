@@ -31,7 +31,6 @@ typedef void* Canvas;
 // Globais do jogo
 int Game_count = 0;
 // Globais de estado
-void* _self = 0;
 int Intro_flag = 0;
 int Intro_seq = 0;
 int Intro_count = 0;
@@ -467,6 +466,14 @@ MatrixImage* MapCanvas_CreateGifMatrixImage() {
 void Role_Lee_paint(void* arg1);
 void Role_Ryu_paint(void* arg1);
 
+// Globais compartilhadas
+void* _self = 0;
+void* _p1_self = 0;
+void* _p2_self = 0;
+
+// Prototipo do helper (definido mais abaixo)
+static void desenha_sprite_direto(const unsigned int* pixels, int w, int h, int x, int y, int flip);
+
 void MapCanvas_paint(void* arg1) {
     // Debug: limpa com roxo pra ver se roda
     j2me_gfx_set_color(0x1A1030);
@@ -513,9 +520,6 @@ void Role_Lee_backward();
 void Role_Lee_punch();
 void Role_Lee_kick();
 void Role_Lee_fire();
-void* _role_self = 0;
-void* _p1_self = 0;
-void* _p2_self = 0;
 
 // === MapCanvas.MapCanvas_keyProc ((I)V) ===
 // Instrucoes: 43
