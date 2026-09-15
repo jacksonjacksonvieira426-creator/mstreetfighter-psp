@@ -902,6 +902,53 @@ int main(void) {
     j2me_input_init();
     j2me_random_init();
 
+    // Cria Canvas principal
+    MapCanvas* mc = (MapCanvas*)calloc(1, sizeof(MapCanvas));
+    _self = mc;
+    msf_mc = (MapCanvas*)mc;
+
+    // Cria Role_Ryu (jogador 1)
+    Role_Ryu* p1 = (Role_Ryu*)calloc(1, sizeof(Role_Ryu));
+    _p1_self = p1;
+    _role_self = p1;
+
+    // Cria Role_Lee (jogador 2)
+    Role_Lee* p2 = (Role_Lee*)calloc(1, sizeof(Role_Lee));
+    _p2_self = p2;
+
+    // Liga personagens ao canvas
+    mc->ofusc_00ff = p1;   // Jogador 1
+    mc->ofusc_0100 = p2;   // Jogador 2
+    mc->ofusc_0101 = 100;  // HP P1
+    mc->ofusc_0102 = 100;  // HP P2
+    mc->ofusc_00e6 = j2me_image_create(480, 272);
+
+    Role_Ryu_constructor();
+    Role_Lee_constructor();
+
+    // Game loop
+    while (1) {
+        j2me_input_update();
+        if (j2me_input_should_quit()) break;
+
+        j2me_gfx_begin_frame();
+        j2me_gfx_clear(0x101020);
+
+        MapCanvas_keyProc();
+        MapCanvas_paint(NULL);
+
+        j2me_gfx_flip();
+    }
+
+    j2me_gfx_shutdown();
+    sceKernelExitGame();
+    return 0;
+}
+t main(void) {
+    j2me_gfx_init();
+    j2me_input_init();
+    j2me_random_init();
+
     // ===== Cria os objetos do jogo =====
     MapCanvas* mc = (MapCanvas*)calloc(1, sizeof(MapCanvas));
     Role_Ryu* ryu = (Role_Ryu*)calloc(1, sizeof(Role_Ryu));
