@@ -28,6 +28,19 @@ typedef void* Canvas;
 
 // Globais do jogo
 int Game_count = 0;
+// Globais de estado
+void* _self = 0;
+int Intro_flag = 0;
+int Intro_seq = 0;
+int Intro_count = 0;
+int MapCanvas_still = 0;
+int MapCanvas_mode = 0;
+int MapCanvas_lightflag = 0;
+int MapCanvas_OFFX = 0;
+int MapCanvas_OFFY = 50;
+int MapCanvas_CanvasWidth = 480;
+int MapCanvas_CanvasHeight = 272;
+
 
 // Globais do jogo (do <clinit> e <init>)
 int MapCanvas_OFFY = 50;
@@ -452,8 +465,36 @@ MatrixImage* MapCanvas_CreateGifMatrixImage() {
 //   1x javax/microedition/lcdui/Graphics.getFont -> ??? javax/microedition/lcdui/Graphics.getFont
 //   1x javax/microedition/lcdui/Image.createImage -> j2me_image_create
 //   1x java/lang/Thread.start -> j2me_thread_start
-void MapCanvas_paint() {
-    // TODO: traduzir logica do bytecode
+void MapCanvas_paint(void* arg1) {
+    MapCanvas* s = (MapCanvas*)_self;
+    if (!s) return;
+    
+    // Setup: fundo preto
+    j2me_clip_push(0, 0, MapCanvas_CanvasWidth, MapCanvas_CanvasHeight);
+    j2me_gfx_set_color(0x000000);
+    j2me_gfx_fill_rect(0, 0, MapCanvas_CanvasWidth, MapCanvas_CanvasHeight);
+    
+    // Desenha Lee e Ryu
+    Role_Lee_paint(NULL);
+    Role_Ryu_paint(NULL);
+    
+    // Barras de vida (HP)
+    j2me_gfx_set_color(0x5B5B5B);
+    int hp_r = s->ofusc_0101 / 5;
+    j2me_gfx_fill_rect(4, MapCanvas_OFFY + 4, 4, hp_r);
+    int hp_l = s->ofusc_0102 / 5;
+    j2me_gfx_fill_rect(MapCanvas_CanvasWidth - 8, MapCanvas_OFFY + 4, 4, hp_l);
+    
+    // K.O. / Time Up
+    if (s->ofusc_0101 <= 0 || s->ofusc_0102 <= 0) {
+        const char* msg = (s->ofusc_0102 <= 0) ? "K.O." : "TIME UP";
+        j2me_gfx_set_color(0x4A4A4A);
+        j2me_gfx_fill_rect(160, MapCanvas_OFFY + 100, 160, 20);
+        j2me_gfx_set_color(0x000000);
+        j2me_font_draw(msg, 230, MapCanvas_OFFY + 105);
+    }
+    
+    MapCanvas_still = 1;
 }
 
 // ===== PROTOTIPOS (auto-gerados) =====
