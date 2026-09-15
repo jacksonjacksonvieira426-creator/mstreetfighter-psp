@@ -11,6 +11,8 @@
 #include "j2me_image.h"
 #include "j2me_clip.h"
 #include "j2me_runtime.h"
+#include "msf_ryu_parado.h"
+#include "msf_lee_parado.h"
 #include <stdint.h>
 
 // ============================================
@@ -577,6 +579,20 @@ void MatrixImage_setColor() {
 // APIs usadas:
 //   1x javax/microedition/lcdui/Graphics.setColor -> j2me_gfx_set_color
 //   1x javax/microedition/lcdui/Graphics.drawRect -> ??? javax/microedition/lcdui/Graphics.drawRect
+
+// Desenha sprite escalado 2x
+static void desenha_sprite_direto(const unsigned int* pixels, int w, int h, int x, int y, int flip) {
+    for (int sy = 0; sy < h; sy++) {
+        for (int sx = 0; sx < w; sx++) {
+            unsigned int cor = pixels[sy * w + sx];
+            if ((cor & 0xFF000000) == 0) continue;
+            j2me_gfx_set_color(cor & 0xFFFFFF);
+            int dx = flip ? (x + (w - 1 - sx) * 2) : (x + sx * 2);
+            j2me_gfx_fill_rect(dx, y - h*2 + sy * 2, 2, 2);
+        }
+    }
+}
+
 void MatrixImage_paint(void* self, void* g, int x, int y) {
     // TODO: traduzir logica do bytecode
 }
@@ -648,32 +664,10 @@ void Role_Lee_fire() {
 // APIs usadas:
 //   2x javax/microedition/lcdui/Graphics.drawImage -> j2me_image_blit
 void Role_Lee_paint(void* arg1) {
-    Role_Lee* s = (Role_Lee*)_role_self;
-    if (!s || !msf_mc) return;
-    if (s->status == 0) {
-        if ((Game_count % 300) == 150) {
-            s->ofusc_0105 ^= 1;
-            s->ofusc_0107 = 1;
-        }
-        if (s->ofusc_0107 == 1) {
-            s->ofusc_0107 = 0;
-            MatrixImage_paint(msf_mc->ofusc_00f4, arg1, s->x + s->ofusc_0105, s->y + s->ofusc_0105);
-            j2me_image_blit((J2MEImage*)s->ofusc_0109, -(s->x) - s->ofusc_0105, -(s->y) - s->ofusc_0105);
-        } else {
-            j2me_image_blit((J2MEImage*)s->ofusc_0108, s->x + s->ofusc_0105, s->y + s->ofusc_0105);
-        }
-    } else if (s->status == 1) {
-        MatrixImage_paint(msf_mc->ofusc_00f5, arg1, s->x, s->y);
-        s->count--; if (s->count <= 0) s->status = 0;
-    } else if (s->status == 2) {
-        MatrixImage_paint(msf_mc->ofusc_00f6, arg1, s->x, s->y);
-        s->count--; if (s->count <= 0) s->status = 0;
-    } else if (s->status == 3) {
-        if (msf_mc->ofusc_00fa > 0) s->x = msf_mc->ofusc_00fa;
-        s->ofusc_0106 ^= 1;
-        if (s->ofusc_0106 == 1) MatrixImage_paint(msf_mc->ofusc_00f8, arg1, s->x, s->y);
-        else                     MatrixImage_paint(msf_mc->ofusc_00f9, arg1, s->x, s->y);
-    }
+    Role_Lee* s = (Role_Lee*)_p2_self;
+    if (!s) s = (Role_Lee*)_role_self;
+    if (!s) return;
+    desenha_sprite_direto(msf_lee_parado_pixels, MSF_LEE_PARADO_W, MSF_LEE_PARADO_H, s->x, s->y, 1);
 }
 
 // === Role_Ryu.Role_Ryu_constructor (()V) ===
@@ -786,29 +780,17 @@ void Role_Ryu_fire() {
 //   2x javax/microedition/lcdui/Graphics.drawImage -> j2me_image_blit
 void Role_Ryu_paint(void* arg1) {
     Role_Ryu* s = (Role_Ryu*)_role_self;
-    if (!s || !msf_mc) return;
-    if (s->status == 0) {
-        if ((Game_count % 300) == 0) {
-            s->ofusc_0105 ^= 1;
-            s->ofusc_0107 = 1;
-        }
-        if (s->ofusc_0107 == 1) {
-            s->ofusc_0107 = 0;
-            MatrixImage_paint(msf_mc->ofusc_00ee, arg1, s->x + s->ofusc_0105, s->y + s->ofusc_0105);
-            j2me_image_blit((J2MEImage*)s->ofusc_0109, -(s->x) - s->ofusc_0105, -(s->y) - s->ofusc_0105);
-        } else {
-            j2me_image_blit((J2MEImage*)s->ofusc_0108, s->x + s->ofusc_0105, s->y + s->ofusc_0105);
-        }
-    } else if (s->status == 1) {
-        MatrixImage_paint(msf_mc->ofusc_00ef, arg1, s->x, s->y);
-        s->count--; if (s->count <= 0) s->status = 0;
+    if (!s) return;
+    const unsigned int* sprite;
+    int w, h;
+    if (s->status == 1) {
+        sprite = msf_ryu_soco_pixels; w = MSF_RYU_SOCO_W; h = MSF_RYU_SOCO_H;
     } else if (s->status == 2) {
-        MatrixImage_paint(msf_mc->ofusc_00f0, arg1, s->x, s->y);
-        s->count--; if (s->count <= 0) s->status = 0;
-    } else if (s->status == 3) {
-        MatrixImage_paint(msf_mc->ofusc_00f1, arg1, s->x, s->y + 6);
-        s->count--; if (s->count <= 0) s->status = 0;
+        sprite = msf_ryu_chute_pixels; w = MSF_RYU_CHUTE_W; h = MSF_RYU_CHUTE_H;
+    } else {
+        sprite = msf_ryu_parado_pixels; w = MSF_RYU_PARADO_W; h = MSF_RYU_PARADO_H;
     }
+    desenha_sprite_direto(sprite, w, h, s->x, s->y, 0);
 }
 
 // === msf.msf_constructor (()V) ===
