@@ -835,6 +835,30 @@ int main(void) {
     j2me_input_init();
     j2me_random_init();
 
+    // ===== Cria os objetos do jogo =====
+    MapCanvas* mc = (MapCanvas*)calloc(1, sizeof(MapCanvas));
+    Role_Ryu* ryu = (Role_Ryu*)calloc(1, sizeof(Role_Ryu));
+    Role_Lee* lee = (Role_Lee*)calloc(1, sizeof(Role_Lee));
+
+    // ===== Seta os ponteiros globais =====
+    _self = mc;
+    msf_mc = mc;
+    _role_self = ryu;
+    _p1_self = ryu;
+    _p2_self = lee;
+
+    // ===== Liga tudo =====
+    mc->ofusc_00ff = ryu;
+    mc->ofusc_0100 = lee;
+    mc->ofusc_0101 = 100;
+    mc->ofusc_0102 = 100;
+    mc->ofusc_00e6 = j2me_image_create(480, 272);
+
+    // ===== Constroi os personagens =====
+    Role_Ryu_constructor();
+    Role_Lee_constructor();
+
+    // ===== Game loop =====
     while (1) {
         j2me_input_update();
         if (j2me_input_should_quit()) break;
@@ -842,9 +866,8 @@ int main(void) {
         j2me_gfx_begin_frame();
         j2me_gfx_clear(0x101020);
 
-        // TODO: chamar metodos do jogo aqui
-        // msf_startApp();
-        // Game_paint();
+        MapCanvas_keyProc();
+        MapCanvas_paint(NULL);
 
         j2me_gfx_flip();
     }
