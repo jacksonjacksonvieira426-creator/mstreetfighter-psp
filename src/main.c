@@ -716,7 +716,7 @@ void Role_Lee_paint(void* arg1) {
     Role_Lee* s = (Role_Lee*)_p2_self;
     if (!s) s = (Role_Lee*)_role_self;
     if (!s) return;
-    desenha_sprite_direto(msf_lee_parado_pixels, MSF_LEE_PARADO_W, MSF_LEE_PARADO_H, s->x, s->y, 1);
+    desenha_sprite_direto(msf_lee_parado_pixels, MSF_LEE_PARADO_W, MSF_LEE_PARADO_H, s->x, s->y - MSF_LEE_PARADO_H*2, 1);
 }
 
 // === Role_Ryu.Role_Ryu_constructor (()V) ===
@@ -831,7 +831,7 @@ void Role_Ryu_paint(void* arg1) {
     Role_Ryu* s = (Role_Ryu*)_role_self;
     if (!s) return;
     // Simplificado: sempre usa sprite parado
-    desenha_sprite_direto(msf_ryu_parado_pixels, MSF_RYU_PARADO_W, MSF_RYU_PARADO_H, s->x, s->y, 0);
+    desenha_sprite_direto(msf_ryu_parado_pixels, MSF_RYU_PARADO_W, MSF_RYU_PARADO_H, s->x, s->y - MSF_RYU_PARADO_H*2, 0);
 }
 
 // === msf.msf_constructor (()V) ===
