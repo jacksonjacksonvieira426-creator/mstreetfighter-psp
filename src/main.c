@@ -468,35 +468,32 @@ void Role_Lee_paint(void* arg1);
 void Role_Ryu_paint(void* arg1);
 
 void MapCanvas_paint(void* arg1) {
-    MapCanvas* s = (MapCanvas*)_self;
-    if (!s) return;
+    // Debug: limpa com roxo pra ver se roda
+    j2me_gfx_set_color(0x1A1030);
+    j2me_gfx_fill_rect(0, 0, 480, 272);
     
-    // Setup: fundo preto
-    j2me_clip_push(0, 0, MapCanvas_CanvasWidth, MapCanvas_CanvasHeight);
-    j2me_gfx_set_color(0x000000);
-    j2me_gfx_fill_rect(0, 0, MapCanvas_CanvasWidth, MapCanvas_CanvasHeight);
+    // Chão
+    j2me_gfx_set_color(0x404020);
+    j2me_gfx_fill_rect(0, 200, 480, 72);
     
-    // Desenha Lee e Ryu
-    Role_Lee_paint(NULL);
-    Role_Ryu_paint(NULL);
+    // Desenha Ryu (esquerda, sprite parado)
+    Role_Ryu* ryu = (Role_Ryu*)_p1_self;
+    int ryu_x = ryu ? ryu->x : 100;
+    int ryu_y = ryu ? ryu->y : 160;
+    desenha_sprite_direto(msf_ryu_parado_pixels, MSF_RYU_PARADO_W, MSF_RYU_PARADO_H,
+                          ryu_x, ryu_y - MSF_RYU_PARADO_H*2, 0);
     
-    // Barras de vida (HP)
-    j2me_gfx_set_color(0x5B5B5B);
-    int hp_r = s->ofusc_0101 / 5;
-    j2me_gfx_fill_rect(4, MapCanvas_OFFY + 4, 4, hp_r);
-    int hp_l = s->ofusc_0102 / 5;
-    j2me_gfx_fill_rect(MapCanvas_CanvasWidth - 8, MapCanvas_OFFY + 4, 4, hp_l);
+    // Desenha Lee (direita, espelhado)
+    Role_Lee* lee = (Role_Lee*)_p2_self;
+    int lee_x = lee ? lee->x : 340;
+    int lee_y = lee ? lee->y : 160;
+    desenha_sprite_direto(msf_lee_parado_pixels, MSF_LEE_PARADO_W, MSF_LEE_PARADO_H,
+                          lee_x, lee_y - MSF_LEE_PARADO_H*2, 1);
     
-    // K.O. / Time Up
-    if (s->ofusc_0101 <= 0 || s->ofusc_0102 <= 0) {
-        const char* msg = (s->ofusc_0102 <= 0) ? "K.O." : "TIME UP";
-        j2me_gfx_set_color(0x4A4A4A);
-        j2me_gfx_fill_rect(160, MapCanvas_OFFY + 100, 160, 20);
-        j2me_gfx_set_color(0x000000);
-        j2me_font_draw(msg, 230, MapCanvas_OFFY + 105);
-    }
-    
-    MapCanvas_still = 1;
+    // Barras de HP (topo)
+    j2me_gfx_set_color(0x808080);
+    j2me_gfx_fill_rect(10, 10, 100, 8);
+    j2me_gfx_fill_rect(370, 10, 100, 8);
 }
 
 // ===== PROTOTIPOS (auto-gerados) =====
@@ -582,13 +579,14 @@ void MatrixImage_setColor() {
 
 // Desenha sprite escalado 2x
 static void desenha_sprite_direto(const unsigned int* pixels, int w, int h, int x, int y, int flip) {
+    // x, y = canto superior esquerdo, escala 2x
     for (int sy = 0; sy < h; sy++) {
         for (int sx = 0; sx < w; sx++) {
             unsigned int cor = pixels[sy * w + sx];
             if ((cor & 0xFF000000) == 0) continue;
             j2me_gfx_set_color(cor & 0xFFFFFF);
             int dx = flip ? (x + (w - 1 - sx) * 2) : (x + sx * 2);
-            j2me_gfx_fill_rect(dx, y - h*2 + sy * 2, 2, 2);
+            j2me_gfx_fill_rect(dx, y + sy * 2, 2, 2);
         }
     }
 }
@@ -865,6 +863,10 @@ int main(void) {
     mc->ofusc_00ff = ryu;
     mc->ofusc_0100 = lee;
     mc->ofusc_0101 = 100;
+    ryu->x = 100;
+    ryu->y = 180;
+    lee->x = 340;
+    lee->y = 180;
     mc->ofusc_0102 = 100;
     mc->ofusc_00e6 = (void**)j2me_image_create(480, 272);
 
