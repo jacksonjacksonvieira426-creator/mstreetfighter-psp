@@ -603,7 +603,7 @@ void MatrixImage_paint(void* self, void* g, int x, int y) {
 //   1x javax/microedition/lcdui/Image.createImage -> j2me_image_create
 //   1x javax/microedition/lcdui/Image.getGraphics -> j2me_image_get_graphics
 void Role_Lee_constructor() {
-    Role_Lee* s = (Role_Lee*)_role_self;
+    Role_Lee* s = (Role_Lee*)_p2_self;
     if (!s) return;
     s->status = 0;
     s->ofusc_0103 = 0;
@@ -621,7 +621,7 @@ void Role_Lee_reset() {
     Role_Lee* s = (Role_Lee*)_role_self;
     if (!s) return;
     s->x = 380;
-    s->y = 220;
+    s->y = 250;
     s->status = 0;
     s->ofusc_0103 = 0;
     s->ofusc_0104 = MapCanvas_CanvasWidth - 16;
@@ -746,7 +746,7 @@ void Role_Ryu_reset() {
     Role_Ryu* s = (Role_Ryu*)_role_self;
     if (!s) return;
     s->x = 60;
-    s->y = 220;
+    s->y = 250;
     s->status = 0;
     s->ofusc_0103 = 0;
     s->ofusc_0104 = MapCanvas_CanvasWidth - 16;
