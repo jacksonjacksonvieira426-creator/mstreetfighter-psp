@@ -713,25 +713,65 @@ void Role_Ryu_reset() {
 // === Role_Ryu.Role_Ryu_forward (()V) ===
 // Instrucoes: 51
 void Role_Ryu_forward() {
-    // TODO: traduzir logica do bytecode
+    Role_Ryu* s = (Role_Ryu*)_role_self;
+    if (!s) return;
+    if (s->x + 2 < s->ofusc_0104) s->x += 2;
+    s->ofusc_0107 = 1;
 }
 
 // === Role_Ryu.Role_Ryu_backward (()V) ===
 // Instrucoes: 37
 void Role_Ryu_backward() {
-    // TODO: traduzir logica do bytecode
+    Role_Ryu* s = (Role_Ryu*)_role_self;
+    if (!s) return;
+    if (s->x - 2 > s->ofusc_0103) s->x -= 2;
+    s->ofusc_0107 = 1;
 }
 
 // === Role_Ryu.Role_Ryu_punch (()V) ===
 // Instrucoes: 62
 void Role_Ryu_punch() {
-    // TODO: traduzir logica do bytecode
+    Role_Ryu* s = (Role_Ryu*)_role_self;
+    if (!s) return;
+    s->ofusc_010b++;
+    s->ofusc_010a += 7 * s->ofusc_010b;
+    if (s->status != 0) return;
+    s->count = 3;
+    s->status = 1;
+    s->ofusc_0107 = 1;
+    if (!msf_mc) return;
+    Role_Lee* lee = (Role_Lee*)msf_mc->ofusc_0100;
+    Role_Ryu* ryu = (Role_Ryu*)msf_mc->ofusc_00ff;
+    if (!lee || !ryu) return;
+    if (lee->x - ryu->x > 18) return;
+    msf_mc->ofusc_00fd = lee->x + 2;
+    msf_mc->ofusc_00fe = lee->y;
+    msf_mc->ofusc_00fc = 1;
+    Role_Lee_backward();
+    msf_mc->ofusc_0102 -= 5;
 }
 
 // === Role_Ryu.Role_Ryu_kick (()V) ===
 // Instrucoes: 62
 void Role_Ryu_kick() {
-    // TODO: traduzir logica do bytecode
+    Role_Ryu* s = (Role_Ryu*)_role_self;
+    if (!s) return;
+    s->ofusc_010b++;
+    s->ofusc_010a += 8 * s->ofusc_010b;
+    if (s->status != 0) return;
+    s->count = 3;
+    s->status = 2;
+    s->ofusc_0107 = 1;
+    if (!msf_mc) return;
+    Role_Lee* lee = (Role_Lee*)msf_mc->ofusc_0100;
+    Role_Ryu* ryu = (Role_Ryu*)msf_mc->ofusc_00ff;
+    if (!lee || !ryu) return;
+    if (lee->x - ryu->x > 20) return;
+    msf_mc->ofusc_00fd = lee->x + 2;
+    msf_mc->ofusc_00fe = lee->y;
+    msf_mc->ofusc_00fc = 1;
+    Role_Lee_backward();
+    msf_mc->ofusc_0102 -= 5;
 }
 
 // === Role_Ryu.Role_Ryu_fire (()V) ===
